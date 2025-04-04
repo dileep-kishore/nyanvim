@@ -37,11 +37,15 @@ in
     # This is for plugins that will load at startup without using packadd:
     startupPlugins = {
       general = with pkgs.vimPlugins; [
-        catppuccin-nvim
-        oil-nvim
         pkgs.neovimPlugins.lze
         pkgs.neovimPlugins.lzextras
         nvim-treesitter.withAllGrammars
+        catppuccin-nvim
+        nvim-lspconfig
+        lazydev-nvim
+        blink-cmp
+        friendly-snippets
+        oil-nvim
       ];
       # extra = with pkgs.neovimPlugins; [];
     };
