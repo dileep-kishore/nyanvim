@@ -23,7 +23,7 @@
 <!-- markdownlint-disable MD013 -->
 
 This flake uses [nixCats-nvim](https://github.com/BirdeeHub/nixCats-nvim) to configure neovim.
-The advantage of using this over my [older configuration](https://github.com/dileep-kishore/neovim) configured using [nixvim](https://github.com/nix-community/nixvim) is that only the plugin installation is handled through [Nix](https://nixos.org/manual/nix/stable/language/index.html) and the rest of the configuration is done using Lua.
+The advantage of using this over a [configuration](https://github.com/dileep-kishore/neovim) defined using [nixvim](https://github.com/nix-community/nixvim) is that only the plugin installation is handled through [Nix](https://nixos.org/manual/nix/stable/language/index.html) and the rest of the configuration is done using Lua.
 
 ## Running the flake
 
