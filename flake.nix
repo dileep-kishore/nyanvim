@@ -3,7 +3,15 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
-    devenv.url = "github:cachix/devenv";
+    pre-commit-hooks.url = "github:cachix/git-hooks.nix";
+    plugins-lze = {
+      url = "github:BirdeeHub/lze";
+      flake = false;
+    };
+    plugins-lzextras = {
+      url = "github:BirdeeHub/lzextras";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -38,6 +46,19 @@
     in {
       packages = utils.mkAllWithDefault defaultPackage;
 
+      checks = {
+        pre-commit-check = inputs.pre-commit-hooks.lib.${system}.run {
+          src = ./.;
+          hooks = {
+            ruff.enable = true;
+            shellcheck.enable = true;
+            markdownlint.enable = true;
+            alejandra.enable = true;
+            editorconfig-checker.enable = true;
+          };
+        };
+      };
+
       devShells = {
         default = pkgs.mkShell {
           name = defaultPackageName;
@@ -45,9 +66,8 @@
             # defaultPackage
             just
           ];
-          inputsFrom = [];
-          shellHook = ''
-          '';
+          inherit (self.checks.${system}.pre-commit-check) shellHook;
+          buildInputs = self.checks.${system}.pre-commit-check.enabledPackages;
         };
       };
     })
