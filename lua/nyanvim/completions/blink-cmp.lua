@@ -15,7 +15,24 @@ require('lze').load {
           ['<C-k>'] = { 'snippet_forward', 'fallback_to_mappings' },
           ['<C-S-k>'] = { 'snippet_forward', 'fallback_to_mappings' },
         },
-        signature = { enabled = true },
+        -- We will use lsp_signature.nvim for signature help
+        signature = {
+          enabled = true,
+          window = {
+            show_documentation = true,
+            border = {
+              { '󰙎', 'WarningMsg' },
+              '─',
+              '╮',
+              '│',
+              '╯',
+              '─',
+              '╰',
+              '│',
+            },
+            winhighlight = 'Normal:Pmenu,CursorLine:PmenuSel,Search:None',
+          },
+        },
         cmdline = {
           enabled = true,
           keymap = { preset = 'inherit' },
