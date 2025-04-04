@@ -43,7 +43,6 @@ in
         better-escape-nvim
         catppuccin-nvim
         nvim-lspconfig
-        lazydev-nvim
       ];
       # extra = with pkgs.neovimPlugins; [];
     };
@@ -54,6 +53,7 @@ in
       general = with pkgs.vimPlugins; [
         blink-cmp
         friendly-snippets
+        lazydev-nvim
         oil-nvim
         image-nvim
         otter-nvim

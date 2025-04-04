@@ -3,6 +3,10 @@ require('lze').load {
     'blink.cmp',
     event = { 'DeferredUIEnter' },
     on_require = 'blink',
+    load = function(name)
+      vim.cmd.packadd(name)
+      vim.cmd.packadd 'lazydev.nvim'
+    end,
     after = function(_)
       require('blink.cmp').setup {
         appearance = { nerd_font_variant = 'normal' },
@@ -15,7 +19,7 @@ require('lze').load {
           ['<C-k>'] = { 'snippet_forward', 'fallback_to_mappings' },
           ['<C-S-k>'] = { 'snippet_forward', 'fallback_to_mappings' },
         },
-        -- We will use lsp_signature.nvim for signature help
+        -- TODO: Disable this after installing lsp_signature.nvim
         signature = {
           enabled = true,
           window = {
