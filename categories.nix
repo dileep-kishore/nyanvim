@@ -40,6 +40,7 @@ in
         pkgs.neovimPlugins.lze
         pkgs.neovimPlugins.lzextras
         nvim-treesitter.withAllGrammars
+        better-escape-nvim
         catppuccin-nvim
         nvim-lspconfig
         lazydev-nvim
