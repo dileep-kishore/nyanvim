@@ -42,10 +42,6 @@ in
         nvim-treesitter.withAllGrammars
         catppuccin-nvim
         nvim-lspconfig
-        lazydev-nvim
-        blink-cmp
-        friendly-snippets
-        oil-nvim
       ];
       # extra = with pkgs.neovimPlugins; [];
     };
@@ -54,6 +50,10 @@ in
     # use with packadd and an autocommand in config to achieve lazy loading
     optionalPlugins = {
       general = with pkgs.vimPlugins; [
+        lazydev-nvim
+        blink-cmp
+        friendly-snippets
+        oil-nvim
         image-nvim
         otter-nvim
       ];
