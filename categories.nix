@@ -27,6 +27,10 @@ in
       general = [
         ripgrep
         fd
+        lua-language-server
+        gopls
+        basedpyright
+        nixd
       ];
     };
 
