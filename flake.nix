@@ -4,6 +4,14 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
     devenv.url = "github:cachix/devenv";
+    plugins-lze = {
+      url = "github:BirdeeHub/lze";
+      flake = false;
+    };
+    plugins-lzextras = {
+      url = "github:BirdeeHub/lzextras";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -38,16 +46,20 @@
     in {
       packages = utils.mkAllWithDefault defaultPackage;
 
-      devShells = {
-        default = pkgs.mkShell {
+      devenv.shells = {
+        default = {
           name = defaultPackageName;
           packages = with pkgs; [
             # defaultPackage
             just
           ];
-          inputsFrom = [];
-          shellHook = ''
-          '';
+          pre-commit.hooks = {
+            ruff.enable = true;
+            shellcheck.enable = true;
+            markdownlint.enable = true;
+            alejandra.enable = true;
+            editorconfig-checker.enable = true;
+          };
         };
       };
     })
