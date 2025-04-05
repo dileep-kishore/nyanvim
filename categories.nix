@@ -66,6 +66,7 @@ in
         nvim-treesitter-context
         nvim-highlight-colors
         nvim-lint
+        nvim-web-devicons
       ];
       # extra = with pkgs.neovimPlugins; [];
     };
@@ -77,6 +78,7 @@ in
         blink-cmp
         friendly-snippets
         lazydev-nvim
+        lspsaga-nvim
         conform-nvim
         oil-nvim
         image-nvim
