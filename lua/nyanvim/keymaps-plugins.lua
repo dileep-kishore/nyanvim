@@ -8,4 +8,6 @@ local function map(mode, key, action, opts)
 end
 
 -- LSP (documentation generation)
-map('n', '<Leader>lg', "<cmd>lua require('neogen').generate()<CR>")
+map('n', '<Leader>lg', "<cmd>lua require('neogen').generate()<CR>", {
+  desc = 'Generate documentation (neogen)',
+})
