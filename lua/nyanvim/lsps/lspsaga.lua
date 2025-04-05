@@ -14,7 +14,7 @@ require('lze').load {
         },
         ui = {
           border = 'rounded',
-          codeAction = '󰌶',
+          code_action = '󰌶',
           kind = { Folder = { ' ' } },
         },
         beacon = { enable = true },
@@ -25,16 +25,16 @@ require('lze').load {
         lightbulb = {
           enable = true,
           sign = true,
-          virtualText = false,
+          virtual_text = false,
         },
         outline = { layout = 'float' },
         keys = {
           toggle_or_open = '<CR>',
         },
-        symbolInWinbar = {
+        symbol_in_winbar = {
           enable = true,
-          showFile = true,
-          colorMode = false,
+          show_file = true,
+          color_mode = false,
           separator = '  ',
         },
       }
