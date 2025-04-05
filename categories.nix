@@ -43,6 +43,7 @@ in
         better-escape-nvim
         catppuccin-nvim
         nvim-lspconfig
+        nvim-treesitter-textobjects
       ];
       # extra = with pkgs.neovimPlugins; [];
     };
