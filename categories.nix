@@ -25,13 +25,25 @@ in
     # this includes LSPs
     lspsAndRuntimeDeps = with pkgs; {
       general = [
+        nodejs_23
         ripgrep
         fd
+        # lsps
         lua-language-server
         gopls
         basedpyright
         nixd
-        nodejs_23
+        # formatters
+        stylua
+        alejandra
+        shfmt
+        gofumpt
+        rustfmt
+        ruff
+        nodePackages.prettier
+        typstfmt
+        yamlfix
+        # linters
       ];
     };
 
@@ -58,6 +70,8 @@ in
         blink-cmp
         friendly-snippets
         lazydev-nvim
+        conform-nvim
+        nvim-lint
         oil-nvim
         image-nvim
         otter-nvim
