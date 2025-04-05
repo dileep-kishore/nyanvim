@@ -31,6 +31,7 @@ in
         gopls
         basedpyright
         nixd
+        nodejs_23
       ];
     };
 
@@ -59,6 +60,7 @@ in
         oil-nvim
         image-nvim
         otter-nvim
+        copilot-lua
       ];
     };
 
