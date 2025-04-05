@@ -62,6 +62,7 @@ in
         image-nvim
         otter-nvim
         copilot-lua
+        neogen
       ];
     };
 

@@ -13,7 +13,7 @@ require('lze').load {
           hide_during_completion = true,
           keymap = {
             accept = '<C-l>',
-            accept_word = '<C-j>',
+            accept_word = false,
             next = '<A-n>',
             prev = '<A-p>',
           },

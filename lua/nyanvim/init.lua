@@ -14,3 +14,5 @@ require 'nyanvim.treesitter'
 require 'nyanvim.ui'
 -- require 'nyanvim.lint'
 -- require 'nyanvim.format'
+
+require 'nyanvim.keymaps-plugins'

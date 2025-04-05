@@ -18,8 +18,8 @@ require('lze').load {
           ['<S-Tab>'] = {},
           ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
           ['<C-n>'] = { 'select_next', 'fallback_to_mappings' },
-          ['<C-k>'] = { 'snippet_forward', 'fallback_to_mappings' },
-          ['<C-S-k>'] = { 'snippet_forward', 'fallback_to_mappings' },
+          ['<C-j>'] = { 'snippet_forward', 'fallback_to_mappings' },
+          ['<C-k>'] = { 'snippet_backward', 'fallback_to_mappings' },
         },
         -- TODO: Disable this after installing lsp_signature.nvim
         signature = {
