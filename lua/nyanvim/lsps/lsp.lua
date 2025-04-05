@@ -1,5 +1,5 @@
-local get_capabilities = require('nyanvim.lsps.caps-on_attach').get_capabilities
-local on_attach = require('nyanvim.lsps.caps-on_attach').on_attach
+local get_capabilities_custom = require('nyanvim.lsps.caps-on_attach').get_capabilities
+local on_attach_custom = require('nyanvim.lsps.caps-on_attach').on_attach
 
 require('lze').load {
   {
@@ -7,8 +7,8 @@ require('lze').load {
     on_require = { 'lspconfig' },
     lsp = function(plugin)
       require('lspconfig')[plugin.name].setup(vim.tbl_extend('force', {
-        capabilities = get_capabilities(plugin.name),
-        on_attach = on_attach,
+        capabilities = get_capabilities_custom(plugin.name),
+        on_attach = on_attach_custom,
       }, plugin.lsp or {}))
     end,
   },
@@ -47,13 +47,27 @@ require('lze').load {
       },
     },
   },
+  { 'gopls', lsp = { filetypes = { 'go' } } },
+  { 'basedpyright', lsp = { filetypes = { 'python' } } },
   {
-    'gopls',
-    lsp = {},
+    'nixd',
+    lsp = {
+      filetypes = { 'nix' },
+      settings = {
+        nixd = {
+          nixpkgs = { expr = 'import <nixpkgs> {}' },
+          options = {
+            nixos = {
+              expr = '(builtins.getFlake "github:dileep-kishore/nixos-hyprland").nixosConfigurations.tsuki.options',
+            },
+            home_manger = {
+              expr = '(builtins.getFlake "github:dileep-kishore/nixos-hyprland").homeConfigurations."g8k@lap135849".options',
+            },
+          },
+        },
+      },
+    },
   },
-  {
-    'basedpyright',
-    lsp = {},
-  },
-  -- TODO: Nix
+  { 'astro', lsp = {} },
+  -- TODO: astro, bashls, dockerls, eslint, gopls, jsonls, harper_ls, ltex, texlab, marksman, julials, ts_ls, rust_analyzer, svelte, tailwindcss, typst_lsp, cssls, html
 }

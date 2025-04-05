@@ -33,6 +33,7 @@ in
         gopls
         basedpyright
         nixd
+        astro-language-server
         # formatters
         stylua
         alejandra
