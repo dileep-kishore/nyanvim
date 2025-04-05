@@ -1,15 +1,23 @@
-local get_capabilities_custom = require('nyanvim.lsps.caps-on_attach').get_capabilities
-local on_attach_custom = require('nyanvim.lsps.caps-on_attach').on_attach
+local servers = require 'nyanvim.lsps.servers'
 
 require('lze').load {
   {
     'nvim-lspconfig',
-    on_require = { 'lspconfig' },
-    lsp = function(plugin)
-      require('lspconfig')[plugin.name].setup(vim.tbl_extend('force', {
-        capabilities = get_capabilities_custom(plugin.name),
-        on_attach = on_attach_custom,
-      }, plugin.lsp or {}))
+    event = { 'BufReadPre', 'BufNewFile' },
+    after = function(_)
+      local lspconfig = require 'lspconfig'
+      lspconfig.util.default_config =
+        vim.tbl_extend('force', lspconfig.util.default_config, {
+          capabilities = require('blink.cmp').get_lsp_capabilities({}, true),
+          on_attach = function(_, bufnr)
+            vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
+              require('conform').format { async = true }
+            end, { desc = 'Format current buffer using conform' })
+          end,
+        })
+      for server_name, cfg in pairs(servers) do
+        lspconfig[server_name].setup(cfg or {})
+      end
     end,
   },
   {
@@ -27,47 +35,5 @@ require('lze').load {
       }
     end,
   },
-  {
-    'lua_ls',
-    lsp = {
-      filetypes = { 'lua' },
-      settings = {
-        Lua = {
-          runtime = { version = 'LuaJIT' },
-          formatters = {
-            ignoreComments = true,
-          },
-          signatureHelp = { enabled = true },
-          diagnostics = {
-            globals = { 'nixCats', 'vim' },
-            disable = { 'missing-fields' },
-          },
-          telemetry = { enabled = false },
-        },
-      },
-    },
-  },
-  { 'gopls', lsp = { filetypes = { 'go' } } },
-  { 'basedpyright', lsp = { filetypes = { 'python' } } },
-  {
-    'nixd',
-    lsp = {
-      filetypes = { 'nix' },
-      settings = {
-        nixd = {
-          nixpkgs = { expr = 'import <nixpkgs> {}' },
-          options = {
-            nixos = {
-              expr = '(builtins.getFlake "github:dileep-kishore/nixos-hyprland").nixosConfigurations.tsuki.options',
-            },
-            home_manger = {
-              expr = '(builtins.getFlake "github:dileep-kishore/nixos-hyprland").homeConfigurations."g8k@lap135849".options',
-            },
-          },
-        },
-      },
-    },
-  },
-  { 'astro', lsp = {} },
-  -- TODO: astro, bashls, dockerls, eslint, gopls, jsonls, harper_ls, ltex, texlab, marksman, julials, ts_ls, rust_analyzer, svelte, tailwindcss, typst_lsp, cssls, html
+  -- TODO:  bashls, dockerls, eslint, gopls, jsonls, harper_ls, ltex, texlab, marksman, julials, ts_ls, rust_analyzer, svelte, tailwindcss, typst_lsp, cssls, html
 }
