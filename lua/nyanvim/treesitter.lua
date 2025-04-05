@@ -3,8 +3,11 @@ require('lze').load {
     'nvim-treesitter',
     event = 'DeferredUIEnter',
     load = function(name)
-      vim.cmd.packadd(name)
-      vim.cmd.packadd 'nvim-treesitter-textobjects'
+      require('lzextras').loaders.multi {
+        name,
+        'nvim-treesitter-textobjects',
+        'treesitter-context',
+      }
     end,
     after = function(_)
       require('nvim-treesitter.configs').setup {
@@ -80,6 +83,12 @@ require('lze').load {
             },
           },
         },
+      }
+      require('treesitter-context').setup {
+        enable = true,
+        max_lines = 0,
+        mode = 'topline',
+        separator = '-',
       }
     end,
   },

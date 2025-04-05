@@ -39,11 +39,12 @@ in
       general = with pkgs.vimPlugins; [
         pkgs.neovimPlugins.lze
         pkgs.neovimPlugins.lzextras
-        nvim-treesitter.withAllGrammars
         better-escape-nvim
         catppuccin-nvim
         nvim-lspconfig
+        nvim-treesitter.withAllGrammars
         nvim-treesitter-textobjects
+        nvim-treesitter-context
       ];
       # extra = with pkgs.neovimPlugins; [];
     };

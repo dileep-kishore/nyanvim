@@ -4,8 +4,10 @@ require('lze').load {
     event = { 'DeferredUIEnter' },
     on_require = 'blink',
     load = function(name)
-      vim.cmd.packadd(name)
-      vim.cmd.packadd 'lazydev.nvim'
+      require('lzextras').loaders.multi {
+        name,
+        'lazydev.nvim',
+      }
     end,
     after = function(_)
       require('blink.cmp').setup {
