@@ -40,10 +40,16 @@ in
         gofumpt
         rustfmt
         ruff
-        nodePackages.prettier
+        prettierd
         typstfmt
         yamlfix
         # linters
+        rstcheck
+        vale
+        nodePackages.jsonlint
+        stylelint
+        hadolint
+        eslint_d
       ];
     };
 
@@ -59,6 +65,7 @@ in
         nvim-treesitter-textobjects
         nvim-treesitter-context
         nvim-highlight-colors
+        nvim-lint
       ];
       # extra = with pkgs.neovimPlugins; [];
     };
@@ -71,7 +78,6 @@ in
         friendly-snippets
         lazydev-nvim
         conform-nvim
-        nvim-lint
         oil-nvim
         image-nvim
         otter-nvim
