@@ -7,11 +7,8 @@ require('catppuccin').setup {
     types = { 'italic' },
     conditionals = { 'italic' },
     loops = { 'italic' },
-    functions = { 'bold' },
     comments = { 'italic' },
-    strings = { 'italic' },
-    variables = { 'italic' },
-    booleans = { 'italic' },
+    functions = { 'bold' },
   },
   custom_highlights = function(colors)
     return {
