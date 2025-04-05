@@ -4,9 +4,17 @@ require('lze').load {
     event = 'LspAttach',
     after = function(_)
       require('lspsaga').setup {
+        finder = {
+          keys = {
+            vsplit = 'v',
+            split = 's',
+            quit = 'q',
+            toggle_or_open = '<CR>',
+          },
+        },
         ui = {
           border = 'rounded',
-          codeAction = '',
+          codeAction = '󰌶',
           kind = { Folder = { ' ' } },
         },
         beacon = { enable = true },
@@ -20,6 +28,9 @@ require('lze').load {
           virtualText = false,
         },
         outline = { layout = 'float' },
+        keys = {
+          toggle_or_open = '<CR>',
+        },
         symbolInWinbar = {
           enable = true,
           showFile = true,
