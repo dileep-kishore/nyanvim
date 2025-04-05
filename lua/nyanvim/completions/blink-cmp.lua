@@ -80,6 +80,12 @@ require('lze').load {
             },
           },
           ghost_text = { enabled = true },
+          accept = {
+            auto_brackets = {
+              enabled = true,
+              semantic_token_resolution = { enabled = true },
+            },
+          },
         },
         sources = {
           default = { 'lazydev', 'lsp', 'path', 'snippets', 'buffer' },
