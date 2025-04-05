@@ -27,8 +27,6 @@ require('lze').load {
             enable = true,
             lookahead = true,
             keymaps = {
-              ['ap'] = '@parameter.outer', -- argument
-              ['ip'] = '@parameter.inner',
               ['af'] = '@function.outer', -- function
               ['if'] = '@function.inner',
               ['ac'] = '@class.outer', -- class
