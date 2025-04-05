@@ -46,6 +46,7 @@ in
         nvim-treesitter.withAllGrammars
         nvim-treesitter-textobjects
         nvim-treesitter-context
+        nvim-highlight-colors
       ];
       # extra = with pkgs.neovimPlugins; [];
     };
