@@ -14,7 +14,6 @@ require 'nyanvim.plugins'
 require 'nyanvim.ui'
 require 'nyanvim.bars'
 require 'nyanvim.ai'
--- require 'nyanvim.lint'
--- require 'nyanvim.format'
+require 'nyanvim.literate'
 
 require 'nyanvim.keymaps-plugins'

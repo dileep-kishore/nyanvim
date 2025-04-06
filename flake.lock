@@ -132,6 +132,38 @@
         "type": "github"
       }
     },
+    "plugins-neopyter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1742273862,
+        "narHash": "sha256-dNUNWvMESeDfbLVLymW9nvLuhQGJoV26JaL7V8NQvF0=",
+        "owner": "SUSTech-data",
+        "repo": "neopyter",
+        "rev": "8716511f2a0d1500ba8f4adeb05bbb432a080bac",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SUSTech-data",
+        "repo": "neopyter",
+        "type": "github"
+      }
+    },
+    "plugins-websocket-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1713103198,
+        "narHash": "sha256-+Z2RgiqdYWzkEUQRHxqoaiLeekziNaf3bNZEe3dDexI=",
+        "owner": "AbaoFromCUG",
+        "repo": "websocket.nvim",
+        "rev": "8a096d51c957557f939e296c4937f27d5dc596d5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AbaoFromCUG",
+        "repo": "websocket.nvim",
+        "type": "github"
+      }
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -159,6 +191,8 @@
         "plugins-incline-nvim": "plugins-incline-nvim",
         "plugins-lze": "plugins-lze",
         "plugins-lzextras": "plugins-lzextras",
+        "plugins-neopyter": "plugins-neopyter",
+        "plugins-websocket-nvim": "plugins-websocket-nvim",
         "pre-commit-hooks": "pre-commit-hooks"
       }
     }

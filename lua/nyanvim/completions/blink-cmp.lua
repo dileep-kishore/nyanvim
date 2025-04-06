@@ -1,5 +1,9 @@
 require('lze').load {
   {
+    'blink.compat',
+    event = { 'DeferredUIEnter' },
+  },
+  {
     'blink.cmp',
     event = { 'DeferredUIEnter' },
     on_require = 'blink',
@@ -7,6 +11,7 @@ require('lze').load {
       require('lzextras').loaders.multi {
         name,
         'lazydev.nvim',
+        'neopyter',
       }
     end,
     after = function(_)
@@ -62,40 +67,6 @@ require('lze').load {
               '│',
             },
             winhighlight = 'Normal:Pmenu,CursorLine:PmenuSel,Search:None',
-            draw = {
-              components = {
-                kind_icon = {
-                  text = function(ctx)
-                    local icon = ctx.kind_icon
-                    if ctx.item.source_name == 'LSP' then
-                      local color_item =
-                        require('nvim-highlight-colors').format(
-                          ctx.item.documentation,
-                          { kind = ctx.kind }
-                        )
-                      if color_item and color_item.abbr then
-                        icon = color_item.abbr
-                      end
-                    end
-                    return icon .. ctx.icon_gap
-                  end,
-                  highlight = function(ctx)
-                    local highlight = 'BlinkCmpKind' .. ctx.kind
-                    if ctx.item.source_name == 'LSP' then
-                      local color_item =
-                        require('nvim-highlight-colors').format(
-                          ctx.item.documentation,
-                          { kind = ctx.kind }
-                        )
-                      if color_item and color_item.abbr_hl_group then
-                        highlight = color_item.abbr_hl_group
-                      end
-                    end
-                    return highlight
-                  end,
-                },
-              },
-            },
           },
           documentation = {
             auto_show = true,
@@ -122,12 +93,38 @@ require('lze').load {
           },
         },
         sources = {
-          default = { 'lazydev', 'lsp', 'path', 'snippets', 'buffer' },
+          default = {
+            'lazydev',
+            'neopyter',
+            'lsp',
+            'path',
+            'snippets',
+            'buffer',
+            'avante_commands',
+            'avante_mentions',
+            'avante_files',
+          },
           providers = {
             lazydev = {
               name = 'LazyDev',
               module = 'lazydev.integrations.blink',
               score_offset = 100,
+            },
+            neopyter = {
+              name = 'Neopyter',
+              module = 'neopyter.blink',
+            },
+            avante_commands = {
+              name = 'avante_commands',
+              module = 'blink.compat.source',
+            },
+            avante_mentions = {
+              name = 'avante_mentions',
+              module = 'blink.compat.source',
+            },
+            avante_files = {
+              name = 'avante_files',
+              module = 'blink.compat.source',
             },
           },
         },

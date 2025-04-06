@@ -16,6 +16,14 @@
       url = "github:b0o/incline.nvim";
       flake = false;
     };
+    plugins-websocket-nvim = {
+      url = "github:AbaoFromCUG/websocket.nvim";
+      flake = false;
+    };
+    plugins-neopyter = {
+      url = "github:SUSTech-data/neopyter";
+      flake = false;
+    };
   };
 
   outputs = {

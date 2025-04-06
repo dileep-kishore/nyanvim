@@ -95,7 +95,9 @@ in
     # use with packadd and an autocommand in config to achieve lazy loading
     optionalPlugins = {
       general = with pkgs.vimPlugins; [
+        plenary-nvim
         blink-cmp
+        blink-compat
         friendly-snippets
         lazydev-nvim
         lspsaga-nvim
@@ -111,6 +113,8 @@ in
         avante-nvim
         ChatGPT-nvim
         wtf-nvim
+        pkgs.neovimPlugins.websocket-nvim
+        pkgs.neovimPlugins.neopyter
       ];
     };
 

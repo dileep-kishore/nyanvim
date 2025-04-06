@@ -35,6 +35,9 @@ require('lze').load {
               ['il'] = '@loop.inner',
               ['as'] = '@conditional.outer', -- conditionals
               ['is'] = '@conditional.inner',
+              -- neopyter
+              ['aj'] = { query = '@cell', desc = 'Select cell' },
+              ['ij'] = { query = '@cellcontent', desc = 'Select cell content' },
             },
           },
           move = {
@@ -46,6 +49,7 @@ require('lze').load {
               [']l'] = '@loop.outer',
               [']s'] = '@conditional.outer',
               [']p'] = '@parameter.outer',
+              [']j'] = '@cellseparator',
             },
             goto_next_end = {
               [']F'] = '@function.outer',
@@ -60,6 +64,7 @@ require('lze').load {
               ['[l'] = '@loop.outer',
               ['[s'] = '@conditional.outer',
               ['[p'] = '@parameter.outer',
+              ['[j'] = '@cellseparator',
             },
             goto_previous_end = {
               ['[F'] = '@function.outer',
