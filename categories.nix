@@ -103,6 +103,7 @@ in
         neogen
         avante-nvim
         ChatGPT-nvim
+        wtf-nvim
       ];
     };
 
