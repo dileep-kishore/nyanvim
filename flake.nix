@@ -12,6 +12,10 @@
       url = "github:BirdeeHub/lzextras";
       flake = false;
     };
+    plugins-incline-nvim = {
+      url = "github:b0o/incline.nvim";
+      flake = false;
+    };
   };
 
   outputs = {

@@ -84,6 +84,22 @@
         "type": "github"
       }
     },
+    "plugins-incline-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1742809093,
+        "narHash": "sha256-5chrEfjk1Q+lvGqtoUfS/cYbxCUp1gij6SMoB1QRNbs=",
+        "owner": "b0o",
+        "repo": "incline.nvim",
+        "rev": "27040695b3bbfcd3257669037bd008d1a892831d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "b0o",
+        "repo": "incline.nvim",
+        "type": "github"
+      }
+    },
     "plugins-lze": {
       "flake": false,
       "locked": {
@@ -140,6 +156,7 @@
       "inputs": {
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs",
+        "plugins-incline-nvim": "plugins-incline-nvim",
         "plugins-lze": "plugins-lze",
         "plugins-lzextras": "plugins-lzextras",
         "pre-commit-hooks": "pre-commit-hooks"

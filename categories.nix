@@ -74,6 +74,7 @@ in
       general = with pkgs.vimPlugins; [
         pkgs.neovimPlugins.lze
         pkgs.neovimPlugins.lzextras
+        nui-nvim
         better-escape-nvim
         catppuccin-nvim
         nvim-lspconfig
@@ -83,6 +84,9 @@ in
         nvim-highlight-colors
         nvim-lint
         nvim-web-devicons
+        lualine-nvim
+        tabby-nvim
+        pkgs.neovimPlugins.incline-nvim
       ];
       # extra = with pkgs.neovimPlugins; [];
     };
@@ -96,6 +100,8 @@ in
         lazydev-nvim
         lspsaga-nvim
         conform-nvim
+        nvim-notify
+        noice-nvim
         oil-nvim
         image-nvim
         otter-nvim
