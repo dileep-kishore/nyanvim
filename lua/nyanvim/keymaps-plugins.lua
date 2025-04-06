@@ -102,3 +102,20 @@ map(
 map('n', '<Leader>lg', "<cmd>lua require('neogen').generate()<CR>", {
   desc = 'Generate documentation (neogen)',
 })
+
+-- ChatGPT
+map('n', '<leader>cg', '<cmd>ChatGPT<cr>', { desc = 'ChatGPT' })
+map(
+  'n',
+  '<leader>cc',
+  '<cmd>CopilotChatToggle<cr>',
+  { desc = 'Copilot chat toggle' }
+)
+map('n', '<leader>ca', '<cmd>ChatGPTActAs<cr>', { desc = 'ChatGPT act as' })
+map(
+  'v',
+  '<leader>ce',
+  '<cmd>ChatGPTEditWithInstruction<cr>',
+  { desc = 'ChatGPT edit with instruction' }
+)
+map('n', '<leader>cr', ':ChatGPTRun ', { desc = 'ChatGPT run' })

@@ -102,6 +102,7 @@ in
         copilot-lua
         neogen
         avante-nvim
+        ChatGPT-nvim
       ];
     };
 
