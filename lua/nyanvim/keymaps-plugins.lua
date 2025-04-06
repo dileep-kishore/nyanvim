@@ -8,8 +8,24 @@ local function map(mode, key, action, opts)
 end
 
 -- LSP (keymaps)
--- nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
--- nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+map(
+  'n',
+  'gD',
+  '<cmd>lua vim.lsp.buf.references()<cr>',
+  { desc = '[G]oto [D]eclaration' }
+)
+map(
+  'n',
+  'gt',
+  '<cmd>lua vim.lsp.buf.type_definition()<cr>',
+  { desc = 'Type [D]efinition' }
+)
+map(
+  'n',
+  'gi',
+  '<cmd>lua vim.lsp.buf.implementation()<cr>',
+  { desc = 'Type [D]efinition' }
+)
 map(
   'n',
   '<leader>le',
