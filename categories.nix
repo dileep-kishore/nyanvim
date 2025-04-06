@@ -102,6 +102,7 @@ in
         conform-nvim
         nvim-notify
         noice-nvim
+        arrow-nvim
         oil-nvim
         image-nvim
         otter-nvim
