@@ -1,16 +1,11 @@
 local servers = {}
 
--- TODO:
--- bashls, dockerls, eslint, gopls, jsonls, harper_ls, ltex, texlab, marksman, julials, ts_ls, rust_analyzer, svelte, tailwindcss, typst_lsp, cssls, html
-
 servers.lua_ls = {
   filetypes = { 'lua' },
   settings = {
     Lua = {
       runtime = { version = 'LuaJIT' },
-      formatters = {
-        ignoreComments = true,
-      },
+      formatters = { ignoreComments = true },
       signatureHelp = { enabled = true },
       diagnostics = {
         globals = { 'nixCats', 'vim' },
@@ -21,13 +16,7 @@ servers.lua_ls = {
   },
 }
 
-servers.gopls = {
-  filetypes = { 'go' },
-}
-
-servers.basedpyright = {
-  filetypes = { 'python' },
-}
+servers.basedpyright = {}
 
 servers.nixd = {
   filetypes = { 'nix' },
@@ -46,5 +35,63 @@ servers.nixd = {
   },
 }
 
+servers.gopls = {}
+
 servers.astro = {}
+
+servers.bashls = {}
+
+servers.dockerls = {}
+
+servers.eslint = {}
+
+servers.jsonls = {}
+
+servers.harper_ls = {
+  filetypes = { 'markdown', 'gitcommit', 'typst', 'html', 'text' },
+}
+
+servers.ltex_plus = {
+  filetypes = {
+    'bib',
+    'org',
+    'plaintex',
+    'rst',
+    'rnoweb',
+    'tex',
+    'pandoc',
+    'quarto',
+    'rmd',
+    'context',
+  },
+  settings = {
+    check_frequency = 'save',
+  },
+}
+
+servers.texlab = {}
+
+servers.marksman = {}
+
+-- NOTE: julials must be installed manually
+-- julia --project=~/.julia/environments/nvim-lspconfig -e 'using Pkg; Pkg.add("LanguageServer")'
+-- julia --project=~/.julia/environments/nvim-lspconfig -e 'using Pkg; Pkg.update()'
+servers.julials = {}
+
+servers.ts_ls = {}
+
+servers.ts_ls = {}
+
+servers.rust_analyzer = {}
+
+servers.svelte = {}
+
+servers.tailwindcss = {}
+
+servers.tinymist = {}
+
+servers.cssls = {}
+
+servers.html = {}
+
 return servers

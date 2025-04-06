@@ -28,12 +28,26 @@ in
         nodejs_23
         ripgrep
         fd
+
         # lsps
         lua-language-server
         gopls
         basedpyright
         nixd
         astro-language-server
+        bash-language-server
+        dockerfile-language-server-nodejs
+        vscode-langservers-extracted
+        harper
+        ltex-ls-plus
+        texlab
+        marksman
+        typescript-language-server
+        rust-analyzer
+        svelte-language-server
+        tailwindcss-language-server
+        tinymist
+
         # formatters
         stylua
         alejandra
@@ -42,8 +56,9 @@ in
         rustfmt
         ruff
         prettierd
-        typstfmt
+        typstyle
         yamlfix
+
         # linters
         rstcheck
         vale

@@ -38,7 +38,7 @@ require('lze').load {
           json = { 'prettierd' },
           yaml = { 'yamlfix', 'prettierd' },
           markdown = { 'prettierd' },
-          typst = { 'typstfmt' },
+          typst = { 'typstyle' },
           -- run formatters on filetypes that don't have other formatters configured.
           ['_'] = { 'trim_newlines', 'trim_whitespace' },
           -- Uncomment the following to run formatters on all filetypes.

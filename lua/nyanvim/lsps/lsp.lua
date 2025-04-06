@@ -35,5 +35,4 @@ require('lze').load {
       }
     end,
   },
-  -- TODO:  bashls, dockerls, eslint, gopls, jsonls, harper_ls, ltex, texlab, marksman, julials, ts_ls, rust_analyzer, svelte, tailwindcss, typst_lsp, cssls, html
 }
