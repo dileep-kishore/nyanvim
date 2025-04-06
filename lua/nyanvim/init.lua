@@ -6,11 +6,12 @@ require 'nyanvim.keymaps'
 -- and trigger lspconfig setup hooks only on the correct filetypes
 require('lze').register_handlers(require('lzextras').lsp)
 
-require 'nyanvim.plugins'
 require 'nyanvim.themes'
 require 'nyanvim.lsps'
 require 'nyanvim.completions'
 require 'nyanvim.treesitter'
+require 'nyanvim.plugins'
+require 'nyanvim.ai'
 require 'nyanvim.ui'
 -- require 'nyanvim.lint'
 -- require 'nyanvim.format'

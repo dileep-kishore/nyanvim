@@ -101,6 +101,7 @@ in
         otter-nvim
         copilot-lua
         neogen
+        avante-nvim
       ];
     };
 
