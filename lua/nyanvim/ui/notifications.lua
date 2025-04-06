@@ -42,3 +42,13 @@ require('lze').load {
     end,
   },
 }
+
+-- NOTE: Disable deprecation warnings for vim.tbl_islist
+local original_deprecate = vim.deprecate
+
+vim.deprecate = function(msg, ...)
+  if msg:find 'vim.tbl_islist' then
+    return
+  end
+  original_deprecate(msg, ...)
+end
