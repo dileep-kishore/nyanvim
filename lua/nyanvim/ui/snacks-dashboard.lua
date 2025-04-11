@@ -39,7 +39,7 @@ M.dashboard = {
         icon = ' ',
         key = 'r',
         desc = 'Restore Session',
-        action = ':SessionRestore',
+        action = ':PossessionLoad',
       },
       { icon = ' ', key = 'q', desc = 'Quit', action = ':qa' },
     },

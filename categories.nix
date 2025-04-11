@@ -111,13 +111,13 @@ in
         arrow-nvim
         oil-nvim
         mini-indentscope
-        auto-session
         otter-nvim
         copilot-lua
         neogen
         avante-nvim
         ChatGPT-nvim
         wtf-nvim
+        pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
         pkgs.neovimPlugins.neopyter
       ];

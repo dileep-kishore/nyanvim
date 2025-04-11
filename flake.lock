@@ -148,6 +148,22 @@
         "type": "github"
       }
     },
+    "plugins-possession-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1743970536,
+        "narHash": "sha256-RJ+6qWBLJDhLqkjuV/ESescWUvmEWkVN9QnBLiLVpbs=",
+        "owner": "jedrzejboczar",
+        "repo": "possession.nvim",
+        "rev": "8fb21fabae4e5ffd98386e1b11e9d9d429633bdf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jedrzejboczar",
+        "repo": "possession.nvim",
+        "type": "github"
+      }
+    },
     "plugins-websocket-nvim": {
       "flake": false,
       "locked": {
@@ -192,6 +208,7 @@
         "plugins-lze": "plugins-lze",
         "plugins-lzextras": "plugins-lzextras",
         "plugins-neopyter": "plugins-neopyter",
+        "plugins-possession-nvim": "plugins-possession-nvim",
         "plugins-websocket-nvim": "plugins-websocket-nvim",
         "pre-commit-hooks": "pre-commit-hooks"
       }

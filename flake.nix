@@ -24,6 +24,10 @@
       url = "github:SUSTech-data/neopyter";
       flake = false;
     };
+    plugins-possession-nvim = {
+      url = "github:jedrzejboczar/possession.nvim";
+      flake = false;
+    };
   };
 
   outputs = {
