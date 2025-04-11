@@ -111,6 +111,7 @@ in
         arrow-nvim
         oil-nvim
         mini-indentscope
+        auto-session
         otter-nvim
         copilot-lua
         neogen

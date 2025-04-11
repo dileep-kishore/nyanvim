@@ -37,9 +37,9 @@ M.dashboard = {
       },
       {
         icon = ' ',
-        key = 's',
+        key = 'r',
         desc = 'Restore Session',
-        section = 'session',
+        action = ':SessionRestore',
       },
       { icon = ' ', key = 'q', desc = 'Quit', action = ':qa' },
     },
