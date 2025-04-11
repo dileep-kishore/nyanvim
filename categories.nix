@@ -107,6 +107,7 @@ in
         nvim-notify
         noice-nvim
         indent-blankline-nvim
+        which-key-nvim
         arrow-nvim
         oil-nvim
         mini-indentscope
