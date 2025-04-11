@@ -12,6 +12,7 @@ require('lze').load {
             border = 'rounded',
             backdrop = false,
           },
+          git = { backdrop = false },
         },
         bigfile = { enabled = true },
         gitbrowse = { enabled = true },

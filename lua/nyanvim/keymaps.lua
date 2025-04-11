@@ -65,8 +65,14 @@ map('n', '<C-s>', '<cmd>w<CR>', { desc = 'Save file' })
 map(
   'n',
   '<Leader>qb',
-  "<cmd>lua require('mini.bufremove').delete()<CR>",
+  "<cmd>lua require('snacks').bufdelete()<CR>",
   { desc = 'Delete buffer' }
+)
+map(
+  'n',
+  '<Leader>qB',
+  "<cmd>lua require('snacks').bufdelete.all()<CR>",
+  { desc = 'Delete all buffers' }
 )
 map('n', '<Leader>qw', '<cmd>q<CR>', { desc = 'Close window' })
 map('n', '<Leader>qt', '<cmd>tabclose<CR>', { desc = 'Close tab' })
