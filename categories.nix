@@ -102,6 +102,7 @@ in
         lazydev-nvim
         lspsaga-nvim
         conform-nvim
+        snacks-nvim
         nvim-notify
         noice-nvim
         arrow-nvim
