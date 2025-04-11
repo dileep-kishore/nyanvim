@@ -1,5 +1,4 @@
 require('lze').load {
-  -- TODO: Replace this snacks.notify
   {
     'nvim-notify',
     -- event = { 'DeferredUIEnter' },
@@ -23,12 +22,7 @@ require('lze').load {
     end,
     after = function(_)
       require('noice').setup {
-        lsp = {
-          override = {
-            ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
-            ['vim.lsp.util.stylize_markdown'] = true,
-          },
-        },
+        lsp = { progress = { enabled = true } },
         presets = {
           bottom_search = false,
           command_palette = true,
