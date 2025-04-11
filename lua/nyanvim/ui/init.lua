@@ -1,4 +1,5 @@
 require 'nyanvim.ui.snacks'
+require 'nyanvim.ui.indent'
 require 'nyanvim.ui.highlight-colors'
 require 'nyanvim.ui.notifications'
 require 'nyanvim.ui.arrow'

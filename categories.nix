@@ -105,6 +105,7 @@ in
         snacks-nvim
         nvim-notify
         noice-nvim
+        indent-blankline-nvim
         arrow-nvim
         oil-nvim
         image-nvim
