@@ -4,6 +4,7 @@ require('lze').load {
     after = function(_)
       local snacks = require 'snacks'
       local snacks_dashboard = require 'nyanvim.ui.snacks-dashboard'
+      require 'nyanvim.ui.snacks-rename'
 
       snacks.setup {
         styles = {
