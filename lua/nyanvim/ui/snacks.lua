@@ -26,6 +26,10 @@ require('lze').load {
           style = 'compact',
           timeout = 2500,
         },
+        image = {
+          enabled = true,
+          doc = { inline = false, float = true },
+        },
         picker = {
           layouts = {
             custom = {

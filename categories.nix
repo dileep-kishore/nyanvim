@@ -28,6 +28,7 @@ in
         nodejs_23
         ripgrep
         fd
+        imagemagick
 
         # lsps
         lua-language-server
@@ -109,7 +110,6 @@ in
         arrow-nvim
         oil-nvim
         mini-indentscope
-        image-nvim
         otter-nvim
         copilot-lua
         neogen
