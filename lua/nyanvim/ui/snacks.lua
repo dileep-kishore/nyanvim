@@ -56,10 +56,10 @@ require('lze').load {
             git_log_file = { layout = { preset = 'vertical' } },
 
             -- Snacks pickers (search) [s]
-            grep = { layout = { preset = 'ivy' } },
+            grep = { layout = { preset = 'vertical' } },
             -- lines = {layout = {preset = "ivy"}},
-            grep_buffers = { layout = { preset = 'ivy' } },
-            todo_comments = { layout = { preset = 'ivy' } },
+            grep_buffers = { layout = { preset = 'vertical' } },
+            todo_comments = { layout = { preset = 'vertical' } },
 
             -- Snacks pickers (misc) [t]
             command_history = { layout = { preset = 'vscode_custom' } },
@@ -71,7 +71,7 @@ require('lze').load {
             keymaps = { layout = { preset = 'vscode_custom' } },
 
             -- Snacks pickers (lsp) [l]
-            diagnostics = { layout = { preset = 'ivy' } },
+            diagnostics = { layout = { preset = 'vertical' } },
             lsp_symbols = { layout = { preset = 'custom' } },
           },
         },
