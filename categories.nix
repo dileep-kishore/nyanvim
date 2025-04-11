@@ -108,6 +108,7 @@ in
         indent-blankline-nvim
         arrow-nvim
         oil-nvim
+        mini-indentscope
         image-nvim
         otter-nvim
         copilot-lua
