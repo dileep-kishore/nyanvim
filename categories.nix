@@ -125,6 +125,7 @@ in
         mini-ai
         mini-animate
         mini-basics
+        mini-files
         otter-nvim
         iron-nvim
         copilot-lua
