@@ -42,6 +42,15 @@ require('lze').load {
         tail = { fg = colors.base, bg = colors.mauve, style = 'bold' },
       }
 
+      local function get_session_name()
+        local session_name = require('possession.session').get_session_name()
+        if session_name == nil then
+          return ' 󱙃 '
+        else
+          return ' 󰆓 ' .. session_name
+        end
+      end
+
       local open_tabs = {}
 
       local tab_name = function(tab)
@@ -99,6 +108,12 @@ require('lze').load {
       require('tabby.tabline').set(function(line)
         return {
           {
+            {
+              get_session_name(),
+              hl = theme.head,
+              margin = ' ',
+            },
+            line.sep('󰇝', theme.fill, theme.head),
             { ' 󰓩 ', hl = theme.head },
             { tab_count(), hl = theme.head },
             -- line.sep('█ ', theme.head, theme.fill),
