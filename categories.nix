@@ -118,6 +118,8 @@ in
         octo-nvim
         arrow-nvim
         oil-nvim
+        comment-nvim
+        nvim-ts-context-commentstring
         mini-indentscope
         mini-ai
         mini-animate
