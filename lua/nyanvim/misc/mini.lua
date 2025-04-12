@@ -67,4 +67,14 @@ require('lze').load {
       require('mini.move').setup {}
     end,
   },
+  {
+    'mini.operators',
+    event = { 'DeferredUIEnter' },
+    after = function(_)
+      require('mini.operators').setup {
+        exchange = { prefix = 'ge' },
+        sort = { prefix = 'gS' },
+      }
+    end,
+  },
 }

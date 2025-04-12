@@ -128,6 +128,7 @@ in
         mini-files
         mini-icons
         mini-move
+        mini-operators
         otter-nvim
         iron-nvim
         copilot-lua
