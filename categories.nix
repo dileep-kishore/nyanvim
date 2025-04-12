@@ -111,6 +111,10 @@ in
         noice-nvim
         indent-blankline-nvim
         which-key-nvim
+        gitsigns-nvim
+        diffview-nvim
+        neogit
+        octo-nvim
         arrow-nvim
         oil-nvim
         mini-indentscope

@@ -31,6 +31,12 @@ require('lze').load {
           enabled = true,
           doc = { inline = false, float = true },
         },
+        statuscolumn = {
+          enabled = false,
+          left = { 'mark', 'sign' },
+          right = { 'fold', 'git' },
+          folds = { open = false, git_hl = true },
+        },
         picker = {
           layouts = {
             custom = {

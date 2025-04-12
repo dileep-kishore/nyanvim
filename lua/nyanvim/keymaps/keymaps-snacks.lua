@@ -64,6 +64,18 @@ map(
   '<cmd>lua Snacks.git.blame_line()<cr>',
   { desc = 'Git blame line' }
 )
+map(
+  'n',
+  '<leader>gl',
+  '<cmd>lua Snacks.lazygit.open()<CR>',
+  { desc = 'LazyGit' }
+)
+map(
+  'n',
+  '<leader>go',
+  '"<cmd>lua Snacks.gitbrowse()<CR>"',
+  { desc = 'Git browse' }
+)
 
 -- Snacks pickers (search) [s]
 map(
