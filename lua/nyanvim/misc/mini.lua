@@ -60,4 +60,11 @@ require('lze').load {
       }
     end,
   },
+  {
+    'mini.move',
+    event = { 'DeferredUIEnter' },
+    after = function(_)
+      require('mini.move').setup {}
+    end,
+  },
 }

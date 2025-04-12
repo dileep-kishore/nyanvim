@@ -127,6 +127,7 @@ in
         mini-basics
         mini-files
         mini-icons
+        mini-move
         otter-nvim
         iron-nvim
         copilot-lua
