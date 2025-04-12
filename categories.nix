@@ -119,6 +119,7 @@ in
         oil-nvim
         mini-indentscope
         otter-nvim
+        iron-nvim
         copilot-lua
         neogen
         avante-nvim
