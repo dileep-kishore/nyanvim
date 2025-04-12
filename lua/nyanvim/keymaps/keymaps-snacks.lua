@@ -10,6 +10,18 @@ end
 -- Snacks pickers (find) [f]
 map(
   'n',
+  '<leader>o',
+  '<cmd>lua Snacks.picker.git_files({untracked=true})<cr>',
+  { desc = 'Find git files' }
+)
+map(
+  'n',
+  '<leader>b',
+  '<cmd>lua Snacks.picker.buffers()<cr>',
+  { desc = 'Find buffers' }
+)
+map(
+  'n',
   '<leader>ff',
   '<cmd>lua Snacks.picker.files()<cr>',
   { desc = 'Find files' }
