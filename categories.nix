@@ -129,6 +129,7 @@ in
         mini-icons
         mini-move
         mini-operators
+        mini-surround
         treesj
         nvim-autopairs
         otter-nvim
