@@ -35,4 +35,13 @@ require('lze').load {
       }
     end,
   },
+  {
+    'inc-rename.nvim',
+    event = { 'DeferredUIEnter' },
+    after = function(_)
+      require('inc_rename').setup {
+        show_message = true,
+      }
+    end,
+  },
 }

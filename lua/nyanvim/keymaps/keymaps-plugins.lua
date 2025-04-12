@@ -85,18 +85,7 @@ map(
   { desc = 'Lspsaga goto definition' }
 )
 -- LSP (rename)
-map(
-  'n',
-  '<Leader>lr',
-  '<cmd>Lspsaga rename<cr>',
-  { desc = 'Rename symbol (buffer)' }
-)
-map(
-  'n',
-  '<Leader>lR',
-  '<cmd>Lspsaga lsp_rename ++project<cr>',
-  { desc = 'Rename symbol (project-wide)' }
-)
+map('n', '<Leader>lr', ':IncRename ', { desc = 'Incremental rename' })
 
 -- LSP (documentation generation)
 map('n', '<Leader>lg', "<cmd>lua require('neogen').generate()<CR>", {

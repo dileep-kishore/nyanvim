@@ -109,6 +109,7 @@ in
         snacks-nvim
         nvim-notify
         noice-nvim
+        inc-rename-nvim
         indent-blankline-nvim
         which-key-nvim
         gitsigns-nvim
