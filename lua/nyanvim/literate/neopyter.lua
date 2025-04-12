@@ -1,3 +1,25 @@
+require('lze').load {
+  {
+    'neopyter',
+    lazy = false,
+    load = function(name)
+      require('lzextras').loaders.multi {
+        name,
+        'plenary.nvim',
+        'nvim-treesitter',
+        'websocket-nvim',
+      }
+    end,
+    after = function(_)
+      require('neopyter').setup {
+        mode = 'direct',
+        remote_address = '127.0.0.1:9001',
+        file_pattern = { '*.ju.*' },
+      }
+    end,
+  },
+}
+
 vim.keymap.set(
   'n',
   '<leader>jc',
@@ -23,49 +45,57 @@ vim.keymap.set(
   { desc = 'restart kernel and run all' }
 )
 
-require('lze').load {
+-- Provide a command to create a blank new Python notebook
+-- note: the metadata is needed for Jupytext to understand how to parse the notebook.
+-- if you use another language than Python, you should change it in the template.
+local default_notebook = [[
   {
-    'neopyter',
-    keys = {
-      {
-        '<leader>jc',
-        '<cmd>Neopyter execute notebook:run-cell<cr>',
-        mode = 'n',
-        desc = 'run selected',
+    "cells": [
+     {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        ""
+      ]
+     }
+    ],
+    "metadata": {
+     "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+     },
+     "language_info": {
+      "codemirror_mode": {
+        "name": "ipython"
       },
-      {
-        '<leader>ja',
-        '<cmd>Neopyter execute notebook:run-all-above<cr>',
-        mode = 'n',
-        desc = 'run all above cell',
-      },
-      {
-        '<leader>jr',
-        '<cmd>Neopyter execute kernelmenu:restart<cr>',
-        mode = 'n',
-        desc = 'restart kernel',
-      },
-      {
-        '<leader>jA',
-        '<cmd>Neopyter execute notebook:restart-run-all<cr>',
-        mode = 'n',
-        desc = 'restart kernel and run all',
-      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3"
+     }
     },
-    load = function(name)
-      require('lzextras').loaders.multi {
-        name,
-        'plenary.nvim',
-        'nvim-treesitter',
-        'websocket.nvim',
-      }
-    end,
-    after = function(_)
-      require('neopyter').setup {
-        mode = 'direct',
-        remote_address = '127.0.0.1:9001',
-        file_pattern = { '*.ju.*' },
-      }
-    end,
-  },
-}
+    "nbformat": 4,
+    "nbformat_minor": 5
+  }
+]]
+
+local function new_notebook(filename)
+  local path = filename
+  local file = io.open(path, 'w')
+  if file then
+    file:write(default_notebook)
+    file:close()
+    vim.cmd('edit ' .. path)
+  else
+    print 'Error: Could not open new notebook file for writing.'
+  end
+end
+
+vim.api.nvim_create_user_command('NewNotebook', function(opts)
+  new_notebook(opts.args)
+end, {
+  nargs = 1,
+  complete = 'file',
+})
