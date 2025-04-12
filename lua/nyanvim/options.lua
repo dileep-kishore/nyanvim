@@ -13,9 +13,6 @@ vim.g.clipboard = {
   cache_enabled = 0,
 }
 
--- FIXME: Is this the correct option?
-vim.g.EditorConfig_enable = true
-
 -- General Neovim options
 vim.opt.termguicolors = true
 vim.opt.showmode = false
@@ -60,3 +57,9 @@ vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+
+-- Always show tabline
+vim.o.showtabline = 2
+-- Save and restore tabpages
+vim.opt.sessionoptions =
+  'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
