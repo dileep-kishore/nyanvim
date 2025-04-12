@@ -22,4 +22,19 @@ require('lze').load {
       }
     end,
   },
+  {
+    'treesj',
+    keys = {
+      {
+        'gs',
+        '<cmd>lua require("treesj").toggle()<CR>',
+        desc = 'Toggle treesj',
+      },
+    },
+    after = function(_)
+      require('treesj').setup {
+        use_default_keymaps = false,
+      }
+    end,
+  },
 }
