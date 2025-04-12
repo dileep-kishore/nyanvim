@@ -77,11 +77,11 @@ require('lze').load {
           swap = {
             enable = true,
             swap_next = {
-              ['<leader>pl'] = '@parameter.inner',
+              ['gpl'] = '@parameter.inner',
               desc = 'Swap next parameter',
             },
             swap_previous = {
-              ['<leader>ph'] = '@parameter.inner',
+              ['gph'] = '@parameter.inner',
               desc = 'Swap previous parameter',
             },
           },
