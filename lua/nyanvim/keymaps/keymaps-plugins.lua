@@ -128,3 +128,20 @@ map(
   "<cmd>lua require'dapui'.toggle()<cr>",
   { desc = 'DAP toggle UI' }
 )
+
+-- sessions ([P]ossession)
+map('n', '<leader>pl', '<cmd>PossessionLoad<cr>', { desc = 'Possession Load' })
+map('n', '<leader>ps', '<cmd>PossessionSave<cr>', { desc = 'Possession Save' })
+map(
+  'n',
+  '<leader>pr',
+  '<cmd>PossessionRename<cr>',
+  { desc = 'Possession Rename' }
+)
+map(
+  'n',
+  '<leader>pd',
+  '<cmd>PossessionDelete<cr>',
+  { desc = 'Possession Delete' }
+)
+map('n', '<leader>ps', '<cmd>PossessionList<cr>', { desc = 'Possession List' })

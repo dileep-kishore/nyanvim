@@ -26,7 +26,7 @@ require('lze').load {
         { '<leader>m', group = '+Arrow' },
         { '<leader>n', group = '+Literate Notes' },
         { '<leader>o', group = '+Obsidian' },
-        { '<leader>p', group = '+Parameter swap' },
+        { '<leader>p', group = '+Pos[session]' },
         { '<Leader>q', group = '+Close' },
         { '<leader>r', group = '+Refactor' },
         { '<leader>R', group = '+Auto-session' },
