@@ -67,6 +67,9 @@ in
         stylelint
         hadolint
         eslint_d
+
+        # dap
+        python3Packages.debugpy
       ];
     };
 
@@ -117,6 +120,10 @@ in
         avante-nvim
         ChatGPT-nvim
         wtf-nvim
+        nvim-dap
+        nvim-dap-ui
+        nvim-dap-python
+        nvim-dap-virtual-text
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
         pkgs.neovimPlugins.neopyter

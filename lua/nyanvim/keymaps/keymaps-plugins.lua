@@ -119,3 +119,23 @@ map(
   { desc = 'ChatGPT edit with instruction' }
 )
 map('n', '<leader>cr', ':ChatGPTRun ', { desc = 'ChatGPT run' })
+
+-- DAP
+map(
+  'n',
+  '<leader>db',
+  "<cmd>lua require'dap'.toggle_breakpoint()<cr>",
+  { desc = 'DAP toggle breakpoint' }
+)
+map(
+  'n',
+  '<leader>dc',
+  "<cmd>lua require'dap'.continue()<cr>",
+  { desc = 'DAP continue' }
+)
+map(
+  'n',
+  '<leader>do',
+  "<cmd>lua require'dapui'.toggle()<cr>",
+  { desc = 'DAP toggle UI' }
+)

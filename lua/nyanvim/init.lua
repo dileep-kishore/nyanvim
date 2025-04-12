@@ -16,5 +16,6 @@ require 'nyanvim.bars'
 require 'nyanvim.ai'
 require 'nyanvim.literate'
 require 'nyanvim.misc'
+require 'nyanvim.debug'
 
 require 'nyanvim.keymaps'
