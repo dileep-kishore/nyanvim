@@ -105,6 +105,7 @@ in
         friendly-snippets
         lazydev-nvim
         lspsaga-nvim
+        vim-illuminate
         conform-nvim
         snacks-nvim
         nvim-notify

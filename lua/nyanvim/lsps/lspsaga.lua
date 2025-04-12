@@ -40,4 +40,14 @@ require('lze').load {
       }
     end,
   },
+  {
+    'vim-illuminate',
+    event = { 'DeferredUIEnter' },
+    after = function(_)
+      require('illuminate').configure {
+        under_cursor = false,
+        filetypes_denylist = { 'qf', 'help', 'grapple', 'Trouble' },
+      }
+    end,
+  },
 }
