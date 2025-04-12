@@ -18,6 +18,10 @@ map('n', '<Space>', '<Nop>')
 -- map('n', 'p', 'p')
 -- map('n', 'P', 'P')
 
+-- Window splitting
+map('n', '<Leader>wv', '<cmd>vsplit<CR>', { desc = 'Vertical split' })
+map('n', '<Leader>ws', '<cmd>split<CR>', { desc = 'Horizontal split' })
+
 -- Window navigation
 map('n', '<C-h>', '<C-w>h', { desc = 'Move to the window on the left' })
 map('n', '<C-j>', '<C-w>j', { desc = 'Move to the window below' })
