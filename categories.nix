@@ -129,6 +129,7 @@ in
         mini-icons
         mini-move
         mini-operators
+        nvim-autopairs
         otter-nvim
         iron-nvim
         copilot-lua
