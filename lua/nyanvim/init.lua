@@ -1,5 +1,4 @@
 require 'nyanvim.options'
-require 'nyanvim.keymaps.keymaps'
 
 -- NOTE: Register another one from lzextras. This one makes it so that
 -- you can set up lsps within lze specs,
@@ -20,3 +19,4 @@ require 'nyanvim.misc'
 require 'nyanvim.debug'
 
 require 'nyanvim.keymaps'
+require 'nyanvim.autocmds'
