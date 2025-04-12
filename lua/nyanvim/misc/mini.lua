@@ -51,4 +51,13 @@ require('lze').load {
       }
     end,
   },
+  {
+    'mini.icons',
+    event = { 'DeferredUIEnter' },
+    after = function(_)
+      require('mini.icons').setup {
+        style = 'glpyh',
+      }
+    end,
+  },
 }
