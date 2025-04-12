@@ -8,6 +8,7 @@ require('lze').load {
 
       snacks.setup {
         styles = {
+          float = { wo = { winblend = 0 } },
           lazygit = {
             border = 'rounded',
             backdrop = false,

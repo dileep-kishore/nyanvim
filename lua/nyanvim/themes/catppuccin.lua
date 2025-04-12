@@ -2,6 +2,7 @@ require('catppuccin').setup {
   flavour = 'mocha',
   transparent_background = false,
   term_colors = false,
+  dim_inactive = { enabled = false },
   styles = {
     keywords = { 'italic' },
     types = { 'italic' },
