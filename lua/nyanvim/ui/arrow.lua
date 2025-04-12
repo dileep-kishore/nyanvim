@@ -1,7 +1,7 @@
 require('lze').load {
   {
     'arrow.nvim',
-    -- event = { 'DeferredUIEnter' },
+    event = { 'DeferredUIEnter' },
     after = function(_)
       require('arrow').setup {
         leader_key = '<leader>m',
