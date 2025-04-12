@@ -119,6 +119,9 @@ in
         arrow-nvim
         oil-nvim
         mini-indentscope
+        mini-ai
+        mini-animate
+        mini-basics
         otter-nvim
         iron-nvim
         copilot-lua
