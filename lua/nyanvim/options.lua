@@ -38,13 +38,14 @@ vim.opt.guifont = 'Maple Mono NF:h13'
 vim.opt.listchars = { tab = '󰌒 ', trail = '•', nbsp = '␣' }
 vim.opt.list = true
 vim.opt.showbreak = '↪ '
-vim.opt.foldmethod = 'expr'
 vim.opt.foldnestmax = 20
 vim.opt.foldminlines = 2
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
-vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.o.foldenable = true
+vim.o.foldcolumn = '0'
+vim.o.fillchars = [[eob: ,fold: ,foldopen: ,foldsep: ,foldclose:]]
 
 -- Always show tabline
 vim.o.showtabline = 2

@@ -108,6 +108,8 @@ in
         lazydev-nvim
         lspsaga-nvim
         vim-illuminate
+        promise-async
+        nvim-ufo
         conform-nvim
         snacks-nvim
         nvim-notify
