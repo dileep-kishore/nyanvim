@@ -33,9 +33,8 @@ require('lze').load {
           nvim_cmp = false,
           blink = true,
         },
-        ui = {
-          enable = false,
-        },
+        picker = { name = 'snacks.pick' },
+        ui = { enable = false },
         attachments = {
           img_folder = 'Atlas/Utilities/Attachments',
         },
