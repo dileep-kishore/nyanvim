@@ -46,7 +46,14 @@ require('lze').load {
     after = function(_)
       require('illuminate').configure {
         under_cursor = false,
-        filetypes_denylist = { 'qf', 'help', 'grapple', 'Trouble' },
+        filetypes_denylist = {
+          'qf',
+          'help',
+          'grapple',
+          'Trouble',
+          'snacks_dashboard',
+          'oil',
+        },
       }
     end,
   },
