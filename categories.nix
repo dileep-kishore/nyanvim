@@ -29,6 +29,8 @@ in
         ripgrep
         fd
         imagemagick
+        lazygit
+        gh
 
         # lsps
         lua-language-server
