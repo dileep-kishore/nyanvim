@@ -37,4 +37,18 @@ require('lze').load {
       }
     end,
   },
+  {
+    'img-clip.nvim',
+    event = { 'DeferredUIEnter' },
+    keys = {
+      {
+        '<leader>P',
+        '<cmd>PasteImage<cr>',
+        desc = 'Paste image from clipboard',
+      },
+    },
+    after = function(_)
+      require('img-clip').setup {}
+    end,
+  },
 }

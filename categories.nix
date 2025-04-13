@@ -151,6 +151,7 @@ in
         render-markdown-nvim
         ssr-nvim
         grug-far-nvim
+        img-clip-nvim
         pkgs.neovimPlugins.modes-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
