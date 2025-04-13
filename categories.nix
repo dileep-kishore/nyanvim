@@ -143,6 +143,7 @@ in
         nvim-dap-ui
         nvim-dap-python
         nvim-dap-virtual-text
+        obsidian-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
         pkgs.neovimPlugins.neopyter

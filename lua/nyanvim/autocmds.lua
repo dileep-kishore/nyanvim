@@ -72,7 +72,7 @@ vim.api.nvim_create_autocmd({ 'WinEnter', 'WinNew' }, {
     local config = vim.api.nvim_win_get_config(win)
     -- Only adjust floating windows (those with a non-empty 'relative' field)
     if config.relative ~= '' then
-      vim.api.nvim_win_set_option(win, 'winblend', 0)
+      vim.api.nvim_set_option_value('winblend', 0, { win = win })
     end
   end,
 })
