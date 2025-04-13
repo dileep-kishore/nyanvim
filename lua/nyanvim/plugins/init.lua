@@ -53,4 +53,17 @@ require('lze').load {
       }
     end,
   },
+  {
+    'tabout.nvim',
+    event = 'InsertCharPre',
+    after = function(_)
+      require('tabout').setup {}
+    end,
+  },
+  {
+    'highlight-undo.nvim',
+    after = function(_)
+      require('highlight-undo').setup {}
+    end,
+  },
 }

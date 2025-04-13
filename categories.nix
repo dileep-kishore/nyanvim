@@ -152,6 +152,8 @@ in
         ssr-nvim
         grug-far-nvim
         img-clip-nvim
+        tabout-nvim
+        highlight-undo-nvim
         pkgs.neovimPlugins.modes-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
