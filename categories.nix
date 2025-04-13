@@ -156,6 +156,7 @@ in
         vim-repeat
         lspkind-nvim
         outline-nvim
+        nvim-spider
         pkgs.neovimPlugins.modes-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
