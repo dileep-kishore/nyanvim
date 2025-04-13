@@ -154,6 +154,8 @@ in
         img-clip-nvim
         tabout-nvim
         vim-repeat
+        lspkind-nvim
+        outline-nvim
         pkgs.neovimPlugins.modes-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim

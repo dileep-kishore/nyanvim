@@ -53,6 +53,7 @@ require('lze').load {
           'Trouble',
           'snacks_dashboard',
           'oil',
+          'Outline',
         },
       }
     end,

@@ -63,4 +63,38 @@ require('lze').load {
   {
     'vim-repeat',
   },
+  {
+    'outline.nvim',
+    cmd = { 'Outline', 'OutlineOpen' },
+    keys = {
+      {
+        'go',
+        '<cmd>Outline<CR>',
+        desc = 'Toggle Outline',
+      },
+    },
+    load = function(name)
+      require('lzextras').loaders.multi {
+        name,
+        'lspkind.nvim',
+      }
+    end,
+    after = function(_)
+      require('outline').setup {
+        symbols = {
+          icon_source = 'lspkind',
+          filter = {
+            default = { 'String', 'Variable', exclude = true },
+          },
+        },
+        keymaps = {
+          goto_location = 'e',
+          peek_location = '<Cr>',
+          fold = 'h',
+          unfold = 'l',
+          fold_toggle = 'o',
+        },
+      }
+    end,
+  },
 }

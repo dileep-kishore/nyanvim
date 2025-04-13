@@ -11,7 +11,7 @@ require('lze').load {
         symbol = '╎',
       }
       local disabled_filetypes =
-        { 'NvimTree', 'alpha', 'help', 'snacks_dashboard', '' }
+        { 'NvimTree', 'alpha', 'help', 'snacks_dashboard', '', 'Outline' }
       vim.api.nvim_create_autocmd('BufWinEnter', {
         group = vim.api.nvim_create_augroup(
           'MiniIndentScopeDisable',
