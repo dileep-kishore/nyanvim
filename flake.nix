@@ -28,6 +28,10 @@
       url = "github:jedrzejboczar/possession.nvim";
       flake = false;
     };
+    plugins-modes-nvim = {
+      url = "github:mvllow/modes.nvim";
+      flake = false;
+    };
   };
 
   outputs = {

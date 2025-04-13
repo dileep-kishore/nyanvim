@@ -132,6 +132,22 @@
         "type": "github"
       }
     },
+    "plugins-modes-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1744317427,
+        "narHash": "sha256-V7a6h1MUxoA6LuINkVtrAlHx2OH5SUuapzWa4zVTCyE=",
+        "owner": "mvllow",
+        "repo": "modes.nvim",
+        "rev": "7c6ca20de4c9acb22ef06074e39fd2c021b99935",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mvllow",
+        "repo": "modes.nvim",
+        "type": "github"
+      }
+    },
     "plugins-neopyter": {
       "flake": false,
       "locked": {
@@ -207,6 +223,7 @@
         "plugins-incline-nvim": "plugins-incline-nvim",
         "plugins-lze": "plugins-lze",
         "plugins-lzextras": "plugins-lzextras",
+        "plugins-modes-nvim": "plugins-modes-nvim",
         "plugins-neopyter": "plugins-neopyter",
         "plugins-possession-nvim": "plugins-possession-nvim",
         "plugins-websocket-nvim": "plugins-websocket-nvim",
