@@ -153,7 +153,7 @@ in
         grug-far-nvim
         img-clip-nvim
         tabout-nvim
-        highlight-undo-nvim
+        vim-repeat
         pkgs.neovimPlugins.modes-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim

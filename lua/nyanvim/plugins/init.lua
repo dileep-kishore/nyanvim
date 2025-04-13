@@ -61,9 +61,6 @@ require('lze').load {
     end,
   },
   {
-    'highlight-undo.nvim',
-    after = function(_)
-      require('highlight-undo').setup {}
-    end,
+    'vim-repeat',
   },
 }
