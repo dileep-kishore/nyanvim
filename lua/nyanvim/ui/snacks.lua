@@ -21,7 +21,7 @@ require('lze').load {
           enabled = true,
           win = { position = 'float' },
         },
-        quickfile = { enabled = true },
+        quickfile = { enabled = false },
         dashboard = snacks_dashboard.dashboard,
         notifier = {
           enabled = true,
