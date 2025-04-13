@@ -147,6 +147,8 @@ in
         nvim-dap-virtual-text
         obsidian-nvim
         render-markdown-nvim
+        ssr-nvim
+        grug-far-nvim
         pkgs.neovimPlugins.modes-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
