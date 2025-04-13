@@ -92,6 +92,9 @@ require('lze').load {
         max_lines = 0,
         mode = 'topline',
         separator = '-',
+        on_attach = function(bufnr)
+          return vim.bo[bufnr].filetype ~= 'markdown'
+        end,
       }
     end,
   },

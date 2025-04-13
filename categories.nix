@@ -144,6 +144,7 @@ in
         nvim-dap-python
         nvim-dap-virtual-text
         obsidian-nvim
+        render-markdown-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
         pkgs.neovimPlugins.neopyter
