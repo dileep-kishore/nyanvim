@@ -27,9 +27,9 @@ require('lze').load {
           sign = true,
           virtual_text = false,
         },
-        outline = { layout = 'float' },
-        keys = {
-          toggle_or_open = '<CR>',
+        outline = {
+          layout = 'float',
+          keys = { toggle_or_jump = '<CR>' },
         },
         symbol_in_winbar = {
           enable = true,
