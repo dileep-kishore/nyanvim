@@ -48,7 +48,9 @@ require('lze').load {
       },
     },
     after = function(_)
-      require('img-clip').setup {}
+      require('img-clip').setup {
+        show_dir_path_in_prompt = true,
+      }
     end,
   },
 }
