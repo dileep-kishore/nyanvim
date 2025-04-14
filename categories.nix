@@ -160,6 +160,9 @@ in
         vim-tmux-navigator
         trouble-nvim
         todo-comments-nvim
+        refactoring-nvim
+        nvim-bqf
+        marks-nvim
         pkgs.neovimPlugins.modes-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim

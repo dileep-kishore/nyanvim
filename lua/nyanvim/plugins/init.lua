@@ -198,4 +198,60 @@ require('lze').load {
       }
     end,
   },
+  {
+    'refactoring.nvim',
+    event = { 'DeferredUIEnter' },
+    keys = {
+      {
+        '<leader>re',
+        ':Refactor extract ',
+        mode = 'x',
+        desc = 'Extract function',
+      },
+      {
+        '<leader>rf',
+        ':Refactor extract_to_file ',
+        mode = 'x',
+        desc = 'Extract function to file',
+      },
+      {
+        '<leader>rv',
+        ':Refactor extract_var ',
+        mode = 'x',
+        desc = 'Extract variable',
+      },
+    },
+    after = function(_)
+      require('refactoring').setup {}
+    end,
+  },
+  {
+    'nvim-bqf',
+    after = function(_)
+      require('bqf').setup {
+        auto_enable = true,
+      }
+    end,
+  },
+  {
+    'marks.nvim',
+    event = { 'DeferredUIEnter' },
+    keys = {
+      {
+        '<leader>xm',
+        '<cmd>MarksListBuf<CR>',
+        desc = 'Quickfix marks (buffer)',
+      },
+      {
+        '<leader>xM',
+        '<cmd>MarksListAll<CR>',
+        desc = 'Quickfix marks (all)',
+      },
+    },
+    after = function(_)
+      require('marks').setup {
+        default_mappings = true,
+      }
+    end,
+  },
 }
