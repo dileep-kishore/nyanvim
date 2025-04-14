@@ -157,6 +157,9 @@ in
         lspkind-nvim
         outline-nvim
         nvim-spider
+        vim-tmux-navigator
+        trouble-nvim
+        todo-comments-nvim
         pkgs.neovimPlugins.modes-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
