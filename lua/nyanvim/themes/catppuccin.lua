@@ -30,7 +30,7 @@ require('catppuccin').setup {
       ['@comment.info'] = { link = 'Comment' },
       ['@comment.error'] = { link = 'Comment' },
       ['@comment.warning'] = { link = 'Comment' },
-      Folded = { bg = colors.mantle },
+      Folded = { bg = colors.base },
     }
   end,
   integrations = {
