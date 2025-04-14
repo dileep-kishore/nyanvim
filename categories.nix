@@ -31,6 +31,7 @@ in
         imagemagick
         lazygit
         gh
+        python3Packages.pylatexenc
 
         # lsps
         lua-language-server
@@ -136,7 +137,6 @@ in
         mini-surround
         treesj
         nvim-autopairs
-        otter-nvim
         iron-nvim
         copilot-lua
         neogen
@@ -163,6 +163,9 @@ in
         refactoring-nvim
         nvim-bqf
         marks-nvim
+        markdown-preview-nvim
+        cloak-nvim
+        git-conflict-nvim
         pkgs.neovimPlugins.modes-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
@@ -188,6 +191,7 @@ in
     python3.libraries = {
       python = py: [
         py.debugpy
+        py.pylatexenc
       ];
     };
 

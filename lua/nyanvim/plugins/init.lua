@@ -254,4 +254,28 @@ require('lze').load {
       }
     end,
   },
+  {
+    'markdown-preview.nvim',
+    cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
+    ft = { 'markdown' },
+  },
+  {
+    'cloak.nvim',
+    event = { 'DeferredUIEnter' },
+    after = function(_)
+      require('cloak').setup {
+        enabled = true,
+      }
+    end,
+  },
+  {
+    'git-conflict.nvim',
+    event = { 'DeferredUIEnter' },
+    after = function(_)
+      require('git-conflict').setup {
+        default_commands = true,
+        default_mappings = true,
+      }
+    end,
+  },
 }
