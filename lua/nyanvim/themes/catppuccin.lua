@@ -51,7 +51,7 @@ require('catppuccin').setup {
     mason = true,
     mini = {
       enabled = true,
-      indentscope_color = 'overlay2',
+      indentscope_color = 'mauve',
     },
     native_lsp = {
       enabled = true,
