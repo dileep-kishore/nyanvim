@@ -1,14 +1,10 @@
 local fold_handler = function(virtText, lnum, endLnum, width, truncate)
   local newVirtText = {}
-  -- local prefix = '+--- '
-  local prefix = '+'
-  table.insert(newVirtText, { prefix, 'MoreMsg' })
-  local prefixWidth = vim.fn.strdisplaywidth(prefix)
-  local suffix = (' ·········· 󰘕 %d lines ···'):format(
+  local suffix = (' ───────────────┤ 󰘕 %d lines ├─────'):format(
     endLnum - lnum
   )
   local sufWidth = vim.fn.strdisplaywidth(suffix)
-  local targetWidth = width - sufWidth - prefixWidth
+  local targetWidth = width - sufWidth
   local curWidth = 0
   for _, chunk in ipairs(virtText) do
     local chunkText = chunk[1]
