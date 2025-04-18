@@ -40,6 +40,9 @@ require('catppuccin').setup {
       ['@comment.error'] = { link = 'Comment' },
       ['@comment.warning'] = { link = 'Comment' },
       Folded = { bg = colors.base },
+      MarkSignHL = { bg = colors.base },
+      MarkSignNumHL = { bg = colors.base },
+      MarkVirtTextHL = { bg = colors.base },
       IlluminatedWordText = { bg = colors.surface0, underline = true },
       IlluminatedWordRead = { bg = colors.surface0, underline = true },
       IlluminatedWordWrite = {
@@ -47,6 +50,7 @@ require('catppuccin').setup {
         underline = true,
         standout = true,
       },
+      NoiceCmdlinePopup = { bg = colors.base, blend = 0 },
     }
   end,
   integrations = {
@@ -54,9 +58,15 @@ require('catppuccin').setup {
     colorful_winsep = { enabled = true, color = 'mauve' },
     dap = true,
     dap_ui = true,
+    diffview = true,
     flash = true,
     gitsigns = true,
     grug_far = true,
+    indent_blankline = {
+      enabled = true,
+      scope_color = 'mauve',
+      colored_indent_levels = false,
+    },
     illuminate = { enabled = true, lsp = true },
     lsp_saga = true,
     lsp_trouble = true,

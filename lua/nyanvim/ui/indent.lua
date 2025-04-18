@@ -2,8 +2,21 @@ require('lze').load {
   {
     'indent-blankline.nvim',
     event = { 'DeferredUIEnter' },
+    keys = {
+      {
+        '<leader>ii',
+        function()
+          require('ibl').setup_buffer(0, {
+            enabled = not require('ibl.config').get_config(0).enabled,
+          })
+        end,
+        mode = { 'n', 'x' },
+        desc = 'Toggle indent blankline',
+      },
+    },
     after = function(_)
       require('ibl').setup {
+        enabled = false,
         indent = {
           char = '│',
           smart_indent_cap = true,

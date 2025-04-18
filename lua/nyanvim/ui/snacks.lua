@@ -34,9 +34,9 @@ require('lze').load {
         },
         statuscolumn = {
           enabled = true,
-          left = { 'mark', 'sign', 'fold', 'git' },
-          right = {},
-          folds = { open = false, git_hl = true },
+          left = { 'mark', 'sign' },
+          right = { 'fold', 'git' },
+          folds = { open = true, git_hl = true },
         },
         picker = {
           layouts = {
