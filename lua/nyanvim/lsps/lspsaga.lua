@@ -46,6 +46,8 @@ require('lze').load {
     after = function(_)
       require('illuminate').configure {
         under_cursor = false,
+        delay = 1000,
+        min_count_to_highlight = 2,
         filetypes_denylist = {
           'qf',
           'help',

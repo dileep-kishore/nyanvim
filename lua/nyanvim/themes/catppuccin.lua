@@ -40,6 +40,13 @@ require('catppuccin').setup {
       ['@comment.error'] = { link = 'Comment' },
       ['@comment.warning'] = { link = 'Comment' },
       Folded = { bg = colors.base },
+      IlluminatedWordText = { bg = colors.surface0, underline = true },
+      IlluminatedWordRead = { bg = colors.surface0, underline = true },
+      IlluminatedWordWrite = {
+        bg = colors.surface0,
+        underline = true,
+        standout = true,
+      },
     }
   end,
   integrations = {
