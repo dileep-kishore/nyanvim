@@ -171,6 +171,7 @@ in
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
         pkgs.neovimPlugins.neopyter
+        pkgs.neovimPlugins.colorful-winsep-nvim
       ];
     };
 

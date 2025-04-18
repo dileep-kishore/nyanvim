@@ -84,6 +84,22 @@
         "type": "github"
       }
     },
+    "plugins-colorful-winsep-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1744337773,
+        "narHash": "sha256-3ZXbpUNZqLHaUWgb2wHnfQfcGkMpcRtAt8q7z0tmo1o=",
+        "owner": "nvim-zh",
+        "repo": "colorful-winsep.nvim",
+        "rev": "7bbe4e1353c0fe37c98bad2758aafc410280f6b3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-zh",
+        "repo": "colorful-winsep.nvim",
+        "type": "github"
+      }
+    },
     "plugins-incline-nvim": {
       "flake": false,
       "locked": {
@@ -220,6 +236,7 @@
       "inputs": {
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs",
+        "plugins-colorful-winsep-nvim": "plugins-colorful-winsep-nvim",
         "plugins-incline-nvim": "plugins-incline-nvim",
         "plugins-lze": "plugins-lze",
         "plugins-lzextras": "plugins-lzextras",

@@ -32,6 +32,10 @@
       url = "github:mvllow/modes.nvim";
       flake = false;
     };
+    plugins-colorful-winsep-nvim = {
+      url = "github:nvim-zh/colorful-winsep.nvim";
+      flake = false;
+    };
   };
 
   outputs = {
