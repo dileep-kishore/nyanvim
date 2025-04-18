@@ -84,6 +84,7 @@ in
         nui-nvim
         better-escape-nvim
         catppuccin-nvim
+        rose-pine
         nvim-lspconfig
         nvim-treesitter.withAllGrammars
         nvim-treesitter-textobjects

@@ -2,7 +2,15 @@ require('catppuccin').setup {
   flavour = 'mocha',
   transparent_background = false,
   term_colors = false,
-  dim_inactive = { enabled = false },
+  dim_inactive = {
+    enabled = false,
+    shade = 'dark',
+    percentage = 0.15,
+  },
+  background = {
+    dark = 'mocha',
+    light = 'latte',
+  },
   styles = {
     keywords = { 'italic' },
     types = { 'italic' },
@@ -20,6 +28,7 @@ require('catppuccin').setup {
       FloatBorder = { bg = colors.base },
       NormalFloat = { bg = colors.base },
       ZenBg = { bg = colors.base },
+      TreeSitterContext = { bg = colors.base },
       TreesitterContextLineNumber = { bg = colors.mantle },
       TreesitterContextBottom = { style = {} },
       TreesitterContextLineNumberBottom = { style = {} },
@@ -69,6 +78,7 @@ require('catppuccin').setup {
     rainbow_delimiters = true,
     treesitter = true,
     semantic_tokens = true,
+    telescope = { enabled = true },
     symbols_outline = true,
     which_key = true,
     treesitter_context = true,
