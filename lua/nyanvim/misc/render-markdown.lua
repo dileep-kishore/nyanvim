@@ -26,8 +26,6 @@ require('lze').load {
         indent = { enabled = false },
         code = {
           width = 'block',
-          language_pad = 2,
-          left_pad = 2,
           position = 'left',
           right_pad = 5,
           border = 'thick',

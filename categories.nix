@@ -167,6 +167,7 @@ in
         markdown-preview-nvim
         cloak-nvim
         git-conflict-nvim
+        hlchunk-nvim
         pkgs.neovimPlugins.modes-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim

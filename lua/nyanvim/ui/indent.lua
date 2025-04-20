@@ -62,4 +62,34 @@ require('lze').load {
       )
     end,
   },
+  {
+    'hlchunk.nvim',
+    event = { 'DeferredUIEnter' },
+    after = function(_)
+      local colors = require('catppuccin.palettes').get_palette 'mocha'
+      require('hlchunk').setup {
+        chunk = {
+          enable = true,
+          chars = {
+            horizontal_line = '─',
+            vertical_line = '│',
+            left_top = '┌',
+            left_bottom = '└',
+            right_arrow = '─',
+          },
+          style = colors.mauve,
+          delay = 150,
+          duration = 150,
+        },
+        indent = {
+          enable = false,
+        },
+        line_num = {
+          enable = true,
+          use_treesitter = true,
+          style = colors.mauve,
+        },
+      }
+    end,
+  },
 }
