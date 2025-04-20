@@ -168,6 +168,7 @@ in
         cloak-nvim
         git-conflict-nvim
         hlchunk-nvim
+        nvim-ts-autotag
         pkgs.neovimPlugins.modes-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim

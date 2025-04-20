@@ -7,6 +7,7 @@ require('lze').load {
         name,
         'nvim-treesitter-textobjects',
         'treesitter-context',
+        'nvim-ts-autotag',
       }
     end,
     after = function(_)
@@ -95,6 +96,13 @@ require('lze').load {
         on_attach = function(bufnr)
           return vim.bo[bufnr].filetype ~= 'markdown'
         end,
+      }
+      require('nvim-ts-autotag').setup {
+        opts = {
+          enable_close = true,
+          enable_rename = true,
+          enable_close_on_slash = true,
+        },
       }
     end,
   },
