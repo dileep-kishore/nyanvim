@@ -13,7 +13,7 @@ require('catppuccin').setup {
   },
   styles = {
     keywords = { 'italic' },
-    types = { 'italic' },
+    types = { 'bold' },
     conditionals = { 'italic' },
     loops = { 'italic' },
     comments = { 'italic' },
@@ -21,6 +21,7 @@ require('catppuccin').setup {
   },
   custom_highlights = function(colors)
     return {
+      ['@variable.builtin'] = { italic = true },
       InclineNormal = { bg = colors.base },
       InclineNormalNC = { bg = colors.base },
       Pmenu = { bg = colors.base },
