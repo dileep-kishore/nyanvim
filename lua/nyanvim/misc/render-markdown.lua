@@ -13,7 +13,14 @@ require('lze').load {
       require('render-markdown').setup {
         preset = 'obsidian',
         heading = {
-          icons = { '󰼏 ', '󰼐 ', '󰼑 ', '󰼒 ', '󰼓 ', '󰼔 ' },
+          icons = {
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+          },
           position = 'inline',
           width = 'block',
           left_pad = 2,
