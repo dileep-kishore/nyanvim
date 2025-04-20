@@ -57,6 +57,7 @@ require('catppuccin').setup {
   integrations = {
     blink_cmp = true,
     colorful_winsep = { enabled = true, color = 'mauve' },
+    copilot_vim = true,
     dap = true,
     dap_ui = true,
     diffview = true,
