@@ -24,7 +24,7 @@ require('lze').load {
         { '<leader>i', group = '+Iron' },
         { '<leader>j', group = '+Neopyter' },
         { '<leader>l', group = '+LSP' },
-        { '<leader>m', group = '+Arrow' },
+        { '<leader>m', group = '+Grapple' },
         { '<leader>n', group = '+Notes' },
         { '<leader>p', group = '+Pos[session]' },
         { '<Leader>q', group = '+Close' },

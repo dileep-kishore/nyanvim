@@ -123,7 +123,7 @@ in
         diffview-nvim
         neogit
         octo-nvim
-        arrow-nvim
+        grapple-nvim
         oil-nvim
         comment-nvim
         nvim-ts-context-commentstring

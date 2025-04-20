@@ -22,15 +22,12 @@ require('lze').load {
 
           local ft_icon, ft_color = devicons.get_icon_color(filename)
 
-          local arrow_status = require 'arrow.statusline'
-          local arrow_status_text
-          if props.focused then
-            arrow_status_text = ' '
-              .. arrow_status.text_for_statusline_with_icons()
+          local grapple_status = require('grapple').name_or_index() or ''
+          local grapple_status_text
+          if grapple_status ~= '' then
+            grapple_status_text = ' 󰛢' .. grapple_status .. ' '
           else
-            -- arrow_status_text = ''
-            arrow_status_text = ' '
-              .. arrow_status.text_for_statusline_with_icons()
+            grapple_status_text = ' '
           end
 
           local modified = vim.bo[props.buf].modified
@@ -106,8 +103,8 @@ require('lze').load {
                 or colors.overlay2,
             },
             {
-              arrow_status_text,
-              guifg = props.focused and colors.green or colors.overlay2,
+              grapple_status_text,
+              guifg = props.focused and colors.peach or colors.overlay2,
               guibg = colors.surface0,
             },
             { '', guifg = colors.surface0, guibg = colors.base },

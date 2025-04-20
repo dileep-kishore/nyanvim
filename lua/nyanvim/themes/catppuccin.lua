@@ -76,6 +76,13 @@ require('catppuccin').setup {
         bold = true,
         italic = true,
       },
+      GrappleTitle = {
+        fg = colors.crust,
+        bg = colors.blue,
+        bold = true,
+        italic = true,
+      },
+      GrappleFooter = { italic = true },
     }
   end,
   integrations = {

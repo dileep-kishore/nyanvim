@@ -16,6 +16,12 @@ local diagnostics = {
   padding = { left = 1, right = 1 },
 }
 
+local grapple = {
+  'grapple',
+  separator = '',
+  color = { fg = colors.peach },
+}
+
 local mode = {
   'mode',
   fmt = function(str)
@@ -158,6 +164,7 @@ require('lze').load {
       require('lzextras').loaders.multi {
         name,
         'noice.nvim',
+        'grapple.nvim',
       }
     end,
     after = function(_)
@@ -205,6 +212,7 @@ require('lze').load {
           lualine_a = { mode },
           lualine_b = { filetype, lsp_status },
           lualine_c = {
+            grapple,
             center_comp,
             icononly_filetype,
             filename,
