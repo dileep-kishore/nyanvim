@@ -83,6 +83,18 @@ require('catppuccin').setup {
         italic = true,
       },
       GrappleFooter = { italic = true },
+      MiniFilesTitle = {
+        fg = colors.crust,
+        bg = colors.blue,
+        bold = true,
+        italic = true,
+      },
+      MiniFilesTitleFocused = {
+        fg = colors.crust,
+        bg = colors.mauve,
+        bold = true,
+        italic = true,
+      },
     }
   end,
   integrations = {

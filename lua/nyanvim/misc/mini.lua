@@ -32,26 +32,6 @@ require('lze').load {
     end,
   },
   {
-    'mini.files',
-    keys = {
-      {
-        '<leader>/',
-        '<cmd>lua MiniFiles.open()<CR>',
-        desc = 'Open mini.files',
-      },
-    },
-    event = { 'DeferredUIEnter' },
-    after = function(_)
-      require('mini.files').setup {
-        windows = { preview = true, width_preview = 60 },
-        mappings = {
-          go_in_plus = '<CR>',
-          synchronize = '<C-s>',
-        },
-      }
-    end,
-  },
-  {
     'mini.icons',
     event = { 'DeferredUIEnter' },
     after = function(_)
