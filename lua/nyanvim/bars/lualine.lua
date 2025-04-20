@@ -114,27 +114,6 @@ local diff = {
   padding = { left = 0, right = 1 },
 }
 
-local cmd = {
-  function()
-    return require('noice').api.status.command.get()
-  end,
-  cond = function()
-    return package.loaded['noice'] and require('noice').api.status.command.has()
-  end,
-}
-
-local macro = {
-  require('noice').api.statusline.mode.get,
-  cond = require('noice').api.statusline.mode.has,
-  color = { fg = colors.red },
-}
-
-local search = {
-  require('noice').api.status.search.get,
-  cond = require('noice').api.status.search.has,
-  color = { fg = colors.peach },
-}
-
 -- cool function for progress
 local progress_custom = function()
   local current_line = vim.fn.line '.'
@@ -175,6 +154,12 @@ end
 require('lze').load {
   {
     'lualine.nvim',
+    load = function(name)
+      require('lzextras').loaders.multi {
+        name,
+        'noice.nvim',
+      }
+    end,
     after = function(_)
       local custom_catppuccin = require 'lualine.themes.catppuccin-mocha'
       custom_catppuccin.normal.c.bg = colors.base
@@ -183,6 +168,28 @@ require('lze').load {
       if not status_ok then
         return
       end
+
+      local cmd = {
+        function()
+          return require('noice').api.status.command.get()
+        end,
+        cond = function()
+          return package.loaded['noice']
+            and require('noice').api.status.command.has()
+        end,
+      }
+
+      local macro = {
+        require('noice').api.statusline.mode.get,
+        cond = require('noice').api.statusline.mode.has,
+        color = { fg = colors.red },
+      }
+
+      local search = {
+        require('noice').api.status.search.get,
+        cond = require('noice').api.status.search.has,
+        color = { fg = colors.peach },
+      }
 
       lualine.setup {
         options = {

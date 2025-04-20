@@ -12,7 +12,7 @@ require('lze').load {
   {
     'noice.nvim',
     -- Comment this out because lualine uses noice at startup
-    -- event = { 'DeferredUIEnter' },
+    event = { 'DeferredUIEnter' },
     load = function(name)
       require('lzextras').loaders.multi {
         name,
