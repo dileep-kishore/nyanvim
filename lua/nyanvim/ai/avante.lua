@@ -11,7 +11,7 @@ require('lze').load {
           enable_claude_text_editor_tool_mode = true,
           enable_cursor_planning_mode = true,
         },
-        hints = { enabled = false },
+        hints = { enabled = true },
         windows = { wrap = true },
       }
     end,
