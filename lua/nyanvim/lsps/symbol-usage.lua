@@ -10,6 +10,13 @@ require('lze').load {
         end,
         desc = 'Toggle symbol usage',
       },
+      {
+        '<leader>lU',
+        function()
+          require('symbol-usage').toggle_globally()
+        end,
+        desc = 'Toggle symbol usage globally',
+      },
     },
     after = function(_)
       local symbol_usage = require 'symbol-usage'
@@ -64,6 +71,8 @@ require('lze').load {
         definition = { enabled = false },
         implementation = { enabled = true },
       }
+
+      symbol_usage.toggle_globally()
     end,
   },
 }

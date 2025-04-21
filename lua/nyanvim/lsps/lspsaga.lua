@@ -19,7 +19,7 @@ require('lze').load {
         },
         beacon = { enable = true },
         implement = {
-          enable = true,
+          enable = false,
           sign = false,
         },
         lightbulb = {
