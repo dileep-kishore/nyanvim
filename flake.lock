@@ -164,6 +164,22 @@
         "type": "github"
       }
     },
+    "plugins-maximize-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724018013,
+        "narHash": "sha256-rwnvX+Sul+bwESZtpqbvaDJuk49SV9tLUnvgiAH4VMs=",
+        "owner": "declancm",
+        "repo": "maximize.nvim",
+        "rev": "d688b66344b03ee6e5a32a0a40af85d174490af8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "declancm",
+        "repo": "maximize.nvim",
+        "type": "github"
+      }
+    },
     "plugins-neopyter": {
       "flake": false,
       "locked": {
@@ -289,6 +305,7 @@
         "plugins-incline-nvim": "plugins-incline-nvim",
         "plugins-lze": "plugins-lze",
         "plugins-lzextras": "plugins-lzextras",
+        "plugins-maximize-nvim": "plugins-maximize-nvim",
         "plugins-neopyter": "plugins-neopyter",
         "plugins-possession-nvim": "plugins-possession-nvim",
         "plugins-reactive-nvim": "plugins-reactive-nvim",

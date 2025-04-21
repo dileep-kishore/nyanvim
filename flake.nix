@@ -48,6 +48,10 @@
       url = "github:Goose97/timber.nvim";
       flake = false;
     };
+    plugins-maximize-nvim = {
+      url = "github:declancm/maximize.nvim";
+      flake = false;
+    };
   };
 
   outputs = {

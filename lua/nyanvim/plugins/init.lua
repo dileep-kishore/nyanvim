@@ -317,4 +317,18 @@ require('lze').load {
       require('timber').setup {}
     end,
   },
+  {
+    'maximize-nvim',
+    event = { 'DeferredUIEnter' },
+    keys = {
+      {
+        '<leader>wm',
+        '<cmd>Maximize<CR>',
+        desc = 'Window maximize toggle',
+      },
+    },
+    after = function(_)
+      require('maximize').setup {}
+    end,
+  },
 }
