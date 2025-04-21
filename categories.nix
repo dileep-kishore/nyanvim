@@ -180,6 +180,7 @@ in
         pkgs.neovimPlugins.reactive-nvim
         pkgs.neovimPlugins.symbol-usage-nvim
         pkgs.neovimPlugins.early-retirement-nvim
+        pkgs.neovimPlugins.timber-nvim
       ];
     };
 

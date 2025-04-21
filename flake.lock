@@ -228,6 +228,22 @@
         "type": "github"
       }
     },
+    "plugins-timber-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1743757717,
+        "narHash": "sha256-HQVbzlVSoewBqKODlyalz9QbgFe0FfCBnV/zJiXgUgE=",
+        "owner": "Goose97",
+        "repo": "timber.nvim",
+        "rev": "202ffb359717bdf3282be045228af4ad11be6fb5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Goose97",
+        "repo": "timber.nvim",
+        "type": "github"
+      }
+    },
     "plugins-websocket-nvim": {
       "flake": false,
       "locked": {
@@ -277,6 +293,7 @@
         "plugins-possession-nvim": "plugins-possession-nvim",
         "plugins-reactive-nvim": "plugins-reactive-nvim",
         "plugins-symbol-usage-nvim": "plugins-symbol-usage-nvim",
+        "plugins-timber-nvim": "plugins-timber-nvim",
         "plugins-websocket-nvim": "plugins-websocket-nvim",
         "pre-commit-hooks": "pre-commit-hooks"
       }

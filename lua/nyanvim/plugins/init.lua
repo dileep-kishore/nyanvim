@@ -285,4 +285,36 @@ require('lze').load {
       require('early-retirement').setup {}
     end,
   },
+  {
+    'timber-nvim',
+    event = { 'DeferredUIEnter' },
+    keys = {
+      {
+        'gll',
+        function()
+          return require('timber.actions').insert_log {
+            position = 'below',
+            operator = true,
+          } .. '_'
+        end,
+        desc = 'Insert below log statements the current line',
+        mode = 'n',
+        expr = true,
+      },
+      {
+        'gls',
+        function()
+          require('timber.actions').insert_log {
+            templates = { before = 'default', after = 'default' },
+            position = 'surround',
+          }
+        end,
+        mode = 'n',
+        desc = 'Insert surround log statements below the current line',
+      },
+    },
+    after = function(_)
+      require('timber').setup {}
+    end,
+  },
 }
