@@ -4,8 +4,8 @@ require('lze').load {
     event = { 'DeferredUIEnter' },
     after = function(_)
       require('avante').setup {
-        provider = 'openai',
-        openai = { model = 'o3-mini' },
+        provider = 'copilot',
+        openai = { model = 'o4-mini' },
         behavior = {
           auto_suggestions = false,
           enable_claude_text_editor_tool_mode = true,

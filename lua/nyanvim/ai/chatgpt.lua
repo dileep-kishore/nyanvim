@@ -4,7 +4,7 @@ require('lze').load {
     event = 'DeferredUIEnter',
     after = function(_)
       require('chatgpt').setup {
-        openai_params = { model = 'gpt-4o-mini' },
+        openai_params = { model = 'gpt-4.1-mini' },
       }
     end,
   },

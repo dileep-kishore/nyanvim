@@ -23,7 +23,7 @@ require('lze').load {
     after = function(_)
       require('wtf').setup {
         context = true,
-        openai_model_id = 'gpt-4o-mini',
+        openai_model_id = 'gpt-4.1-mini',
         popup_type = 'popup',
         search_engine = 'perplexity',
       }
