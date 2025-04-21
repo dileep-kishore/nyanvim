@@ -28,6 +28,12 @@ require('catppuccin').setup {
       Float = { bg = colors.base },
       FloatBorder = { bg = colors.base },
       NormalFloat = { bg = colors.base },
+      FloatTitle = {
+        fg = colors.crust,
+        bg = colors.blue,
+        bold = true,
+        italic = true,
+      },
       ZenBg = { bg = colors.base },
       TreesitterContext = { bg = colors.base, blend = 0 },
       TreesitterContextLineNumber = { bg = colors.mantle },
