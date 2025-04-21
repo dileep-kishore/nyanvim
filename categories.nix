@@ -179,6 +179,7 @@ in
         pkgs.neovimPlugins.colorful-winsep-nvim
         pkgs.neovimPlugins.reactive-nvim
         pkgs.neovimPlugins.symbol-usage-nvim
+        pkgs.neovimPlugins.early-retirement-nvim
       ];
     };
 

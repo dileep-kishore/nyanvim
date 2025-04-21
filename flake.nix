@@ -40,6 +40,10 @@
       url = "github:Wansmer/symbol-usage.nvim";
       flake = false;
     };
+    plugins-early-retirement-nvim = {
+      url = "github:chrisgrieser/nvim-early-retirement";
+      flake = false;
+    };
   };
 
   outputs = {

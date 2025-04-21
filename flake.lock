@@ -100,6 +100,22 @@
         "type": "github"
       }
     },
+    "plugins-early-retirement-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1744450582,
+        "narHash": "sha256-ybs65ObtjcUBaGglxP3SIpYjlGSEk/MQI9nSN8S3Q1w=",
+        "owner": "chrisgrieser",
+        "repo": "nvim-early-retirement",
+        "rev": "3b14762a0186b1922cb5ddf3a760d8521c7b3d7e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "chrisgrieser",
+        "repo": "nvim-early-retirement",
+        "type": "github"
+      }
+    },
     "plugins-incline-nvim": {
       "flake": false,
       "locked": {
@@ -253,6 +269,7 @@
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs",
         "plugins-colorful-winsep-nvim": "plugins-colorful-winsep-nvim",
+        "plugins-early-retirement-nvim": "plugins-early-retirement-nvim",
         "plugins-incline-nvim": "plugins-incline-nvim",
         "plugins-lze": "plugins-lze",
         "plugins-lzextras": "plugins-lzextras",

@@ -278,4 +278,11 @@ require('lze').load {
       }
     end,
   },
+  {
+    'early-retirement-nvim',
+    event = { 'DeferredUIEnter' },
+    after = function(_)
+      require('early-retirement').setup {}
+    end,
+  },
 }
