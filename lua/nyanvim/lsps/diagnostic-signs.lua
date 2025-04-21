@@ -1,6 +1,6 @@
 local config = {
   -- enable virtual text
-  virtual_text = true,
+  virtual_text = false,
   -- disable update while in insert mode
   update_in_insert = false,
   -- show signs

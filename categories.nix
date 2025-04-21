@@ -172,6 +172,7 @@ in
         nvim-ts-autotag
         flash-nvim
         eyeliner-nvim
+        tiny-inline-diagnostic-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
         pkgs.neovimPlugins.neopyter

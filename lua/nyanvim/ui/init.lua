@@ -1,4 +1,5 @@
 require 'nyanvim.ui.snacks'
+require 'nyanvim.ui.tiny-diagnostics'
 -- require 'nyanvim.ui.mini-indent'
 require 'nyanvim.ui.indent'
 require 'nyanvim.ui.highlight-colors'
