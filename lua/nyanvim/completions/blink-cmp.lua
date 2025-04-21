@@ -12,6 +12,7 @@ require('lze').load {
         name,
         'lazydev.nvim',
         'neopyter',
+        'blink-copilot',
       }
     end,
     after = function(_)
@@ -50,11 +51,16 @@ require('lze').load {
           completion = {
             list = { selection = { preselect = false } },
             menu = { auto_show = true },
-            ghost_text = { enabled = true },
+            ghost_text = { enabled = false },
           },
         },
         completion = {
-          list = { selection = { preselect = false } },
+          list = {
+            selection = {
+              preselect = false,
+              auto_insert = false,
+            },
+          },
           menu = {
             border = {
               { '󱐋', 'WarningMsg' },
@@ -84,7 +90,7 @@ require('lze').load {
               winhighlight = 'Normal:Pmenu,CursorLine:PmenuSel,Search:None',
             },
           },
-          ghost_text = { enabled = true },
+          ghost_text = { enabled = false },
           accept = {
             auto_brackets = {
               enabled = true,
@@ -94,6 +100,7 @@ require('lze').load {
         },
         sources = {
           default = {
+            'copilot',
             'lazydev',
             'neopyter',
             'lsp',
@@ -105,6 +112,12 @@ require('lze').load {
             'avante_files',
           },
           providers = {
+            copilot = {
+              name = 'copilot',
+              module = 'blink-copilot',
+              score_offset = 100,
+              async = true,
+            },
             lazydev = {
               name = 'LazyDev',
               module = 'lazydev.integrations.blink',

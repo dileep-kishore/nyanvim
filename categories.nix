@@ -107,6 +107,7 @@ in
         plenary-nvim
         blink-cmp
         blink-compat
+        blink-copilot
         friendly-snippets
         lazydev-nvim
         lspsaga-nvim
