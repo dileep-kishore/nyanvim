@@ -28,8 +28,8 @@
       url = "github:jedrzejboczar/possession.nvim";
       flake = false;
     };
-    plugins-modes-nvim = {
-      url = "github:mvllow/modes.nvim";
+    plugins-reactive-nvim = {
+      url = "github:rasulomaroff/reactive.nvim";
       flake = false;
     };
     plugins-colorful-winsep-nvim = {

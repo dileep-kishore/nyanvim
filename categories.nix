@@ -94,6 +94,7 @@ in
         nvim-web-devicons
         lualine-nvim
         tabby-nvim
+        rainbow-delimiters-nvim
         pkgs.neovimPlugins.incline-nvim
       ];
       # extra = with pkgs.neovimPlugins; [];
@@ -171,11 +172,11 @@ in
         nvim-ts-autotag
         flash-nvim
         eyeliner-nvim
-        pkgs.neovimPlugins.modes-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
         pkgs.neovimPlugins.neopyter
         pkgs.neovimPlugins.colorful-winsep-nvim
+        pkgs.neovimPlugins.reactive-nvim
       ];
     };
 
