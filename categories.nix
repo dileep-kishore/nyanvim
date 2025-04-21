@@ -169,6 +169,8 @@ in
         git-conflict-nvim
         hlchunk-nvim
         nvim-ts-autotag
+        flash-nvim
+        eyeliner-nvim
         pkgs.neovimPlugins.modes-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
