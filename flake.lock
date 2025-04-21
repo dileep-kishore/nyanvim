@@ -196,6 +196,22 @@
         "type": "github"
       }
     },
+    "plugins-symbol-usage-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1744874818,
+        "narHash": "sha256-0+epDQTVv+Wrb0rrXUIeTILGXlF6sRJR5jdaNYNEj2E=",
+        "owner": "Wansmer",
+        "repo": "symbol-usage.nvim",
+        "rev": "d6fff0e061d555624760ed82113ddf8587358c4e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Wansmer",
+        "repo": "symbol-usage.nvim",
+        "type": "github"
+      }
+    },
     "plugins-websocket-nvim": {
       "flake": false,
       "locked": {
@@ -243,6 +259,7 @@
         "plugins-neopyter": "plugins-neopyter",
         "plugins-possession-nvim": "plugins-possession-nvim",
         "plugins-reactive-nvim": "plugins-reactive-nvim",
+        "plugins-symbol-usage-nvim": "plugins-symbol-usage-nvim",
         "plugins-websocket-nvim": "plugins-websocket-nvim",
         "pre-commit-hooks": "pre-commit-hooks"
       }

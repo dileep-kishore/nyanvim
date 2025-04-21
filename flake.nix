@@ -36,6 +36,10 @@
       url = "github:nvim-zh/colorful-winsep.nvim";
       flake = false;
     };
+    plugins-symbol-usage-nvim = {
+      url = "github:Wansmer/symbol-usage.nvim";
+      flake = false;
+    };
   };
 
   outputs = {

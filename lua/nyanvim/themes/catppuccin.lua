@@ -101,6 +101,10 @@ require('catppuccin').setup {
         bold = true,
         italic = true,
       },
+      SymbolUsageContent = { link = 'Comment' },
+      SymbolUsageRef = { link = 'Function' },
+      SymbolUsageDef = { link = 'Type' },
+      SymbolUsageImpl = { link = '@keyword' },
     }
   end,
   integrations = {
