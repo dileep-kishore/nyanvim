@@ -4,6 +4,16 @@ require('lze').load {
     event = { 'DeferredUIEnter' },
   },
   {
+    'copilot-lsp-nvim',
+    after = function(_)
+      vim.g.copilot_nes_debounce = 500
+      vim.lsp.enable 'copilot'
+      vim.keymap.set('n', '<tab>', function()
+        require('copilot-lsp.nes').apply_pending_nes()
+      end)
+    end,
+  },
+  {
     'blink.cmp',
     event = { 'DeferredUIEnter' },
     on_require = 'blink',
@@ -20,7 +30,14 @@ require('lze').load {
         appearance = { nerd_font_variant = 'normal' },
         keymap = {
           preset = 'enter',
-          ['<Tab>'] = {},
+          ['<Tab>'] = {
+            function(cmp)
+              if vim.b[vim.api.nvim_get_current_buf()].nes_state then
+                cmp.hide()
+                return require('copilot-lsp.nes').apply_pending_nes()
+              end
+            end,
+          },
           ['<S-Tab>'] = {},
           ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
           ['<C-n>'] = { 'select_next', 'fallback_to_mappings' },
