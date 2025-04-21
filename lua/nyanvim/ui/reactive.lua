@@ -3,10 +3,29 @@ require('lze').load {
     'reactive-nvim',
     event = { 'DeferredUIEnter' },
     after = function(_)
+      local palette = require('catppuccin.palettes').get_palette 'mocha'
+      local darken = require('catppuccin.utils.colors').darken
       require('reactive').setup {
         load = {
           'catppuccin-mocha-cursor',
           'catppuccin-mocha-cursorline',
+        },
+        configs = {
+          ['catppuccin-mocha-cursorline'] = {
+            modes = {
+              i = {
+                winhl = {
+                  CursorLine = { bg = darken(palette.blue, 0.3) },
+                  CursorLineNr = { bg = darken(palette.blue, 0.3) },
+                },
+              },
+            },
+          },
+          ['catppuccin-mocha-cursor'] = {
+            modes = {
+              i = { hl = { ReactiveCursor = { bg = palette.blue } } },
+            },
+          },
         },
       }
     end,
