@@ -157,7 +157,6 @@ in
         ssr-nvim
         grug-far-nvim
         img-clip-nvim
-        tabout-nvim
         vim-repeat
         lspkind-nvim
         outline-nvim

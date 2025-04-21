@@ -54,13 +54,6 @@ require('lze').load {
     end,
   },
   {
-    'tabout.nvim',
-    event = 'InsertCharPre',
-    after = function(_)
-      require('tabout').setup {}
-    end,
-  },
-  {
     'vim-repeat',
   },
   {
