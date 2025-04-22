@@ -115,7 +115,7 @@ require('lze').load {
               filename,
               gui = 'italic,bold',
               guibg = props.focused and colors.blue or colors.surface0,
-              guifg = modified and colors.red
+              guifg = modified and '#603030'
                 or props.focused and colors.crust
                 or colors.overlay2,
             },
