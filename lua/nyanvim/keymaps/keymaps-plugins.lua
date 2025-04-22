@@ -143,4 +143,4 @@ map(
   '<cmd>PossessionDelete<cr>',
   { desc = 'Possession Delete' }
 )
-map('n', '<leader>ps', '<cmd>PossessionList<cr>', { desc = 'Possession List' })
+map('n', '<leader>pp', '<cmd>PossessionList<cr>', { desc = 'Possession List' })
