@@ -4,7 +4,7 @@ require('lze').load {
     keys = {
       {
         '<leader>/',
-        '<cmd>lua MiniFiles.open()<CR>',
+        '<cmd>lua require("mini.files").open(vim.api.nvim_buf_get_name(0))<CR>',
         desc = 'Open mini.files',
       },
     },
