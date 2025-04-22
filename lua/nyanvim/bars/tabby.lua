@@ -54,7 +54,7 @@ require('lze').load {
         if session_name == nil then
           return ' 󱙃 '
         else
-          return ' 󰆓 ' .. session_name
+          return ' 󰆓 ' .. session_name .. ' '
         end
       end
 
