@@ -94,9 +94,6 @@ require('lze').load {
           end
 
           local res = {
-            props.focused
-                and { '▒', guifg = colors.crust, guibg = colors.base }
-              or '',
             -- props.focused
             --     and {
             --       { get_diagnostic_label() },
@@ -109,29 +106,24 @@ require('lze').load {
                   ' ',
                   ft_icon,
                   ' ',
-                  -- guibg = props.focused and ft_color or colors.base,
-                  guibg = colors.surface0,
+                  guibg = props.focused and colors.blue or colors.surface0,
                   -- guifg = props.focused and helpers.contrast_color(ft_color) or ft_color,
-                  guifg = props.focused and ft_color or colors.overlay2,
+                  guifg = props.focused and colors.crust or colors.overlay2,
                 }
               or '',
             {
               filename,
-              gui = 'italic',
-              -- guifg = props.focused and colors.text or colors.overlay2,
-              guibg = colors.surface0,
-              guifg = modified and colors.peach
-                or props.focused and colors.text
+              gui = 'italic,bold',
+              guibg = props.focused and colors.blue or colors.surface0,
+              guifg = modified and colors.red
+                or props.focused and colors.crust
                 or colors.overlay2,
             },
             {
               props.focused and grapple_status_text or ' ',
-              guifg = props.focused and colors.peach or colors.overlay2,
-              guibg = colors.surface0,
+              guifg = props.focused and colors.crust or colors.overlay2,
+              guibg = props.focused and colors.blue or colors.surface0,
             },
-            props.focused
-                and { '▒', guifg = colors.crust, guibg = colors.base }
-              or '',
             guibg = colors.base,
           }
           -- table.insert(res, ' ')
