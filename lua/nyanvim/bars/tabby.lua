@@ -41,6 +41,7 @@ require('lze').load {
       local colors = require('catppuccin.palettes').get_palette 'mocha'
 
       local theme = {
+        base = { fg = colors.mantle, bg = colors.mantle },
         fill = { fg = colors.base, bg = colors.base },
         head = { fg = colors.mantle, bg = colors.mauve, style = 'bold' },
         current_tab = { fg = colors.mantle, bg = colors.blue, style = 'bold' },
@@ -109,7 +110,7 @@ require('lze').load {
         local api = require 'tabby.module.api'
         local win_count = #api.get_tab_wins(tab.id)
         -- return "[  " .. win_count .. " ]"
-        return ' ' .. win_count .. ' '
+        return ' ' .. win_count
       end
 
       require('tabby.tabline').set(function(line)
@@ -117,8 +118,8 @@ require('lze').load {
           {
             { ' 󰓩 ', hl = theme.head },
             { tab_count(), hl = theme.head },
-            -- line.sep('', theme.head, theme.fill),
-            line.sep(' ', theme.head, theme.fill),
+            line.sep('▒', theme.head, theme.base),
+            line.sep(' ', theme.head, theme.base),
           },
           line.tabs().foreach(function(tab)
             local hl = tab.is_current() and theme.current_tab or theme.tab
@@ -129,20 +130,20 @@ require('lze').load {
               -- tab.number(),
               tab_name(tab),
               window_count(tab),
-              -- line.sep(' ', hl, theme.fill),
+              line.sep(' ', hl, theme.base),
               -- line.sep('', hl, theme.fill),
               hl = hl,
               margin = ' ',
             }
           end),
           line.spacer(),
-          -- line.sep(' ', theme.tail, theme.fill),
+          line.sep('▒', theme.tail, theme.base),
           {
             get_session_name(),
             hl = theme.head,
             margin = ' ',
           },
-          hl = theme.fill,
+          hl = theme.base,
         }
       end, { buf_name = { mode = 'unique' } })
     end,
