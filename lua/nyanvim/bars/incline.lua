@@ -77,14 +77,19 @@ require('lze').load {
           end
 
           local res = {
-            { '', guifg = colors.surface0, guibg = colors.base },
-            props.focused and {
-              { get_diagnostic_label() },
-              { get_git_diff() },
-              guibg = colors.surface0,
-            } or '',
+            props.focused
+                and { '▒', guifg = colors.crust, guibg = colors.base }
+              or '',
+            -- props.focused
+            --     and {
+            --       { get_diagnostic_label() },
+            --       { get_git_diff() },
+            --       guibg = colors.surface0,
+            --     }
+            --   or '',
             ft_icon
                 and {
+                  ' ',
                   ft_icon,
                   ' ',
                   -- guibg = props.focused and ft_color or colors.base,
@@ -103,11 +108,13 @@ require('lze').load {
                 or colors.overlay2,
             },
             {
-              grapple_status_text,
+              props.focused and grapple_status_text or ' ',
               guifg = props.focused and colors.peach or colors.overlay2,
               guibg = colors.surface0,
             },
-            { '', guifg = colors.surface0, guibg = colors.base },
+            props.focused
+                and { '▒', guifg = colors.crust, guibg = colors.base }
+              or '',
             guibg = colors.base,
           }
           -- table.insert(res, ' ')

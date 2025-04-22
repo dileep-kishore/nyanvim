@@ -63,12 +63,13 @@ require('lze').load {
           git = {
             icons = {
               branch = '',
-              added = ' ',
-              modified = ' ',
-              removed = ' ',
+              added = ' ',
+              modified = ' ',
+              removed = ' ',
             },
           },
           diagnostics = {
+            verbose = true,
             icons = {
               ERROR = ' ',
               WARN = ' ',
@@ -95,9 +96,16 @@ require('lze').load {
       local set_hl_secondary = function(name, fg_color, bg_color)
         vim.api.nvim_set_hl(0, name, { fg = fg_color, bg = bg_color })
       end
+      local set_hl_tertiary = function(name, fg_color, bg_color)
+        vim.api.nvim_set_hl(
+          0,
+          name,
+          { fg = fg_color, bg = bg_color, bold = true }
+        )
+      end
       set_hl_primary('SlimlinePathPrimary', colors.crust, colors.mauve)
       set_hl_primary('SlimlineGitPrimary', colors.crust, colors.blue)
-      set_hl_secondary('SlimlineDiagnosticsPrimary', colors.crust, colors.pink)
+      set_hl_tertiary('SlimlineDiagnosticsPrimary', colors.crust, colors.peach)
       set_hl_primary('SlimlineFiletype_lspPrimary', colors.crust, colors.green)
       set_hl_secondary('SlimlinePathSecondary', colors.text, colors.surface0)
       set_hl_secondary('SlimlineGitSecondary', colors.text, colors.surface0)
