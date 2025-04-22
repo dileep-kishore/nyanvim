@@ -178,12 +178,13 @@ require('lze').load {
       require('todo-comments').setup {
         merge_keywords = true,
         gui_style = {
-          fg = 'BOLD',
+          bg = 'BOLD',
+          fg = 'NONE',
         },
         highlight = {
           before = '',
-          after = '',
-          keyword = 'wide_fg',
+          after = 'fg',
+          keyword = 'wide',
         },
         keywords = {
           QUESTION = { icon = '' },
