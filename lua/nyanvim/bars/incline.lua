@@ -2,12 +2,29 @@ require('lze').load {
   {
     'incline.nvim',
     event = { 'DeferredUIEnter' },
+    load = function(name)
+      require('lzextras').loaders.multi {
+        name,
+        'grapple.nvim',
+        'zen-mode.nvim',
+      }
+    end,
     after = function(_)
       local colors = require('catppuccin.palettes').get_palette 'mocha'
       local devicons = require 'nvim-web-devicons'
       local helpers = require 'incline.helpers'
 
       require('incline').setup {
+        ignore = {
+          floating_wins = false,
+          wintypes = function(winid, wintype)
+            local zen_view = package.loaded['zen-mode.view']
+            if zen_view and zen_view.is_open() then
+              return winid ~= zen_view.win
+            end
+            return wintype ~= ''
+          end,
+        },
         window = {
           padding = 0,
           -- padding_char = ' ',
