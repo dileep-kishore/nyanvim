@@ -41,7 +41,7 @@ require('lze').load {
       local colors = require('catppuccin.palettes').get_palette 'mocha'
 
       local theme = {
-        base = { fg = colors.mantle, bg = colors.mantle },
+        base = { fg = colors.base, bg = colors.base },
         fill = { fg = colors.base, bg = colors.base },
         head = { fg = colors.mantle, bg = colors.mauve, style = 'bold' },
         current_tab = { fg = colors.mantle, bg = colors.blue, style = 'bold' },
@@ -116,7 +116,13 @@ require('lze').load {
       require('tabby.tabline').set(function(line)
         return {
           {
-            { ' 󰓩 ', hl = theme.head },
+            {
+              get_session_name(),
+              hl = theme.head,
+              margin = ' ',
+            },
+            line.sep(' 󰇝 ', theme.fill, theme.head),
+            { '󰓩 ', hl = theme.head },
             { tab_count(), hl = theme.head },
             line.sep('▒', theme.head, theme.base),
             line.sep(' ', theme.head, theme.base),
@@ -137,12 +143,6 @@ require('lze').load {
             }
           end),
           line.spacer(),
-          line.sep('▒', theme.tail, theme.base),
-          {
-            get_session_name(),
-            hl = theme.head,
-            margin = ' ',
-          },
           hl = theme.base,
         }
       end, { buf_name = { mode = 'unique' } })
