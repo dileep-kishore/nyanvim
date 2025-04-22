@@ -30,6 +30,12 @@ require('lze').load {
   {
     'tabby.nvim',
     event = { 'DeferredUIEnter' },
+    load = function(name)
+      require('lzextras').loaders.multi {
+        name,
+        'possession-nvim',
+      }
+    end,
     after = function(_)
       local colors = require('catppuccin.palettes').get_palette 'mocha'
 
