@@ -58,6 +58,7 @@ require('catppuccin').setup {
         standout = true,
       },
       NoiceCmdlinePopup = { bg = colors.base, blend = 0 },
+      NoicePopup = { bg = colors.base, blend = 0 },
       SnacksPickerTitle = {
         fg = colors.crust,
         bg = colors.mauve,

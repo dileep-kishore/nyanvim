@@ -77,7 +77,6 @@ map(
   '<cmd>Lspsaga outgoing_calls<cr>',
   { desc = 'Lspsaga outgoing calls' }
 )
-map('n', 'K', '<cmd>Lspsaga hover_doc<cr>', { desc = 'Lspsaga hover doc' })
 map(
   'n',
   'gd',

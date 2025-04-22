@@ -22,7 +22,10 @@ require('lze').load {
     end,
     after = function(_)
       require('noice').setup {
-        lsp = { progress = { enabled = true } },
+        lsp = {
+          progress = { enabled = true },
+          hover = { enabled = true },
+        },
         presets = {
           bottom_search = false,
           command_palette = true,
