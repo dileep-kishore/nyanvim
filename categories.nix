@@ -95,6 +95,7 @@ in
         tabby-nvim
         rainbow-delimiters-nvim
         vim-sleuth
+        vim-matchup
         pkgs.neovimPlugins.incline-nvim
         pkgs.neovimPlugins.slimline-nvim
       ];

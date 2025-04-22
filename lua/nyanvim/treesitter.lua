@@ -14,6 +14,7 @@ require('lze').load {
       require('nvim-treesitter.configs').setup {
         highlight = { enable = true },
         indent = { enable = false },
+        matchup = { enable = true },
         incremental_selection = {
           enable = true,
           keymaps = {
