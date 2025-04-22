@@ -174,6 +174,8 @@ in
         flash-nvim
         eyeliner-nvim
         tiny-inline-diagnostic-nvim
+        zen-mode-nvim
+        twilight-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
         pkgs.neovimPlugins.neopyter
