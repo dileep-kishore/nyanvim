@@ -4,16 +4,6 @@ require('lze').load {
     event = { 'DeferredUIEnter' },
   },
   {
-    'copilot-lsp-nvim',
-    after = function(_)
-      vim.g.copilot_nes_debounce = 500
-      vim.lsp.enable 'copilot'
-      vim.keymap.set('n', '<tab>', function()
-        require('copilot-lsp.nes').apply_pending_nes()
-      end)
-    end,
-  },
-  {
     'blink.cmp',
     event = { 'DeferredUIEnter' },
     on_require = 'blink',
@@ -22,7 +12,6 @@ require('lze').load {
         name,
         'lazydev.nvim',
         'neopyter',
-        'blink-copilot',
       }
     end,
     after = function(_)
@@ -30,14 +19,7 @@ require('lze').load {
         appearance = { nerd_font_variant = 'normal' },
         keymap = {
           preset = 'enter',
-          ['<Tab>'] = {
-            function(cmp)
-              if vim.b[vim.api.nvim_get_current_buf()].nes_state then
-                cmp.hide()
-                return require('copilot-lsp.nes').apply_pending_nes()
-              end
-            end,
-          },
+          ['<Tab>'] = {},
           ['<S-Tab>'] = {},
           ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
           ['<C-n>'] = { 'select_next', 'fallback_to_mappings' },
@@ -117,7 +99,6 @@ require('lze').load {
         },
         sources = {
           default = {
-            'copilot',
             'lazydev',
             'neopyter',
             'lsp',
@@ -129,12 +110,6 @@ require('lze').load {
             'avante_files',
           },
           providers = {
-            copilot = {
-              name = 'copilot',
-              module = 'blink-copilot',
-              score_offset = 100,
-              async = true,
-            },
             lazydev = {
               name = 'LazyDev',
               module = 'lazydev.integrations.blink',

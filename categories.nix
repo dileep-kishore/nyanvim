@@ -51,7 +51,6 @@ in
         svelte-language-server
         tailwindcss-language-server
         tinymist
-        copilot-language-server
 
         # formatters
         stylua
@@ -95,9 +94,9 @@ in
         nvim-web-devicons
         tabby-nvim
         rainbow-delimiters-nvim
+        vim-sleuth
         pkgs.neovimPlugins.incline-nvim
         pkgs.neovimPlugins.slimline-nvim
-        pkgs.neovimPlugins.copilot-lsp-nvim
       ];
       # extra = with pkgs.neovimPlugins; [];
     };
@@ -109,7 +108,6 @@ in
         plenary-nvim
         blink-cmp
         blink-compat
-        blink-copilot
         friendly-snippets
         lazydev-nvim
         lspsaga-nvim

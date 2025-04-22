@@ -100,22 +100,6 @@
         "type": "github"
       }
     },
-    "plugins-copilot-lsp-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1745252658,
-        "narHash": "sha256-YhpBHHO+8J5JnY0ZZE5w/IwObpjX6dW1N6A9vOjieX8=",
-        "owner": "copilotlsp-nvim",
-        "repo": "copilot-lsp",
-        "rev": "e4293f301035c2ac759b547f4fd80f04a8c11032",
-        "type": "github"
-      },
-      "original": {
-        "owner": "copilotlsp-nvim",
-        "repo": "copilot-lsp",
-        "type": "github"
-      }
-    },
     "plugins-early-retirement-nvim": {
       "flake": false,
       "locked": {
@@ -333,7 +317,6 @@
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs",
         "plugins-colorful-winsep-nvim": "plugins-colorful-winsep-nvim",
-        "plugins-copilot-lsp-nvim": "plugins-copilot-lsp-nvim",
         "plugins-early-retirement-nvim": "plugins-early-retirement-nvim",
         "plugins-incline-nvim": "plugins-incline-nvim",
         "plugins-lze": "plugins-lze",

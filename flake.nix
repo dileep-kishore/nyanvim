@@ -56,10 +56,6 @@
       url = "github:declancm/maximize.nvim";
       flake = false;
     };
-    plugins-copilot-lsp-nvim = {
-      url = "github:copilotlsp-nvim/copilot-lsp";
-      flake = false;
-    };
   };
 
   outputs = {
