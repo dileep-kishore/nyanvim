@@ -93,10 +93,10 @@ in
         nvim-highlight-colors
         nvim-lint
         nvim-web-devicons
-        lualine-nvim
         tabby-nvim
         rainbow-delimiters-nvim
         pkgs.neovimPlugins.incline-nvim
+        pkgs.neovimPlugins.slimline-nvim
         pkgs.neovimPlugins.copilot-lsp-nvim
       ];
       # extra = with pkgs.neovimPlugins; [];

@@ -32,7 +32,7 @@ require('lze').load {
           keys = { toggle_or_jump = '<CR>' },
         },
         symbol_in_winbar = {
-          enable = true,
+          enable = false,
           show_file = true,
           color_mode = false,
           separator = '  ',

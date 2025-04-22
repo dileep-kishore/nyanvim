@@ -85,7 +85,7 @@ require('lze').load {
           enable = false,
         },
         line_num = {
-          enable = true,
+          enable = false,
           use_treesitter = true,
           style = colors.mauve,
         },
