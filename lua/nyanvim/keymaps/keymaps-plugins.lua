@@ -85,11 +85,17 @@ map(
 )
 -- LSP (rename)
 map('n', '<Leader>lr', ':IncRename ', { desc = 'Incremental rename' })
-
 -- LSP (documentation generation)
 map('n', '<Leader>lg', "<cmd>lua require('neogen').generate()<CR>", {
   desc = 'Generate documentation (neogen)',
 })
+-- Getting highlights at cursor
+map(
+  'n',
+  '<leader>lh',
+  '<cmd>lua vim.notify(vim.inspect(vim.treesitter.get_captures_at_cursor(0)))<CR>',
+  { desc = 'Get highlight at cursor' }
+)
 
 -- ChatGPT
 map('n', '<leader>cg', '<cmd>ChatGPT<cr>', { desc = 'ChatGPT' })

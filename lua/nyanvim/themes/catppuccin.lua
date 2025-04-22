@@ -83,6 +83,18 @@ require('catppuccin').setup {
         bold = true,
         italic = true,
       },
+      SnacksScratchKey = {
+        fg = colors.crust,
+        bg = colors.blue,
+        bold = true,
+        italic = true,
+      },
+      SnacksScratchDesc = {
+        fg = colors.crust,
+        bg = colors.blue,
+        bold = true,
+        italic = true,
+      },
       GrappleTitle = {
         fg = colors.crust,
         bg = colors.blue,

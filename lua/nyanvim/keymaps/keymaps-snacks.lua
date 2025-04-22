@@ -189,7 +189,7 @@ map(
 map(
   'n',
   '<leader>ns',
-  '<cmd>lua Snacks.scratch()<cr>',
+  '<cmd>lua Snacks.scratch.select()<cr>',
   { desc = 'Toggle scratch buffer' }
 )
 map(
