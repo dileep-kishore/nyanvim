@@ -34,6 +34,7 @@ require('lze').load {
       require('lzextras').loaders.multi {
         name,
         'possession-nvim',
+        'lspsaga.nvim',
       }
     end,
     after = function(_)
@@ -108,39 +109,39 @@ require('lze').load {
         local api = require 'tabby.module.api'
         local win_count = #api.get_tab_wins(tab.id)
         -- return "[  " .. win_count .. " ]"
-        return ' ' .. win_count
+        return ' ' .. win_count .. ' '
       end
 
       require('tabby.tabline').set(function(line)
         return {
           {
-            {
-              get_session_name(),
-              hl = theme.head,
-              margin = ' ',
-            },
-            line.sep(' 󰇝 ', theme.fill, theme.head),
-            { '󰓩 ', hl = theme.head },
+            { ' 󰓩 ', hl = theme.head },
             { tab_count(), hl = theme.head },
-            -- line.sep('█ ', theme.head, theme.fill),
-            line.sep('', theme.head, theme.fill),
+            -- line.sep('', theme.head, theme.fill),
+            line.sep(' ', theme.head, theme.fill),
           },
           line.tabs().foreach(function(tab)
             local hl = tab.is_current() and theme.current_tab or theme.tab
             return {
-              -- line.sep('█', hl, theme.fill),
-              line.sep('', theme.fill, hl),
-              tab.is_current() and '' or '',
-              tab.number(),
+              -- line.sep('', theme.fill, hl),
+              -- line.sep(' ', theme.fill, hl),
+              tab.is_current() and ' ' or ' ',
+              -- tab.number(),
               tab_name(tab),
               window_count(tab),
-              -- line.sep('█ ', hl, theme.fill),
-              line.sep('', hl, theme.fill),
+              -- line.sep(' ', hl, theme.fill),
+              -- line.sep('', hl, theme.fill),
               hl = hl,
               margin = ' ',
             }
           end),
           line.spacer(),
+          -- line.sep(' ', theme.tail, theme.fill),
+          {
+            get_session_name(),
+            hl = theme.head,
+            margin = ' ',
+          },
           hl = theme.fill,
         }
       end, { buf_name = { mode = 'unique' } })
