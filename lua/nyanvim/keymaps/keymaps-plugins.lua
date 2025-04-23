@@ -129,7 +129,12 @@ map(
 )
 
 -- sessions ([P]ossession)
-map('n', '<leader>pl', '<cmd>PossessionLoad<cr>', { desc = 'Possession Load' })
+map(
+  'n',
+  '<leader>pl',
+  '<cmd>PossessionLoadCwd<cr>',
+  { desc = 'Possession Load' }
+)
 map('n', '<leader>ps', '<cmd>PossessionSave<cr>', { desc = 'Possession Save' })
 map(
   'n',
@@ -137,10 +142,11 @@ map(
   '<cmd>PossessionRename<cr>',
   { desc = 'Possession Rename' }
 )
+map('n', '<leader>pq', '<cmd>PossessionClose<cr>', { desc = 'Possession Quit' })
 map(
   'n',
   '<leader>pd',
   '<cmd>PossessionDelete<cr>',
   { desc = 'Possession Delete' }
 )
-map('n', '<leader>pp', '<cmd>PossessionList<cr>', { desc = 'Possession List' })
+map('n', '<leader>pp', '<cmd>PossessionPick<cr>', { desc = 'Possession Pick' })
