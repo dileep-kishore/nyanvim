@@ -105,17 +105,17 @@ require('lze').load {
                 and {
                   ' ',
                   ft_icon,
-                  ' ',
                   guibg = props.focused and colors.blue or colors.surface0,
                   -- guifg = props.focused and helpers.contrast_color(ft_color) or ft_color,
                   guifg = props.focused and colors.crust or colors.overlay2,
                 }
               or '',
             {
+              ' ',
               filename,
               gui = 'italic,bold',
               guibg = props.focused and colors.blue or colors.surface0,
-              guifg = modified and '#603030'
+              guifg = modified and (props.focused and '#603030' or colors.red)
                 or props.focused and colors.crust
                 or colors.overlay2,
             },
