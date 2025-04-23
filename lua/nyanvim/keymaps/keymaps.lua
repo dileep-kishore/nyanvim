@@ -51,6 +51,12 @@ map(
   '<cmd>vertical resize -4<CR>',
   { desc = 'Decrease window width' }
 )
+map(
+  'n',
+  '<Leader>w=',
+  '<cmd>tabdo wincmd =<CR>',
+  { desc = 'Window auto resize' }
+)
 
 -- Navigate buffers
 map('n', '[b', '<cmd>bprevious<CR>', { desc = 'Previous buffer' })
