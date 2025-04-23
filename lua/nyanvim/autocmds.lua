@@ -34,10 +34,16 @@ vim.api.nvim_create_autocmd({ 'CmdWinEnter' }, {
   end,
 })
 
+local auto_resize_group =
+  vim.api.nvim_create_augroup('_auto_resize', { clear = true })
 vim.api.nvim_create_autocmd({ 'VimResized' }, {
-  callback = function()
-    vim.cmd 'tabdo wincmd ='
-  end,
+  group = auto_resize_group,
+  pattern = '*',
+  command = [[
+          let _auto_resize_current_tab = tabpagenr()
+          tabdo wincmd =
+          execute 'tabnext' _auto_resize_current_tab
+        ]],
 })
 
 vim.api.nvim_create_autocmd({ 'FileType' }, {
