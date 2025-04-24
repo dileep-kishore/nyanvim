@@ -63,7 +63,7 @@ require('lze').load {
     after = function(_)
       require('mini.surround').setup {
         respect_selection_type = true,
-        search_method = 'cover_or_next',
+        search_method = 'cover_or_nearest',
       }
     end,
   },
