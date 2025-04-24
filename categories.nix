@@ -169,7 +169,6 @@ in
         markdown-preview-nvim
         cloak-nvim
         git-conflict-nvim
-        hlchunk-nvim
         nvim-ts-autotag
         flash-nvim
         eyeliner-nvim

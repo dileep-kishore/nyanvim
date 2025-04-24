@@ -8,7 +8,7 @@ require('lze').load {
           try_as_border = true,
           border = 'both',
         },
-        symbol = '¦',
+        symbol = '╎',
       }
       local disabled_filetypes =
         { 'NvimTree', 'alpha', 'help', 'snacks_dashboard', '', 'Outline' }
