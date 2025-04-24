@@ -39,6 +39,7 @@ require('lze').load {
           yaml = { 'yamlfix', 'prettierd' },
           markdown = { 'prettierd' },
           typst = { 'typstyle' },
+          kdl = { 'kdlfmt' },
           -- run formatters on filetypes that don't have other formatters configured.
           ['_'] = { 'trim_newlines', 'trim_whitespace' },
           -- Uncomment the following to run formatters on all filetypes.

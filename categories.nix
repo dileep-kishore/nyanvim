@@ -62,6 +62,7 @@ in
         prettierd
         typstyle
         yamlfix
+        kdlfmt
 
         # linters
         rstcheck
