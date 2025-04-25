@@ -160,7 +160,6 @@ in
         vim-repeat
         lspkind-nvim
         outline-nvim
-        nvim-spider
         vim-tmux-navigator
         trouble-nvim
         todo-comments-nvim
