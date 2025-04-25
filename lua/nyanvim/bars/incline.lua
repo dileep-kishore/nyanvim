@@ -105,7 +105,10 @@ require('lze').load {
                 and {
                   ' ',
                   ft_icon,
-                  guibg = props.focused and colors.blue or colors.surface0,
+                  guibg = modified
+                      and (props.focused and colors.peach or colors.surface0)
+                    or props.focused and colors.blue
+                    or colors.surface0,
                   -- guifg = props.focused and helpers.contrast_color(ft_color) or ft_color,
                   guifg = props.focused and colors.crust or colors.overlay2,
                 }
@@ -114,15 +117,23 @@ require('lze').load {
               ' ',
               filename,
               gui = 'italic,bold',
-              guibg = props.focused and colors.blue or colors.surface0,
-              guifg = modified and (props.focused and '#603030' or colors.red)
+              guibg = modified
+                  and (props.focused and colors.peach or colors.surface0)
+                or props.focused and colors.blue
+                or colors.surface0,
+              guifg = modified
+                  and (props.focused and colors.crust or colors.peach)
                 or props.focused and colors.crust
                 or colors.overlay2,
             },
             {
               props.focused and grapple_status_text or ' ',
+              gui = 'bold',
+              guibg = modified
+                  and (props.focused and colors.peach or colors.surface0)
+                or props.focused and colors.blue
+                or colors.surface0,
               guifg = props.focused and colors.crust or colors.overlay2,
-              guibg = props.focused and colors.blue or colors.surface0,
             },
             guibg = colors.base,
           }
