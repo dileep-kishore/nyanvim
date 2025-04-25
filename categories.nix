@@ -171,7 +171,6 @@ in
         git-conflict-nvim
         nvim-ts-autotag
         flash-nvim
-        eyeliner-nvim
         tiny-inline-diagnostic-nvim
         zen-mode-nvim
         twilight-nvim
