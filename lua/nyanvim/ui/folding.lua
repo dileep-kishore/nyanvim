@@ -53,6 +53,15 @@ require('lze').load {
         end,
         desc = 'Close all folds',
       },
+      {
+        'zK',
+        function()
+          local winid = require('ufo').peekFoldedLinesUnderCursor()
+          if not winid then
+            vim.lsp.buf.hover()
+          end
+        end,
+      },
     },
     event = { 'DeferredUIEnter' },
     after = function(_)
