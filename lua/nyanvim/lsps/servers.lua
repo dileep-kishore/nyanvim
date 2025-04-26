@@ -17,7 +17,11 @@ servers.lua_ls = {
 }
 
 servers.basedpyright = {
-  typeCheckingMode = 'standard',
+  settings = {
+    basedpyright = {
+      analysis = { typeCheckingMode = 'standard' },
+    },
+  },
 }
 
 servers.nixd = {
