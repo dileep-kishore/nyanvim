@@ -16,7 +16,9 @@ servers.lua_ls = {
   },
 }
 
-servers.basedpyright = {}
+servers.basedpyright = {
+  typeCheckingMode = 'standard',
+}
 
 servers.nixd = {
   filetypes = { 'nix' },
