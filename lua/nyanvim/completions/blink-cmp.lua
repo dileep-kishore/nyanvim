@@ -54,12 +54,7 @@ require('lze').load {
           },
         },
         completion = {
-          list = {
-            selection = {
-              preselect = false,
-              auto_insert = false,
-            },
-          },
+          list = { selection = { preselect = false } },
           menu = {
             border = {
               { '󱐋', 'WarningMsg' },
