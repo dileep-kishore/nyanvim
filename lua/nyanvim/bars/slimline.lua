@@ -9,8 +9,6 @@ require('lze').load {
       }
     end,
     after = function(_)
-      vim.opt.fillchars = { stl = '─' }
-
       local grapple_status = function()
         local status_ok, grapple = pcall(require, 'grapple')
         local grapple_status_text
