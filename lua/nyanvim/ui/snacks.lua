@@ -220,8 +220,8 @@ require('lze').load {
             marks = { layout = { preset = 'ivy_custom' } },
 
             -- Snacks pickers (git) [g]
-            git_log = { layout = { preset = 'vertical_custom' } },
-            git_log_file = { layout = { preset = 'vertical_custom' } },
+            git_log = { layout = { preset = 'custom' } },
+            git_log_file = { layout = { preset = 'custom' } },
 
             -- Snacks pickers (search) [s]
             grep = { layout = { preset = 'vertical_custom' } },
