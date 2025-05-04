@@ -1,6 +1,6 @@
 local fold_handler = function(virtText, lnum, endLnum, width, truncate)
   local newVirtText = {}
-  local suffix = (' ───────────────┤ 󰘕 %d lines ├─────'):format(
+  local suffix = (' ───────────────┤ 󰘕 %d lines ├─────╌╌╌╌╌'):format(
     endLnum - lnum
   )
   local sufWidth = vim.fn.strdisplaywidth(suffix)
@@ -25,7 +25,7 @@ local fold_handler = function(virtText, lnum, endLnum, width, truncate)
     end
     curWidth = curWidth + chunkWidth
   end
-  table.insert(newVirtText, { suffix, 'MoreMsg' })
+  table.insert(newVirtText, { suffix, 'UfoFoldedFg' })
   return newVirtText
 end
 

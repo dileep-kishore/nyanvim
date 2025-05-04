@@ -46,10 +46,12 @@ require('catppuccin').setup {
       ['@comment.info'] = { link = 'Comment' },
       ['@comment.error'] = { link = 'Comment' },
       ['@comment.warning'] = { link = 'Comment' },
-      Folded = { bg = colors.base },
+      Folded = { bg = colors.mantle },
+      UfoFoldedFg = { fg = colors.teal, style = { 'italic' } },
       MarkSignHL = { bg = colors.base, fg = colors.mauve },
       MarkSignNumHL = { bg = colors.base, fg = colors.mauve },
       MarkVirtTextHL = { bg = colors.base, fg = colors.mauve },
+      CursorLineSign = { bg = colors.surface0 },
       IlluminatedWordText = { bg = colors.surface0, underline = true },
       IlluminatedWordRead = { bg = colors.surface0, underline = true },
       IlluminatedWordWrite = {
