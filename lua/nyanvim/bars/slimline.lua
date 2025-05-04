@@ -33,9 +33,9 @@ require('lze').load {
       require('slimline').setup {
         style = 'bg',
         components = {
-          left = { 'mode', 'git', 'path', grapple_status },
-          center = {},
-          right = { 'diagnostics', 'recording', 'filetype_lsp', 'progress' },
+          left = { 'mode', 'git' },
+          center = { 'path', grapple_status },
+          right = { 'recording', 'diagnostics', 'filetype_lsp', 'progress' },
         },
         spaces = { components = '─', left = '─', right = '─' },
         sep = {
@@ -69,17 +69,17 @@ require('lze').load {
           diagnostics = {
             verbose = true,
             icons = {
-              ERROR = ' ',
-              WARN = ' ',
-              HINT = ' ',
-              INFO = ' ',
+              ERROR = ' ',
+              WARN = ' ',
+              HINT = ' ',
+              INFO = ' ',
             },
           },
           filetype_lsp = {},
           progress = { follow = 'mode', column = false, icon = ' ' },
           recording = {
             hl = { primary = 'Error' },
-            icon = ' ',
+            icon = '󰻂 ',
           },
         },
       }
