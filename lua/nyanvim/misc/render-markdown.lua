@@ -39,7 +39,7 @@ require('lze').load {
           min_width = 80,
         },
         bullet = {
-          icons = { '󰲠 ', '󰲢 ', '󰲤 ', '󰲦 ', '󰲨 ', '󰲪 ' },
+          icons = { '◉', '●', '○', '◈', '◆', '◇' },
         },
         dash = { width = 100 },
         pipe_table = {
