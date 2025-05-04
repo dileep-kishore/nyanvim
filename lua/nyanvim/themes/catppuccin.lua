@@ -120,6 +120,33 @@ require('catppuccin').setup {
       SymbolUsageRef = { link = 'Function' },
       SymbolUsageDef = { link = 'Type' },
       SymbolUsageImpl = { link = '@keyword' },
+      SlPathPrimary = {
+        bg = colors.crust,
+        fg = colors.mauve,
+        italic = true,
+        bold = true,
+      },
+      SlGitPrimary = {
+        bg = colors.crust,
+        fg = colors.blue,
+        italic = true,
+        bold = true,
+      },
+      SlDiagPrimary = {
+        bg = colors.crust,
+        fg = colors.peach,
+        bold = true,
+      },
+      SlLspPrimary = {
+        bg = colors.crust,
+        fg = colors.green,
+        italic = true,
+        bold = true,
+      },
+      SlPathSecondary = { bg = colors.text, fg = colors.overlay2 },
+      SlGitSecondary = { bg = colors.text, fg = colors.overlay2 },
+      SlDiagSecondary = { bg = colors.text, fg = colors.overlay2 },
+      SlLspSecondary = { bg = colors.text, fg = colors.overlay2 },
     }
   end,
   integrations = {
