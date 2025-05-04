@@ -37,7 +37,7 @@ require('lze').load {
           center = { 'path', grapple_status },
           right = { 'recording', 'diagnostics', 'filetype_lsp', 'progress' },
         },
-        spaces = { components = '─', left = '─', right = '─' },
+        spaces = { components = '─', left = '', right = '' },
         sep = {
           hide = { first = false, last = false },
           left = '',
@@ -45,14 +45,7 @@ require('lze').load {
         },
         configs = {
           mode = {
-            verbose = false,
-            hl = {
-              normal = 'Type',
-              insert = 'Function',
-              pending = 'Boolean',
-              visual = 'Keyword',
-              command = 'String',
-            },
+            verbose = true,
           },
           path = {
             directory = true,
@@ -102,10 +95,18 @@ require('lze').load {
           { fg = fg_color, bg = bg_color, bold = true }
         )
       end
+      -- modes
+      set_hl_tertiary('SlimlineModeNormal', colors.crust, colors.yellow)
+      set_hl_tertiary('SlimlineModeInsert', colors.crust, colors.green)
+      set_hl_tertiary('SlimlineModeVisual', colors.crust, colors.mauve)
+      set_hl_tertiary('SlimlineModeCommand', colors.crust, colors.peach)
+      set_hl_tertiary('SlimlineModePending', colors.crust, colors.red)
+      -- other primary
       set_hl_primary('SlimlinePathPrimary', colors.crust, colors.mauve)
       set_hl_primary('SlimlineGitPrimary', colors.crust, colors.blue)
       set_hl_tertiary('SlimlineDiagnosticsPrimary', colors.crust, colors.peach)
       set_hl_primary('SlimlineFiletype_lspPrimary', colors.crust, colors.green)
+      -- secondary
       set_hl_secondary('SlimlinePathSecondary', colors.text, colors.surface0)
       set_hl_secondary('SlimlineGitSecondary', colors.text, colors.surface0)
       set_hl_secondary(
