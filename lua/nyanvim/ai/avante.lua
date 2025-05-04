@@ -2,6 +2,13 @@ require('lze').load {
   {
     'avante.nvim',
     event = { 'DeferredUIEnter' },
+    load = function(name)
+      require('lzextras').loaders.multi {
+        name,
+        'nui.nvim',
+        'copilot',
+      }
+    end,
     after = function(_)
       require('avante').setup {
         provider = 'copilot',
