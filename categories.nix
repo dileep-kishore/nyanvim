@@ -174,6 +174,7 @@ in
         tiny-inline-diagnostic-nvim
         zen-mode-nvim
         twilight-nvim
+        smear-cursor-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
         pkgs.neovimPlugins.neopyter
