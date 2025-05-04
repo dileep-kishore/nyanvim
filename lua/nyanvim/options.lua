@@ -52,3 +52,7 @@ vim.o.showtabline = 2
 -- Save and restore tabpages
 vim.opt.sessionoptions =
   'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
+
+-- Undercurl
+vim.cmd [[let &t_Cs = "\e[4:3m"]]
+vim.cmd [[let &t_Ce = "\e[4:0m"]]
