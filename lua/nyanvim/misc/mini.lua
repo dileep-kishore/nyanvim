@@ -10,9 +10,9 @@ require('lze').load {
     event = { 'DeferredUIEnter' },
     after = function(_)
       require('mini.animate').setup {
-        cursor = { enable = true },
-        scroll = { enable = true },
-        resize = { enable = true },
+        cursor = { enable = false },
+        scroll = { enable = false },
+        resize = { enable = false },
         open = { enable = true },
         close = { enable = true },
       }
