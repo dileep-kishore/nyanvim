@@ -47,9 +47,9 @@ require('catppuccin').setup {
       ['@comment.error'] = { link = 'Comment' },
       ['@comment.warning'] = { link = 'Comment' },
       Folded = { bg = colors.base },
-      MarkSignHL = { bg = colors.base },
-      MarkSignNumHL = { bg = colors.base },
-      MarkVirtTextHL = { bg = colors.base },
+      MarkSignHL = { bg = colors.base, fg = colors.mauve },
+      MarkSignNumHL = { bg = colors.base, fg = colors.mauve },
+      MarkVirtTextHL = { bg = colors.base, fg = colors.mauve },
       IlluminatedWordText = { bg = colors.surface0, underline = true },
       IlluminatedWordRead = { bg = colors.surface0, underline = true },
       IlluminatedWordWrite = {

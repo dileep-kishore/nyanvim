@@ -33,7 +33,7 @@ require('lze').load {
           doc = { inline = false, float = true },
         },
         statuscolumn = {
-          enabled = true,
+          enabled = false,
           left = { 'mark', 'sign' },
           right = { 'fold', 'git' },
           folds = { open = true, git_hl = true },
