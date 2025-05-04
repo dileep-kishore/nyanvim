@@ -57,10 +57,6 @@ require('lze').load {
           path = {
             directory = true,
             icons = { folder = ' ', modified = '', read_only = '' },
-            hl = {
-              primary = 'SlPathPrimary',
-              secondary = 'SlPathSecondary',
-            },
           },
           git = {
             icons = {
@@ -68,10 +64,6 @@ require('lze').load {
               added = ' ',
               modified = ' ',
               removed = ' ',
-            },
-            hl = {
-              primary = 'SlGitPrimary',
-              secondary = 'SlGitSecondary',
             },
           },
           diagnostics = {
@@ -82,17 +74,8 @@ require('lze').load {
               HINT = ' ',
               INFO = ' ',
             },
-            hl = {
-              primary = 'SlDiagPrimary',
-              secondary = 'SlDiagSecondary',
-            },
           },
-          filetype_lsp = {
-            hl = {
-              primary = 'SlLspPrimary',
-              secondary = 'SlLspSecondary',
-            },
-          },
+          filetype_lsp = {},
           progress = { follow = 'mode', column = false, icon = ' ' },
           recording = {
             hl = { primary = 'Error' },
@@ -100,6 +83,40 @@ require('lze').load {
           },
         },
       }
+      local colors = require('catppuccin.palettes').get_palette 'mocha'
+      local set_hl_primary = function(name, fg_color, bg_color)
+        vim.api.nvim_set_hl(
+          0,
+          name,
+          { fg = fg_color, bg = bg_color, italic = true, bold = true }
+        )
+      end
+      local set_hl_secondary = function(name, fg_color, bg_color)
+        vim.api.nvim_set_hl(0, name, { fg = fg_color, bg = bg_color })
+      end
+      local set_hl_tertiary = function(name, fg_color, bg_color)
+        vim.api.nvim_set_hl(
+          0,
+          name,
+          { fg = fg_color, bg = bg_color, bold = true }
+        )
+      end
+      set_hl_primary('SlimlinePathPrimary', colors.crust, colors.mauve)
+      set_hl_primary('SlimlineGitPrimary', colors.crust, colors.blue)
+      set_hl_tertiary('SlimlineDiagnosticsPrimary', colors.crust, colors.peach)
+      set_hl_primary('SlimlineFiletype_lspPrimary', colors.crust, colors.green)
+      set_hl_secondary('SlimlinePathSecondary', colors.text, colors.surface0)
+      set_hl_secondary('SlimlineGitSecondary', colors.text, colors.surface0)
+      set_hl_secondary(
+        'SlimlineDiagnosticsSecondary',
+        colors.text,
+        colors.surface0
+      )
+      set_hl_secondary(
+        'SlimlineFiletype_lspSecondary',
+        colors.text,
+        colors.surface0
+      )
     end,
   },
 }
