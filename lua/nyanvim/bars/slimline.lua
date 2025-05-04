@@ -83,6 +83,7 @@ require('lze').load {
           },
         },
       }
+      require('slimline.highlights').create_hls()
       local colors = require('catppuccin.palettes').get_palette 'mocha'
       local set_hl_primary = function(name, fg_color, bg_color)
         vim.api.nvim_set_hl(
