@@ -25,7 +25,7 @@ in
     # this includes LSPs
     lspsAndRuntimeDeps = with pkgs; {
       general = [
-        nodejs_23
+        nodejs_24
         ripgrep
         fd
         imagemagick
