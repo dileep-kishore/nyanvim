@@ -4,100 +4,18 @@ local hide_in_width = function()
   return vim.fn.winwidth(0) > 80
 end
 
-local diagnostics = {
-  'diagnostics',
-  sources = { 'nvim_diagnostic' },
-  sections = { 'error', 'warn' },
-  symbols = { error = ' ', warn = ' ' },
-  colored = true,
-  update_in_insert = false,
-  separator = '',
-  always_visible = true,
-  padding = { left = 1, right = 1 },
-}
-
-local grapple = {
-  'grapple',
-  separator = '',
-  color = { fg = colors.peach },
-}
+-- Separator reference
+-- separator = '',
+-- separator = '',
 
 local mode = {
   'mode',
   fmt = function(str)
-    return ' [' .. str:sub(1, 1) .. ']'
+    return ' [' .. str:sub(1, 1) .. ']'
   end,
-  padding = { left = 1, right = 0 },
-}
-
-local filename = {
-  'filename',
-  file_status = true,
-  path = 1,
-  cond = hide_in_width,
-  symbols = {
-    modified = '[+]',
-    readonly = ' ',
-    unnamed = '[No Name]',
-    newfile = '[New]',
-  },
-  separator = '',
-  padding = { left = 0, right = 0 },
-  color = { fg = colors.text },
-}
-
-local icononly_filetype = {
-  'filetype',
-  colored = false,
-  icon_only = true,
-  separator = '',
-  padding = { left = 1, right = 0 },
-  color = { fg = colors.blue },
-}
-
-local center_comp = {
-  '%=',
-  separator = '',
-}
-
-local function modified()
-  if vim.bo.modified then
-    return ' '
-  elseif vim.bo.modifiable == false or vim.bo.readonly == true then
-    return ' '
-  end
-  return ''
-end
-
-local modified_section = {
-  modified,
-  color = { fg = '#f38ba8' },
-}
-
-local function get_lsp_status()
-  local buf_clients =
-    vim.lsp.get_clients { bufnr = vim.api.nvim_get_current_buf() }
-  local buf_client_names = ''
-  for _, client in pairs(buf_clients) do
-    -- table.insert(buf_client_names, client.name)
-    if buf_client_names == '' then
-      buf_client_names = client.name
-    else
-      buf_client_names = buf_client_names .. ', ' .. client.name
-    end
-  end
-  -- return table.concat(buf_client_names, self.options.split)
-  return buf_client_names
-end
-
-local lsp_status = {
-  get_lsp_status,
-  separator = '',
-}
-
-local filetype = {
-  'filetype',
-  icons_enabled = true,
+  separator = { left = '' },
+  padding = { left = 0, right = 1 },
+  color = { gui = 'bold' },
 }
 
 local branch = {
@@ -106,22 +24,113 @@ local branch = {
   icon = '',
   separator = '',
   padding = { left = 1, right = 1 },
-  color = { gui = 'bold' },
+  color = { gui = 'bold,italic' },
 }
 
 local diff = {
   'diff',
   colored = true,
-  symbols = { added = ' ', modified = ' ', removed = ' ' }, -- changes diff symbols
+  symbols = { added = ' ', modified = ' ', removed = ' ' },
   cond = hide_in_width,
   update_in_insert = true,
   always_visible = true,
-  separator = '',
   padding = { left = 0, right = 1 },
 }
 
+local grapple = {
+  'grapple',
+  color = { fg = colors.peach, bg = colors.surface0, gui = 'bold' },
+  padding = { left = 1, right = 0 },
+}
+
+local center_comp = {
+  '%=',
+  separator = '',
+  padding = { left = 0, right = 0 },
+}
+
+local icononly_filetype = {
+  'filetype',
+  colored = false,
+  icon_only = true,
+  separator = { left = '' },
+  padding = { left = 0, right = 0 },
+  color = function(section)
+    return {
+      bg = vim.bo.modified and colors.peach or colors.mauve,
+      fg = colors.crust,
+    }
+  end,
+}
+
+local filename = {
+  'filename',
+  file_status = true,
+  path = 1,
+  cond = hide_in_width,
+  symbols = {
+    modified = '',
+    readonly = ' ',
+    unnamed = '[No Name]',
+    newfile = '[New]',
+  },
+  separator = '',
+  padding = { left = 0, right = 1 },
+  color = function(section)
+    return {
+      bg = vim.bo.modified and colors.peach or colors.mauve,
+      fg = colors.crust,
+      gui = 'bold,italic',
+    }
+  end,
+}
+
+local diagnostics = {
+  'diagnostics',
+  sources = { 'nvim_diagnostic' },
+  sections = { 'error', 'warn' },
+  symbols = { error = ' ', warn = ' ', info = ' ', hint = '󰌵 ' },
+  colored = true,
+  update_in_insert = false,
+  always_visible = true,
+  padding = { left = 1, right = 0 },
+  separator = { right = '' },
+  color = { bg = colors.surface0, gui = 'bold' },
+}
+
+local lsp_status = {
+  'lsp_status',
+  separator = '┃',
+  icon = '',
+  padding = { left = 0, right = 1 },
+  symbols = {
+    spinner = {
+      '⠋',
+      '⠙',
+      '⠹',
+      '⠸',
+      '⠼',
+      '⠴',
+      '⠦',
+      '⠧',
+      '⠇',
+      '⠏',
+    },
+    done = '✓',
+    separator = ',',
+  },
+  ignore_lsp = { 'copilot' },
+  color = { gui = 'bold' },
+}
+
+local filetype = {
+  'filetype',
+  icons_enabled = true,
+  color = { gui = 'bold,italic' },
+}
+
 -- cool function for progress
-local progress_custom = function()
+local progress_custom_func = function()
   local current_line = vim.fn.line '.'
   local total_lines = vim.fn.line '$'
   local chars = {
@@ -140,10 +149,16 @@ local progress_custom = function()
   return chars[index]
 end
 
+local progress_custom = {
+  progress_custom_func,
+  separator = { right = '' },
+  padding = { left = 0, right = 0 },
+}
+
 local progress = {
   'progress',
-  separator = '',
-  padding = { left = 0, right = 0 },
+  separator = { left = '' },
+  padding = { left = 1, right = 0 },
 }
 
 local location = {
@@ -176,26 +191,10 @@ require('lze').load {
         return
       end
 
-      local cmd = {
-        function()
-          return require('noice').api.status.command.get()
-        end,
-        cond = function()
-          return package.loaded['noice']
-            and require('noice').api.status.command.has()
-        end,
-      }
-
       local macro = {
         require('noice').api.statusline.mode.get,
         cond = require('noice').api.statusline.mode.has,
         color = { fg = colors.red },
-      }
-
-      local search = {
-        require('noice').api.status.search.get,
-        cond = require('noice').api.status.search.has,
-        color = { fg = colors.peach },
       }
 
       lualine.setup {
@@ -203,28 +202,31 @@ require('lze').load {
           icons_enabled = true,
           globalstatus = true,
           theme = custom_catppuccin,
-          component_separators = { left = '', right = '' },
+          component_separators = { left = '┃', right = '┃' },
           section_separators = { left = '', right = '' },
           disabled_filetypes = { 'alpha', 'dashboard', 'NvimTree', 'Outline' },
           always_divide_middle = true,
         },
         sections = {
           lualine_a = { mode },
-          lualine_b = { filetype, lsp_status },
-          lualine_c = {
+          lualine_b = {
+            branch,
+            diff,
             grapple,
+          },
+          lualine_c = {
             center_comp,
             icononly_filetype,
             filename,
-            -- diagnostics,
+            diagnostics,
           },
-          lualine_x = {
+          lualine_x = {},
+          lualine_y = {
             macro,
-            search,
-            cmd,
-            'encoding',
+            -- 'encoding',
+            lsp_status,
+            filetype,
           },
-          lualine_y = { branch, diff },
           lualine_z = { progress, progress_custom },
         },
         inactive_sections = {
