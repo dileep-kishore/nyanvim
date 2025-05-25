@@ -4,8 +4,8 @@ require('lze').load {
     event = { 'DeferredUIEnter' },
     after = function(_)
       require('tiny-inline-diagnostic').setup {
-        preset = 'simple',
-        transparent_bg = true,
+        preset = 'powerline',
+        transparent_bg = false,
         options = {
           show_source = {
             enabled = false,
