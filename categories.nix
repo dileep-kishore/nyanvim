@@ -96,7 +96,7 @@ in
         nvim-web-devicons
         tabby-nvim
         rainbow-delimiters-nvim
-        vim-sleuth
+        guess-indent-nvim
         vim-matchup
         pkgs.neovimPlugins.incline-nvim
       ];

@@ -14,6 +14,15 @@ require('lze').load {
     end,
   },
   {
+    'guess-indent.nvim',
+    after = function(_)
+      require('guess-indent').setup {
+        auto_cmd = true,
+        override_editorconfig = false,
+      }
+    end,
+  },
+  {
     'nvim-autopairs',
     event = { 'DeferredUIEnter' },
     after = function(_)
