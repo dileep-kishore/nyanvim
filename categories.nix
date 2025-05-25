@@ -128,14 +128,15 @@ in
         neogit
         octo-nvim
         grapple-nvim
-        oil-nvim
+        # oil-nvim
+        yazi-nvim
         comment-nvim
         nvim-ts-context-commentstring
         mini-indentscope
         mini-ai
         mini-animate
         mini-basics
-        mini-files
+        # mini-files
         mini-icons
         mini-move
         mini-operators

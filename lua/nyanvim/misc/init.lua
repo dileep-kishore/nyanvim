@@ -1,5 +1,5 @@
 require 'nyanvim.misc.mini'
-require 'nyanvim.misc.mini-files'
+-- require 'nyanvim.misc.mini-files'
 require 'nyanvim.misc.session'
 require 'nyanvim.misc.comment'
 require 'nyanvim.misc.flash'
