@@ -42,12 +42,16 @@ require('lze').load {
 
       local theme = {
         base = { fg = colors.base, bg = colors.base },
-        fill = { fg = colors.base, bg = colors.base },
-        head = { fg = colors.mantle, bg = colors.mauve, style = 'bold' },
-        current_tab = { fg = colors.mantle, bg = colors.blue, style = 'bold' },
-        tab = { fg = colors.overlay2, bg = colors.surface0, style = 'NONE' },
-        win = { fg = colors.text, bg = colors.surface0 },
-        tail = { fg = colors.base, bg = colors.mauve, style = 'bold' },
+        fill = { fg = colors.mauve, bg = colors.base },
+        head = { bg = colors.base, fg = colors.mauve, style = 'bold' },
+        current_tab = {
+          bg = colors.base,
+          fg = colors.blue,
+          style = 'italic',
+        },
+        tab = { bg = colors.base, fg = colors.overlay2, style = 'NONE' },
+        win = { bg = colors.base, fg = colors.blue },
+        tail = { bg = colors.base, fg = colors.mauve, style = 'bold' },
       }
 
       local function get_session_name()
@@ -121,11 +125,10 @@ require('lze').load {
               hl = theme.head,
               margin = ' ',
             },
-            line.sep(' 󰇝 ', theme.fill, theme.head),
+            line.sep(' ', theme.head, theme.fill),
             { '󰓩 ', hl = theme.head },
             { tab_count(), hl = theme.head },
             line.sep('▒', theme.head, theme.base),
-            line.sep(' ', theme.head, theme.base),
           },
           line.tabs().foreach(function(tab)
             local hl = tab.is_current() and theme.current_tab or theme.tab
@@ -135,7 +138,10 @@ require('lze').load {
               tab.is_current() and ' ' or ' ',
               -- tab.number(),
               tab_name(tab),
-              window_count(tab),
+              {
+                window_count(tab),
+                hl = tab.is_current() and theme.win or theme.tab,
+              },
               line.sep(' ', hl, theme.base),
               -- line.sep('', hl, theme.fill),
               hl = hl,
