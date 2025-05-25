@@ -86,6 +86,7 @@ in
         better-escape-nvim
         catppuccin-nvim
         rose-pine
+        lualine-nvim
         nvim-lspconfig
         nvim-treesitter.withAllGrammars
         nvim-treesitter-textobjects
@@ -98,7 +99,6 @@ in
         vim-sleuth
         vim-matchup
         pkgs.neovimPlugins.incline-nvim
-        pkgs.neovimPlugins.slimline-nvim
       ];
       # extra = with pkgs.neovimPlugins; [];
     };

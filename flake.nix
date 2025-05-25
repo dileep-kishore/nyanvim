@@ -16,10 +16,6 @@
       url = "github:b0o/incline.nvim";
       flake = false;
     };
-    plugins-slimline-nvim = {
-      url = "github:sschleemilch/slimline.nvim";
-      flake = false;
-    };
     plugins-websocket-nvim = {
       url = "github:AbaoFromCUG/websocket.nvim";
       flake = false;

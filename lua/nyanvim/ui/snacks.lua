@@ -6,7 +6,6 @@ require('lze').load {
       local snacks_dashboard = require 'nyanvim.ui.snacks-dashboard'
       require 'nyanvim.ui.snacks-rename'
 
-      -- TODO: This and that
       snacks.setup {
         styles = {
           float = { wo = { winblend = 0 } },

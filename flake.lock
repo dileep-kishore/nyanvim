@@ -228,22 +228,6 @@
         "type": "github"
       }
     },
-    "plugins-slimline-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1747645985,
-        "narHash": "sha256-dJ6OPG5obOsyG0jkyVcRxQRoVk6narsG13qLy74ZhU4=",
-        "owner": "sschleemilch",
-        "repo": "slimline.nvim",
-        "rev": "10dd807685997d1b72b950dfb4ec1a01cb259101",
-        "type": "github"
-      },
-      "original": {
-        "owner": "sschleemilch",
-        "repo": "slimline.nvim",
-        "type": "github"
-      }
-    },
     "plugins-symbol-usage-nvim": {
       "flake": false,
       "locked": {
@@ -325,7 +309,6 @@
         "plugins-neopyter": "plugins-neopyter",
         "plugins-possession-nvim": "plugins-possession-nvim",
         "plugins-reactive-nvim": "plugins-reactive-nvim",
-        "plugins-slimline-nvim": "plugins-slimline-nvim",
         "plugins-symbol-usage-nvim": "plugins-symbol-usage-nvim",
         "plugins-timber-nvim": "plugins-timber-nvim",
         "plugins-websocket-nvim": "plugins-websocket-nvim",
