@@ -46,7 +46,7 @@ require('catppuccin').setup {
       ['@comment.info'] = { link = 'Comment' },
       ['@comment.error'] = { link = 'Comment' },
       ['@comment.warning'] = { link = 'Comment' },
-      Folded = { bg = colors.mantle },
+      Folded = { bg = colors.base },
       UfoFoldedFg = { fg = colors.teal, style = { 'italic' } },
       MarkSignHL = { bg = colors.base, fg = colors.mauve },
       MarkSignNumHL = { bg = colors.base, fg = colors.mauve },

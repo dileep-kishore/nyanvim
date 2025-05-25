@@ -1,6 +1,6 @@
 local fold_handler = function(virtText, lnum, endLnum, width, truncate)
   local newVirtText = {}
-  local suffix = (' ───────────────┤ 󰘕 %d lines ├─────╌╌╌╌╌'):format(
+  local suffix = (' 󱥸───────────────────┤ 󰘕 %d lines ├───────────────────╮'):format(
     endLnum - lnum
   )
   local sufWidth = vim.fn.strdisplaywidth(suffix)
@@ -10,13 +10,13 @@ local fold_handler = function(virtText, lnum, endLnum, width, truncate)
     local chunkText = chunk[1]
     local chunkWidth = vim.fn.strdisplaywidth(chunkText)
     if targetWidth > curWidth + chunkWidth then
-      table.insert(newVirtText, chunk)
-      -- table.insert(newVirtText, { chunkText, 'MoreMsg' })
+      -- table.insert(newVirtText, chunk)
+      table.insert(newVirtText, { chunkText, 'UfoFoldedFg' })
     else
       chunkText = truncate(chunkText, targetWidth - curWidth)
       local hlGroup = chunk[2]
-      -- table.insert(newVirtText, { chunkText, 'MoreMsg' })
-      table.insert(newVirtText, { chunkText, hlGroup })
+      table.insert(newVirtText, { chunkText, 'UfoFoldedFg' })
+      -- table.insert(newVirtText, { chunkText, hlGroup })
       chunkWidth = vim.fn.strdisplaywidth(chunkText)
       if curWidth + chunkWidth < targetWidth then
         suffix = suffix .. (' '):rep(targetWidth - curWidth - chunkWidth)
@@ -25,7 +25,7 @@ local fold_handler = function(virtText, lnum, endLnum, width, truncate)
     end
     curWidth = curWidth + chunkWidth
   end
-  table.insert(newVirtText, { suffix, 'UfoFoldedFg' })
+  table.insert(newVirtText, { suffix, 'Comment' })
   return newVirtText
 end
 
