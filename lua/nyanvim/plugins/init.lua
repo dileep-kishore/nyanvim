@@ -152,12 +152,12 @@ require('lze').load {
         merge_keywords = true,
         gui_style = {
           bg = 'BOLD',
-          fg = 'NONE',
+          fg = 'BOLD',
         },
         highlight = {
           before = '',
-          after = 'fg',
-          keyword = 'wide',
+          after = '',
+          keyword = 'wide_fg',
         },
         keywords = {
           QUESTION = { icon = '' },
