@@ -46,6 +46,7 @@ vim.opt.foldenable = true
 vim.o.foldenable = true
 vim.o.foldcolumn = '0'
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:,stl:─]]
+vim.o.tabclose = 'uselast'
 
 -- Always show tabline
 vim.o.showtabline = 2
