@@ -96,6 +96,13 @@ map(
   '<cmd>lua vim.notify(vim.inspect(vim.treesitter.get_captures_at_cursor(0)))<CR>',
   { desc = 'Get highlight at cursor' }
 )
+-- disable LSP (diagnostics) in current buffer
+map(
+  'n',
+  '<leader>lD',
+  '<cmd>lua vim.diagnostic.disable(0)<CR>',
+  { desc = 'Disable LSP in current buffer' }
+)
 
 -- ChatGPT
 map('n', '<leader>cg', '<cmd>ChatGPT<cr>', { desc = 'ChatGPT' })
