@@ -51,7 +51,6 @@ in
         svelte-language-server
         tailwindcss-language-server
         tinymist
-        copilot-language-server
 
         # formatters
         stylua
@@ -113,7 +112,6 @@ in
         mini-snippets
         blink-compat
         blink-copilot
-        copilot-lsp
         friendly-snippets
         lazydev-nvim
         lspsaga-nvim
