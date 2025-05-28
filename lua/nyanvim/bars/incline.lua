@@ -13,6 +13,7 @@ require('lze').load {
       local colors = require('catppuccin.palettes').get_palette 'mocha'
       local devicons = require 'nvim-web-devicons'
       local helpers = require 'incline.helpers'
+      local darken = require('catppuccin.utils.colors').darken
 
       require('incline').setup {
         ignore = {
@@ -93,6 +94,8 @@ require('lze').load {
             return label
           end
 
+          local inactive_modified = darken(colors.peach, 0.3)
+
           local res = {
             -- props.focused
             --     and {
@@ -105,35 +108,32 @@ require('lze').load {
                 and {
                   ' ',
                   ft_icon,
-                  guibg = modified
-                      and (props.focused and colors.peach or colors.surface0)
+                  guifg = modified
+                      and (props.focused and colors.peach or inactive_modified)
                     or props.focused and colors.blue
-                    or colors.surface0,
+                    or colors.surface2,
                   -- guifg = props.focused and helpers.contrast_color(ft_color) or ft_color,
-                  guifg = props.focused and colors.crust or colors.overlay2,
+                  guibg = 'none',
                 }
               or '',
             {
               ' ',
               filename,
               gui = 'italic,bold',
-              guibg = modified
-                  and (props.focused and colors.peach or colors.surface0)
-                or props.focused and colors.blue
-                or colors.surface0,
               guifg = modified
-                  and (props.focused and colors.crust or colors.peach)
-                or props.focused and colors.crust
-                or colors.overlay2,
+                  and (props.focused and colors.peach or inactive_modified)
+                or props.focused and colors.blue
+                or colors.surface2,
+              guibg = 'none',
             },
             {
               props.focused and grapple_status_text or ' ',
               gui = 'bold',
-              guibg = modified
-                  and (props.focused and colors.peach or colors.surface0)
+              guifg = modified
+                  and (props.focused and colors.peach or inactive_modified)
                 or props.focused and colors.blue
-                or colors.surface0,
-              guifg = props.focused and colors.crust or colors.overlay2,
+                or colors.surface2,
+              guibg = 'none',
             },
             guibg = colors.base,
           }
