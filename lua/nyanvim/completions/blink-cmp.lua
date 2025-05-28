@@ -52,7 +52,7 @@ require('lze').load {
           completion = {
             list = { selection = { preselect = false } },
             menu = { auto_show = true },
-            ghost_text = { enabled = true },
+            ghost_text = { enabled = false },
           },
         },
         completion = {
@@ -91,7 +91,7 @@ require('lze').load {
               winhighlight = 'Normal:Pmenu,CursorLine:PmenuSel,Search:None',
             },
           },
-          ghost_text = { enabled = true },
+          ghost_text = { enabled = false },
           accept = {
             auto_brackets = {
               enabled = true,
