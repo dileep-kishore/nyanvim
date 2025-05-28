@@ -12,6 +12,7 @@ require('lze').load {
         name,
         'lazydev.nvim',
         'neopyter',
+        'mini.snippets',
         'blink-copilot',
         'copilot-lsp',
       }
@@ -19,6 +20,7 @@ require('lze').load {
     after = function(_)
       require('blink.cmp').setup {
         appearance = { nerd_font_variant = 'normal' },
+        snippets = { preset = 'mini_snippets' },
         keymap = {
           preset = 'enter',
           ['<Tab>'] = {
@@ -42,10 +44,8 @@ require('lze').load {
           ['<S-Tab>'] = {},
           ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
           ['<C-n>'] = { 'select_next', 'fallback_to_mappings' },
-          ['<C-j>'] = { 'snippet_forward', 'fallback_to_mappings' },
-          ['<C-k>'] = { 'snippet_backward', 'fallback_to_mappings' },
-          ['<C-f'] = { 'scroll_documentation_down', 'fallback_to_mappings' },
-          ['<C-b>'] = { 'scroll_documentation_up', 'fallback_to_mappings' },
+          ['<C-l>'] = { 'snippet_forward', 'fallback' },
+          ['<C-h>'] = { 'snippet_backward', 'fallback' },
         },
         signature = {
           enabled = false,

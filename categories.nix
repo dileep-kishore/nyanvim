@@ -110,6 +110,7 @@ in
       general = with pkgs.vimPlugins; [
         plenary-nvim
         blink-cmp
+        mini-snippets
         blink-compat
         blink-copilot
         copilot-lsp
