@@ -12,6 +12,8 @@ require('lze').load {
         name,
         'lazydev.nvim',
         'neopyter',
+        'blink-copilot',
+        'copilot-lsp',
       }
     end,
     after = function(_)
@@ -19,12 +21,31 @@ require('lze').load {
         appearance = { nerd_font_variant = 'normal' },
         keymap = {
           preset = 'enter',
-          ['<Tab>'] = {},
+          ['<Tab>'] = {
+            function(cmp)
+              if vim.b[vim.api.nvim_get_current_buf()].nes_state then
+                cmp.hide()
+                return (
+                  require('copilot-lsp.nes').apply_pending_nes()
+                  and require('copilot-lsp.nes').walk_cursor_end_edit()
+                )
+              end
+              if cmp.snippet_active() then
+                return cmp.accept()
+              else
+                return cmp.select_and_accept()
+              end
+            end,
+            'snippet_forward',
+            'fallback',
+          },
           ['<S-Tab>'] = {},
           ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
           ['<C-n>'] = { 'select_next', 'fallback_to_mappings' },
           ['<C-j>'] = { 'snippet_forward', 'fallback_to_mappings' },
           ['<C-k>'] = { 'snippet_backward', 'fallback_to_mappings' },
+          ['<C-f'] = { 'scroll_documentation_down', 'fallback_to_mappings' },
+          ['<C-b>'] = { 'scroll_documentation_up', 'fallback_to_mappings' },
         },
         signature = {
           enabled = false,
@@ -49,11 +70,16 @@ require('lze').load {
           completion = {
             list = { selection = { preselect = false } },
             menu = { auto_show = true },
-            ghost_text = { enabled = false },
+            ghost_text = { enabled = true },
           },
         },
         completion = {
-          list = { selection = { preselect = false } },
+          list = {
+            selection = {
+              preselect = false,
+              auto_insert = false,
+            },
+          },
           menu = {
             border = {
               { '󱐋', 'WarningMsg' },
@@ -83,7 +109,7 @@ require('lze').load {
               winhighlight = 'Normal:Pmenu,CursorLine:PmenuSel,Search:None',
             },
           },
-          ghost_text = { enabled = false },
+          ghost_text = { enabled = true },
           accept = {
             auto_brackets = {
               enabled = true,
@@ -96,6 +122,7 @@ require('lze').load {
             'lazydev',
             'neopyter',
             'lsp',
+            'copilot',
             'path',
             'snippets',
             'buffer',
@@ -104,6 +131,17 @@ require('lze').load {
             'avante_files',
           },
           providers = {
+            snippets = {
+              should_show_items = function(ctx)
+                return ctx.trigger.initial_kind ~= 'trigger_character'
+              end,
+            },
+            copilot = {
+              name = 'copilot',
+              module = 'blink-copilot',
+              score_offset = 100,
+              async = true,
+            },
             lazydev = {
               name = 'LazyDev',
               module = 'lazydev.integrations.blink',
