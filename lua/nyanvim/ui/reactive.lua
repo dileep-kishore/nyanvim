@@ -1,6 +1,12 @@
 require('lze').load {
   {
     'reactive-nvim',
+    load = function(name)
+      require('lzextras').loaders.multi {
+        name,
+        'smear-cursor.nvim',
+      }
+    end,
     event = { 'DeferredUIEnter' },
     after = function(_)
       local palette = require('catppuccin.palettes').get_palette 'mocha'
@@ -24,6 +30,11 @@ require('lze').load {
           ['catppuccin-mocha-cursor'] = {
             modes = {
               i = { hl = { ReactiveCursor = { bg = palette.blue } } },
+              n = {
+                hl = {
+                  ReactiveCursor = { bg = darken(palette.yellow, 0.7) },
+                },
+              },
             },
           },
         },
