@@ -119,7 +119,7 @@ local lsp_status = {
     done = '✓',
     separator = ',',
   },
-  ignore_lsp = { 'copilot' },
+  ignore_lsp = { 'copilot', 'copilot_ls' },
   color = { gui = 'bold' },
 }
 
