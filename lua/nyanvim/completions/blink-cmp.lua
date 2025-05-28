@@ -26,9 +26,8 @@ require('lze').load {
           ['<C-j>'] = { 'snippet_forward', 'fallback_to_mappings' },
           ['<C-k>'] = { 'snippet_backward', 'fallback_to_mappings' },
         },
-        -- TODO: Disable this after installing lsp_signature.nvim
         signature = {
-          enabled = true,
+          enabled = false,
           window = {
             show_documentation = true,
             border = {
