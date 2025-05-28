@@ -25,6 +25,7 @@ require('lze').load {
         lsp = {
           progress = { enabled = true },
           hover = { enabled = true },
+          signature = { enabled = true },
         },
         presets = {
           bottom_search = false,
