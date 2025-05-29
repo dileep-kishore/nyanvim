@@ -14,6 +14,7 @@ require('lze').load {
         'neopyter',
         'mini.snippets',
         'blink-copilot',
+        'blink-cmp-avante',
       }
     end,
     after = function(_)
@@ -101,6 +102,7 @@ require('lze').load {
         },
         sources = {
           default = {
+            'avante',
             'lazydev',
             'neopyter',
             'lsp',
@@ -108,9 +110,6 @@ require('lze').load {
             'path',
             'snippets',
             'buffer',
-            'avante_commands',
-            'avante_mentions',
-            'avante_files',
           },
           providers = {
             snippets = {
@@ -136,17 +135,9 @@ require('lze').load {
               name = 'Neopyter',
               module = 'neopyter.blink',
             },
-            avante_commands = {
-              name = 'avante_commands',
-              module = 'blink.compat.source',
-            },
-            avante_mentions = {
-              name = 'avante_mentions',
-              module = 'blink.compat.source',
-            },
-            avante_files = {
-              name = 'avante_files',
-              module = 'blink.compat.source',
+            avante = {
+              module = 'blink-cmp-avante',
+              name = 'Avante',
             },
           },
         },
