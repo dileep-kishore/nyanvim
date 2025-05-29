@@ -11,10 +11,10 @@ end
 local mode = {
   'mode',
   fmt = function(str)
-    return ' [' .. str:sub(1, 1) .. ']'
+    return ' [' .. str:sub(1, 3) .. ']'
   end,
-  separator = { left = '' },
-  padding = { left = 0, right = 1 },
+  -- separator = { left = '' },
+  padding = { left = 1, right = 0 },
   color = { gui = 'bold' },
 }
 
@@ -39,14 +39,15 @@ local diff = {
 
 local grapple = {
   'grapple',
-  color = { fg = colors.peach, bg = colors.surface0, gui = 'bold' },
-  padding = { left = 1, right = 0 },
+  color = { fg = colors.yellow, bg = colors.base, gui = 'bold' },
+  padding = { left = 2, right = 0 },
 }
 
 local center_comp = {
   '%=',
   separator = '',
   padding = { left = 0, right = 0 },
+  color = { bg = colors.base },
 }
 
 local icononly_filetype = {
@@ -57,8 +58,8 @@ local icononly_filetype = {
   padding = { left = 0, right = 0 },
   color = function(section)
     return {
-      bg = vim.bo.modified and colors.peach or colors.mauve,
-      fg = colors.crust,
+      fg = vim.bo.modified and colors.peach or colors.mauve,
+      bg = colors.base,
     }
   end,
 }
@@ -75,12 +76,12 @@ local filename = {
     newfile = '[New]',
   },
   separator = '',
-  padding = { left = 0, right = 1 },
+  padding = { left = 0, right = 0 },
   color = function(section)
     return {
-      bg = vim.bo.modified and colors.peach or colors.mauve,
-      fg = colors.crust,
-      gui = 'bold,italic',
+      fg = vim.bo.modified and colors.peach or colors.mauve,
+      bg = colors.base,
+      gui = 'italic',
     }
   end,
 }
@@ -92,17 +93,17 @@ local diagnostics = {
   symbols = { error = ' ', warn = ' ', info = ' ', hint = '󰌵 ' },
   colored = true,
   update_in_insert = false,
-  always_visible = true,
-  padding = { left = 1, right = 0 },
-  separator = { right = '' },
-  color = { bg = colors.surface0, gui = 'bold' },
+  always_visible = false,
+  padding = { left = 0, right = 0 },
+  separator = { right = '' },
+  color = { bg = colors.base, gui = 'bold' },
 }
 
 local lsp_status = {
   'lsp_status',
-  separator = '┃',
-  icon = '',
-  padding = { left = 0, right = 1 },
+  separator = ' ',
+  icon = '󱥸',
+  padding = { left = 1, right = 1 },
   symbols = {
     spinner = {
       '⠋',
@@ -151,14 +152,14 @@ end
 
 local progress_custom = {
   progress_custom_func,
-  separator = { right = '' },
-  padding = { left = 0, right = 0 },
+  -- separator = { right = '' },
+  padding = { left = 0, right = 1 },
 }
 
 local progress = {
   'progress',
-  separator = { left = '' },
-  padding = { left = 1, right = 0 },
+  separator = { left = '' },
+  padding = { left = 0, right = 0 },
 }
 
 local location = {
@@ -185,6 +186,7 @@ require('lze').load {
     after = function(_)
       local custom_catppuccin = require 'lualine.themes.catppuccin-mocha'
       custom_catppuccin.normal.c.bg = colors.base
+      custom_catppuccin.normal.b.bg = colors.base
       custom_catppuccin.inactive.c.bg = colors.base
       local status_ok, lualine = pcall(require, 'lualine')
       if not status_ok then
@@ -194,7 +196,9 @@ require('lze').load {
       local macro = {
         require('noice').api.statusline.mode.get,
         cond = require('noice').api.statusline.mode.has,
-        color = { fg = colors.red },
+        color = { fg = colors.green },
+        separator = { right = '' },
+        padding = { left = 0, right = 1 },
       }
 
       lualine.setup {
@@ -202,8 +206,12 @@ require('lze').load {
           icons_enabled = true,
           globalstatus = true,
           theme = custom_catppuccin,
-          component_separators = { left = '┃', right = '┃' },
-          section_separators = { left = '', right = '' },
+          component_separators = { left = ' ', right = ' ' },
+          section_separators = {
+            left = '',
+            right = '',
+            bg = colors.base,
+          },
           disabled_filetypes = { 'alpha', 'dashboard', 'NvimTree', 'Outline' },
           always_divide_middle = true,
         },
@@ -212,20 +220,20 @@ require('lze').load {
           lualine_b = {
             branch,
             diff,
-            grapple,
           },
           lualine_c = {
             center_comp,
             icononly_filetype,
             filename,
-            diagnostics,
+            grapple,
           },
           lualine_x = {},
           lualine_y = {
             macro,
+            diagnostics,
             -- 'encoding',
             lsp_status,
-            filetype,
+            -- filetype,
           },
           lualine_z = { progress, progress_custom },
         },
