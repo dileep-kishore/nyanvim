@@ -185,8 +185,19 @@ require('lze').load {
     end,
     after = function(_)
       local custom_catppuccin = require 'lualine.themes.catppuccin-mocha'
+      local modes = {
+        'normal',
+        'insert',
+        'visual',
+        'replace',
+        'command',
+        'inactive',
+        'terminal',
+      }
+      for _, mode_name in ipairs(modes) do
+        custom_catppuccin[mode_name].b.bg = colors.base
+      end
       custom_catppuccin.normal.c.bg = colors.base
-      custom_catppuccin.normal.b.bg = colors.base
       custom_catppuccin.inactive.c.bg = colors.base
       local status_ok, lualine = pcall(require, 'lualine')
       if not status_ok then
