@@ -78,26 +78,24 @@ And then install it by adding `inputs.neovim.packages.${system}.default` to your
 
 ## Features
 
-- Works out of the box without needing to install any external dependencies.
-  - This includes lsp servers, linters, formatters or other packages.
-- A lot of the default options and autocmds that you would find on a distribution like [Lazyvim](https://www.lazyvim.org) are configured out of the box
-- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) syntax highlighting is enabled and [catppuccin](https://github.com/catppuccin/nvim) theme is set as the default
-- Uses custom statusline configured using [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
-- Custom tabline configured using [tabby.nvim](https://github.com/nanozuki/tabby.nvim) and [incline.nvim](https://github.com/b0o/incline.nvim)
-- Git integration through [neogit](https://github.com/NeogitOrg/neogit) and [snacks.lazygit](https://github.com/folke/snacks.nvim/blob/main/docs/lazygit.md)
-- Lsp servers, linters and formatters for configured for Python, Nix, Lua, Javascript, Typescript, Julia, Bash, Rust, Go and many more
-- Debugging is supported through the [Debugging adapter protocol (DAP) plugin](https://github.com/mfussenegger/nvim-dap).
-  - This is currently only setup to work with Python
-- Completions are enabled through [blink.cmp](https://github.com/Saghen/blink.cmp)
-- Snippets are set up using [mini.snippets](https://github.com/echasnovski/mini.snippets) and [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
-- [Snacks pickers](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) for fuzzy file finding and searching
-- Better file navigation using [yazi.nvim](https://github.com/mikavilpas/yazi.nvim) and [Grapple.nvim](https://github.com/cbochs/grapple.nvim)
-- AI capabilities are enabled through [Avante.nvim](https://github.com/yetone/avante.nvim), [copilot.lua](https://github.com/zbirenbaum/copilot.lua) and [blink-copilot](https://github.com/fang2hou/blink-copilot)
-- Indent lines are enabled using [mini.indentscope](https://github.com/echasnovski/mini.indentscope)
-- The dashboard is set up using [Snacks dashboard](https://github.com/folke/snacks.nvim/blob/main/docs/dashboard.md)
-- Supports literate programming through [iron.nvim](https://github.com/Vigemus/iron.nvim) and [neopyter](https://github.com/SUSTech-data/neopyter)
-- Note-taking capabilities through [obsidian.nvim](https://github.com/obsidian-nvim/obsidian.nvim/) and [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
-- And many other features! Check out `categories.nix` and the `lua/nyanvim/` folder
+- Ready-to-use configuration with no external dependencies required, including LSP servers, linters, formatters, and other tools.
+- Preconfigured default options and autocmds inspired by distributions like [Lazyvim](https://www.lazyvim.org).
+- Enhanced syntax highlighting with [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) and a default [catppuccin](https://github.com/catppuccin/nvim) theme.
+- Custom statusline powered by [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim).
+- Unique tabline setup using [tabby.nvim](https://github.com/nanozuki/tabby.nvim) and [incline.nvim](https://github.com/b0o/incline.nvim).
+- Seamless Git integration with [neogit](https://github.com/NeogitOrg/neogit) and [snacks.lazygit](https://github.com/folke/snacks.nvim/blob/main/docs/lazygit.md).
+- Comprehensive LSP, linting, and formatting support for Python, Nix, Lua, JavaScript, TypeScript, Julia, Bash, Rust, Go, and more.
+- Debugging support via [nvim-dap](https://github.com/mfussenegger/nvim-dap), currently configured for Python.
+- Intelligent autocompletions with [blink.cmp](https://github.com/Saghen/blink.cmp).
+- Snippet management using [mini.snippets](https://github.com/echasnovski/mini.snippets) and [friendly-snippets](https://github.com/rafamadriz/friendly-snippets).
+- Efficient file searching and fuzzy finding with [Snacks pickers](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md).
+- Enhanced file navigation with [yazi.nvim](https://github.com/mikavilpas/yazi.nvim) and [Grapple.nvim](https://github.com/cbochs/grapple.nvim).
+- AI-powered features enabled by [Avante.nvim](https://github.com/yetone/avante.nvim), [copilot.lua](https://github.com/zbirenbaum/copilot.lua), and [blink-copilot](https://github.com/fang2hou/blink-copilot).
+- Visualized indent guides with [mini.indentscope](https://github.com/echasnovski/mini.indentscope).
+- A sleek dashboard setup using [Snacks dashboard](https://github.com/folke/snacks.nvim/blob/main/docs/dashboard.md).
+- Support for literate programming with [iron.nvim](https://github.com/Vigemus/iron.nvim) and [neopyter](https://github.com/SUSTech-data/neopyter).
+- Advanced note-taking capabilities with [obsidian.nvim](https://github.com/obsidian-nvim/obsidian.nvim/) and [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim).
+- Explore even more features in `categories.nix` and the `lua/nyanvim/` folder.
 
 ## Manual Installation
 
