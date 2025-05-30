@@ -26,8 +26,8 @@ require('lze').load {
           ['<S-Tab>'] = {},
           ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
           ['<C-n>'] = { 'select_next', 'fallback_to_mappings' },
-          ['<C-l>'] = { 'snippet_forward', 'fallback' },
-          ['<C-h>'] = { 'snippet_backward', 'fallback' },
+          ['<C-j>'] = { 'snippet_forward', 'fallback' },
+          ['<C-k>'] = { 'snippet_backward', 'fallback' },
         },
         signature = {
           enabled = false,
