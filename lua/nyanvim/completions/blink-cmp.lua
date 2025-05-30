@@ -13,7 +13,6 @@ require('lze').load {
         'lazydev.nvim',
         'neopyter',
         'mini.snippets',
-        'blink-copilot',
         'blink-cmp-avante',
       }
     end,
@@ -106,7 +105,6 @@ require('lze').load {
             'lazydev',
             'neopyter',
             'lsp',
-            'copilot',
             'path',
             'snippets',
             'buffer',
@@ -116,15 +114,6 @@ require('lze').load {
               should_show_items = function(ctx)
                 return ctx.trigger.initial_kind ~= 'trigger_character'
               end,
-            },
-            copilot = {
-              name = 'copilot',
-              module = 'blink-copilot',
-              score_offset = 100,
-              async = true,
-              opts = {
-                max_completions = 1,
-              },
             },
             lazydev = {
               name = 'LazyDev',

@@ -111,7 +111,6 @@ in
         blink-cmp
         mini-snippets
         blink-compat
-        blink-copilot
         blink-cmp-avante
         friendly-snippets
         lazydev-nvim
