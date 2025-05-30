@@ -76,6 +76,7 @@ in
         python3Packages.debugpy
 
         # misc
+        uv
         inputs.mcp-hub.packages.${pkgs.system}.default
       ];
     };
