@@ -20,6 +20,7 @@ require('catppuccin').setup {
     functions = { 'bold' },
   },
   custom_highlights = function(colors)
+    local darken = require('catppuccin.utils.colors').darken
     return {
       ['@variable.builtin'] = { italic = true },
       InclineNormal = { bg = colors.base },
@@ -53,7 +54,7 @@ require('catppuccin').setup {
       MarkVirtTextHL = { bg = colors.base, fg = colors.mauve },
       CursorLineSign = { bg = colors.surface0 },
       CopilotSuggestion = {
-        fg = colors.lavender,
+        fg = darken(colors.teal, 0.5),
         italic = true,
       },
       IlluminatedWordText = { bg = colors.surface0, underline = true },
