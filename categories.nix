@@ -74,6 +74,9 @@ in
 
         # dap
         python3Packages.debugpy
+
+        # misc
+        inputs.mcp-hub.packages.${pkgs.system}.default
       ];
     };
 
@@ -99,6 +102,7 @@ in
         guess-indent-nvim
         vim-matchup
         pkgs.neovimPlugins.incline-nvim
+        inputs.mcphub-nvim.packages.${pkgs.system}.default
       ];
       # extra = with pkgs.neovimPlugins; [];
     };

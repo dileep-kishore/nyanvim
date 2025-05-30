@@ -52,6 +52,8 @@
       url = "github:declancm/maximize.nvim";
       flake = false;
     };
+    mcp-hub.url = "github:ravitemer/mcp-hub";
+    mcphub-nvim.url = "github:ravitemer/mcphub.nvim";
   };
 
   outputs = {
