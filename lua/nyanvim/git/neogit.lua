@@ -11,6 +11,12 @@ require('lze').load {
       require('neogit').setup {
         integrations = { diffview = true },
       }
+      vim.api.nvim_create_autocmd('User', {
+        pattern = 'NeogitStatusRefreshed',
+        callback = function()
+          vim.cmd 'set autoread | checktime'
+        end,
+      })
     end,
   },
 }
