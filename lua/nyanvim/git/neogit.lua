@@ -9,7 +9,18 @@ require('lze').load {
     },
     after = function(_)
       require('neogit').setup {
-        integrations = { diffview = true },
+        graph_style = 'kitty',
+        process_spinner = true,
+        signs = {
+          -- { CLOSED, OPENED }
+          hunk = { '', '' },
+          item = { '▶', '▼' },
+          section = { '▶', '▼' },
+        },
+        integrations = {
+          diffview = true,
+          snacks = true,
+        },
       }
       vim.api.nvim_create_autocmd('User', {
         pattern = 'NeogitStatusRefreshed',
