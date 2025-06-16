@@ -13,10 +13,10 @@ require('lze').load {
       require('avante').setup {
         provider = 'copilot',
         mode = 'agentic',
-        copilot = { model = 'gpt-4.1' },
-        openai = { model = 'gpt-4.1' },
-        claude = { model = 'claude-4-sonnet' },
-        vendors = {
+        providers = {
+          copilot = { model = 'gpt-4.1' },
+          openai = { model = 'gpt-4.1' },
+          claude = { model = 'claude-4-sonnet' },
           ['copilot-o4-mini'] = {
             __inherited_from = 'copilot',
             model = 'o4-mini',
