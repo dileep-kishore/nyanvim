@@ -4,7 +4,7 @@ require('lze').load {
     load = function(name)
       require('lzextras').loaders.multi {
         'nvim-treesitter',
-        'mini.icons',
+        'nvim-web-devicons',
         name,
       }
     end,
@@ -12,6 +12,7 @@ require('lze').load {
     after = function(_)
       require('render-markdown').setup {
         preset = 'obsidian',
+        render_modes = true,
         heading = {
           icons = {
             ' ',
@@ -23,6 +24,7 @@ require('lze').load {
           },
           position = 'inline',
           width = 'block',
+          setext = false,
           left_pad = 2,
           right_pad = 2,
           min_width = 80,

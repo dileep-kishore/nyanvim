@@ -2,6 +2,7 @@ require('lze').load {
   {
     'nvim-treesitter',
     event = 'DeferredUIEnter',
+    dep_of = { 'render-markdown.nvim' },
     load = function(name)
       require('lzextras').loaders.multi {
         name,
@@ -94,9 +95,6 @@ require('lze').load {
         max_lines = 0,
         mode = 'topline',
         separator = '-',
-        on_attach = function(bufnr)
-          return vim.bo[bufnr].filetype ~= 'markdown'
-        end,
       }
       require('nvim-ts-autotag').setup {
         opts = {

@@ -102,6 +102,7 @@ in
         nvim-web-devicons
         tabby-nvim
         rainbow-delimiters-nvim
+        render-markdown-nvim
         guess-indent-nvim
         vim-matchup
         pkgs.neovimPlugins.incline-nvim
@@ -163,7 +164,6 @@ in
         nvim-dap-python
         nvim-dap-virtual-text
         obsidian-nvim
-        render-markdown-nvim
         ssr-nvim
         grug-far-nvim
         img-clip-nvim
