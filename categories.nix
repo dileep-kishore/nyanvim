@@ -60,6 +60,7 @@ in
         rustfmt
         ruff
         prettierd
+        biome
         typstyle
         yamlfix
         kdlfmt
@@ -67,7 +68,6 @@ in
         # linters
         rstcheck
         vale
-        nodePackages.jsonlint
         stylelint
         hadolint
         eslint_d

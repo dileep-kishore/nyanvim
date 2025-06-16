@@ -49,7 +49,7 @@ servers.bashls = {}
 
 servers.dockerls = {}
 
-servers.eslint = {}
+servers.biome = {}
 
 servers.jsonls = {}
 
