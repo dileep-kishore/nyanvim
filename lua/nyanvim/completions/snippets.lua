@@ -9,7 +9,7 @@ require('lze').load {
           gen_loader.from_lang(),
         },
         mappings = {
-          expand = '<Tab>',
+          expand = '<leader>e',
           jump_next = '<C-j>',
           jump_prev = '<C-k>',
           stop = '<C-c>',
