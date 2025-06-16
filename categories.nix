@@ -25,8 +25,10 @@ in
     # this includes LSPs
     lspsAndRuntimeDeps = with pkgs; {
       general = [
+        tree-sitter
         nodejs_24
         ripgrep
+        ast-grep
         fd
         imagemagick
         lazygit
