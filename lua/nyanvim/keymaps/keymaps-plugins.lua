@@ -169,3 +169,9 @@ map(
   { desc = 'Possession Delete' }
 )
 map('n', '<leader>pp', '<cmd>PossessionPick<cr>', { desc = 'Possession Pick' })
+map(
+  'n',
+  '<leader>e',
+  '<cmd>lua MiniSnippets.expand()<cr>',
+  { desc = 'MiniSnippets expand' }
+)
