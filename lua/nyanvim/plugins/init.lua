@@ -58,7 +58,11 @@ require('lze').load {
     },
     after = function(_)
       require('img-clip').setup {
-        show_dir_path_in_prompt = true,
+        default = {
+          dir_path = 'assets',
+          relative_to_current_file = false,
+          show_dir_path_in_prompt = true,
+        },
       }
     end,
   },
