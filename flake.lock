@@ -104,11 +104,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1750090531,
-        "narHash": "sha256-14Aq9bFBJZGrA7gj4dckU4qETL158oUJMvn67FGAAGs=",
+        "lastModified": 1750146953,
+        "narHash": "sha256-v/xGgfAT6oVyljBzF+qG9Z+nKM0aygeK9NKocqYYu9s=",
         "owner": "ravitemer",
         "repo": "mcphub.nvim",
-        "rev": "a51c678a313a8798de6ff0fc9f8b0f06a1aa86e1",
+        "rev": "5cfcf3b9a6d2d809fe379bd5b7dd9e8c4267b04f",
         "type": "github"
       },
       "original": {
@@ -166,11 +166,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1749903597,
-        "narHash": "sha256-jp0D4vzBcRKwNZwfY4BcWHemLGUs4JrS3X9w5k/JYDA=",
+        "lastModified": 1750122687,
+        "narHash": "sha256-zcGClfkXh4pckf4aGOZ18GFv73n1xHbdMWl17cPLouE=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "41da1e3ea8e23e094e5e3eeb1e6b830468a7399e",
+        "rev": "c539ae8d21e49776966d714f82fba33b1fca78bc",
         "type": "github"
       },
       "original": {
