@@ -7,23 +7,23 @@ require('lze').load {
         disable_frontmatter = true,
         workspaces = {
           {
-            name = 'Ideaverse',
-            path = '~/Documents/Ideaverse',
+            name = 'LifeOS',
+            path = '~/Documents/LifeOS',
           },
         },
         new_notes_location = 'notes_subdir',
-        notes_subdir = '+',
+        notes_subdir = '00_Inbox',
         preferred_link_style = 'wiki',
         note_id_func = function(title)
           return title
         end,
         daily_notes = {
-          folder = 'Calendar/Notes/Daily',
+          folder = '01_TimeFrames/011_Daily',
           date_format = '%Y-%m-%d',
-          template = 'Atlas/Utilities/Templates/Daily template.md',
+          template = '_Templates/timeframes/Daily template.md',
         },
         templates = {
-          folder = 'Atlas/Utilities/Templates',
+          folder = '_Templates',
           date_format = '%Y-%m-%d',
           time_format = '%H:%M',
           substitutions = {},
@@ -36,7 +36,7 @@ require('lze').load {
         picker = { name = 'snacks.pick' },
         ui = { enable = false },
         attachments = {
-          img_folder = 'Atlas/Utilities/Attachments',
+          img_folder = '_Assets',
         },
       }
     end,
