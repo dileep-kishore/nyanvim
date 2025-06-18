@@ -22,7 +22,7 @@ map(
 )
 map(
   'n',
-  'gi',
+  'gI',
   '<cmd>lua vim.lsp.buf.implementation()<cr>',
   { desc = 'Type [D]efinition' }
 )
