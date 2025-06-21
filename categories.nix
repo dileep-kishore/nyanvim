@@ -163,7 +163,6 @@ in
         nvim-dap-ui
         nvim-dap-python
         nvim-dap-virtual-text
-        obsidian-nvim
         ssr-nvim
         grug-far-nvim
         img-clip-nvim
@@ -185,6 +184,7 @@ in
         zen-mode-nvim
         twilight-nvim
         smear-cursor-nvim
+        pkgs.neovimPlugins.obsidian-nvim
         pkgs.neovimPlugins.possession-nvim
         pkgs.neovimPlugins.websocket-nvim
         pkgs.neovimPlugins.neopyter

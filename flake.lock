@@ -308,6 +308,22 @@
         "type": "github"
       }
     },
+    "plugins-obsidian-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1750522505,
+        "narHash": "sha256-dftgbT/8ilg7ZFrMG8fqRLjF7K3qH1tGtE5QBE8+APM=",
+        "owner": "obsidian-nvim",
+        "repo": "obsidian.nvim",
+        "rev": "82743e61e67c8bae26788e3b2b3a2e06deecd46b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "obsidian-nvim",
+        "repo": "obsidian.nvim",
+        "type": "github"
+      }
+    },
     "plugins-possession-nvim": {
       "flake": false,
       "locked": {
@@ -421,6 +437,7 @@
         "plugins-lzextras": "plugins-lzextras",
         "plugins-maximize-nvim": "plugins-maximize-nvim",
         "plugins-neopyter": "plugins-neopyter",
+        "plugins-obsidian-nvim": "plugins-obsidian-nvim",
         "plugins-possession-nvim": "plugins-possession-nvim",
         "plugins-reactive-nvim": "plugins-reactive-nvim",
         "plugins-symbol-usage-nvim": "plugins-symbol-usage-nvim",

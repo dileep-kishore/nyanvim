@@ -1,6 +1,6 @@
 require('lze').load {
   {
-    'obsidian.nvim',
+    'obsidian-nvim',
     event = { 'DeferredUIEnter' },
     ft = { 'markdown' },
     after = function(_)
