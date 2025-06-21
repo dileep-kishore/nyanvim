@@ -2,6 +2,7 @@ require('lze').load {
   {
     'obsidian.nvim',
     event = { 'DeferredUIEnter' },
+    ft = { 'markdown' },
     after = function(_)
       require('obsidian').setup {
         disable_frontmatter = true,
@@ -20,7 +21,7 @@ require('lze').load {
         daily_notes = {
           folder = '01_TimeFrames/011_Daily',
           date_format = '%Y-%m-%d',
-          template = '_Templates/timeframes/Daily template.md',
+          template = '_Templates/timeframes/DailyTemplate.md',
         },
         templates = {
           folder = '_Templates',
