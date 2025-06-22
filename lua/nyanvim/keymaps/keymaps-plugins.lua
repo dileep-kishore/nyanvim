@@ -100,7 +100,7 @@ map(
 map(
   'n',
   '<leader>lD',
-  '<cmd>lua vim.diagnostic.enable(false, 0)<CR>',
+  '<cmd>lua vim.diagnostic.enable(false)<CR>',
   { desc = 'Disable LSP in current buffer' }
 )
 -- Noice LSP documentation scrolling
