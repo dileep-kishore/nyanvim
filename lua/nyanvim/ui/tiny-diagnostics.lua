@@ -6,6 +6,12 @@ require('lze').load {
       require('tiny-inline-diagnostic').setup {
         preset = 'simple',
         transparent_bg = true,
+        transparent_cursorline = true,
+        signs = {
+          left = '    ',
+          right = '',
+          arrow = '',
+        },
         options = {
           show_source = {
             enabled = false,
