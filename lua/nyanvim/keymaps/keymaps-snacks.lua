@@ -198,3 +198,9 @@ map(
   '<cmd>lua Snacks.terminal.toggle()<cr>',
   { desc = 'Toggle Snacks terminal' }
 )
+map(
+  'n',
+  '<Leader>tn',
+  '<cmd>lua Snacks.notifier.get_history()<CR>',
+  { desc = 'View notifications' }
+)
