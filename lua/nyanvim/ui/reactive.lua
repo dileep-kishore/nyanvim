@@ -19,6 +19,12 @@ require('lze').load {
         configs = {
           ['catppuccin-mocha-cursorline'] = {
             modes = {
+              n = {
+                winhl = {
+                  CursorLine = { bg = 'None' },
+                  CursorLineNr = { bg = 'None' },
+                },
+              },
               i = {
                 winhl = {
                   CursorLine = { bg = darken(palette.blue, 0.3) },
