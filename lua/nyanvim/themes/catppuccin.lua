@@ -52,7 +52,6 @@ require('catppuccin').setup {
       MarkSignHL = { bg = colors.base, fg = colors.mauve },
       MarkSignNumHL = { bg = colors.base, fg = colors.mauve },
       MarkVirtTextHL = { bg = colors.base, fg = colors.mauve },
-      CursorLineSign = { bg = colors.surface0 },
       CopilotSuggestion = {
         fg = darken(colors.teal, 0.5),
         italic = true,
