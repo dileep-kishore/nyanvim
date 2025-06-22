@@ -25,8 +25,6 @@ require('lze').load {
           position = 'inline',
           width = 'block',
           setext = false,
-          left_pad = 2,
-          right_pad = 2,
           min_width = 80,
           border = true,
           border_virtual = true,
