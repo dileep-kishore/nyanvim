@@ -199,11 +199,11 @@
     "plugins-obsidian-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1751025700,
-        "narHash": "sha256-lRzkcxBzwRLb3y4tDhhWWy/a+wLxl3r/3pW1EJA3oec=",
+        "lastModified": 1751103384,
+        "narHash": "sha256-Jfz2ok8JrawuomGWgy4KdfhiWHd+zUfpg5haNfdZWnM=",
         "owner": "obsidian-nvim",
         "repo": "obsidian.nvim",
-        "rev": "62aaefccfe067f3e80c4929a9cef08d774603a1d",
+        "rev": "9816948e4f043c2704d649b4643ee13d7337151e",
         "type": "github"
       },
       "original": {
