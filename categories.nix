@@ -26,7 +26,6 @@ in
     lspsAndRuntimeDeps = with pkgs; {
       general = [
         tree-sitter
-        nodejs_24
         ripgrep
         ast-grep
         fd
@@ -51,7 +50,8 @@ in
         typescript-language-server
         rust-analyzer
         svelte-language-server
-        tailwindcss-language-server
+        # FIXME: Disable this until nodejs_24 binary is available on nixpkgs
+        # tailwindcss-language-server
         tinymist
 
         # formatters
