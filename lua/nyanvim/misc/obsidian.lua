@@ -6,6 +6,7 @@ require('lze').load {
     after = function(_)
       require('obsidian').setup {
         disable_frontmatter = true,
+        legacy_commands = false,
         workspaces = {
           {
             name = 'LifeOS',
