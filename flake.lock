@@ -39,11 +39,11 @@
     },
     "nixCats": {
       "locked": {
-        "lastModified": 1750385661,
-        "narHash": "sha256-JpIEf5IrOzMTjowkxB6kgh4AK3Dp9i/T9G4w2ZiKMgQ=",
+        "lastModified": 1751874031,
+        "narHash": "sha256-Bj8RGeMMNT4MThQJaKjML123kTXiKtTPsXWC2ieaiDc=",
         "owner": "BirdeeHub",
         "repo": "nixCats-nvim",
-        "rev": "04379fef2fbd4c9d8f4c9a6203cef135ab0b1acd",
+        "rev": "a985eb3e7d30d3f9c9cf7e8a8718d2d10126bcbd",
         "type": "github"
       },
       "original": {
@@ -54,11 +54,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1750994206,
-        "narHash": "sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM=",
+        "lastModified": 1751852175,
+        "narHash": "sha256-+MLlfTCCOvz4K6AcSPbaPiFM9MYi7fA2Wr1ibmRwIlM=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "80d50fc87924c2a0d346372d242c27973cf8cdbf",
+        "rev": "2defa37146df235ef62f566cde69930a86f14df1",
         "type": "github"
       },
       "original": {
@@ -135,11 +135,11 @@
     "plugins-lze": {
       "flake": false,
       "locked": {
-        "lastModified": 1750693429,
-        "narHash": "sha256-weysXFDBF0cVuTOwdPCPn8D7c98LBP1mUy3qfIjpMIA=",
+        "lastModified": 1751874075,
+        "narHash": "sha256-gLoyJek+cLnX2rJj5tKSMJZN0AIFugcujWQe1W2HqW8=",
         "owner": "BirdeeHub",
         "repo": "lze",
-        "rev": "5ebeff3b95923187ce2eed29b2a652a3eda1b5c8",
+        "rev": "b4a88b517e7f924b1ab20c8fabbe0742dc4e2304",
         "type": "github"
       },
       "original": {
@@ -151,11 +151,11 @@
     "plugins-lzextras": {
       "flake": false,
       "locked": {
-        "lastModified": 1750569364,
-        "narHash": "sha256-LLCxiUiV1g2MIfYrWYioC2Dnt8ASKK8CPw8Nds7pS6s=",
+        "lastModified": 1751874065,
+        "narHash": "sha256-N6w/oPiC9WJV9nKjuchyWRfvDkK7Bp8ExCPdiJ9W7Vw=",
         "owner": "BirdeeHub",
         "repo": "lzextras",
-        "rev": "cb5f4aeccea87c4c4f503e82967c5d0ef945aa3b",
+        "rev": "c38ad7d74b1f7b98ae1e3a03424c0ec5e02a529e",
         "type": "github"
       },
       "original": {
@@ -183,11 +183,11 @@
     "plugins-neopyter": {
       "flake": false,
       "locked": {
-        "lastModified": 1742273862,
-        "narHash": "sha256-dNUNWvMESeDfbLVLymW9nvLuhQGJoV26JaL7V8NQvF0=",
+        "lastModified": 1751542457,
+        "narHash": "sha256-ZkMSLEcX9iSt4t7qCWK5llLiRGKnNX2NaPqdZl2mlDo=",
         "owner": "SUSTech-data",
         "repo": "neopyter",
-        "rev": "8716511f2a0d1500ba8f4adeb05bbb432a080bac",
+        "rev": "a4d5cab834b85642df3d22ae6aa004b87050fd75",
         "type": "github"
       },
       "original": {
@@ -199,11 +199,11 @@
     "plugins-obsidian-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1751103384,
-        "narHash": "sha256-Jfz2ok8JrawuomGWgy4KdfhiWHd+zUfpg5haNfdZWnM=",
+        "lastModified": 1751635708,
+        "narHash": "sha256-tQqKm7gGt3j6fwAjv0OdK2/PyZfk0RrLiSPzxRp1oYQ=",
         "owner": "obsidian-nvim",
         "repo": "obsidian.nvim",
-        "rev": "9816948e4f043c2704d649b4643ee13d7337151e",
+        "rev": "d22a3b59a176f631cdccd44664f8de615d5753d3",
         "type": "github"
       },
       "original": {
