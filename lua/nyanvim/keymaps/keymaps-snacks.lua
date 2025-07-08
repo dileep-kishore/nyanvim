@@ -201,6 +201,6 @@ map(
 map(
   'n',
   '<Leader>tn',
-  '<cmd>lua Snacks.notifier.get_history()<CR>',
+  '<cmd>lua Snacks.notifier.show_history()<CR>',
   { desc = 'View notifications' }
 )
