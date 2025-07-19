@@ -37,12 +37,6 @@ local diff = {
   padding = { left = 0, right = 1 },
 }
 
-local obsidian = {
-  'g:obsidian',
-  color = { fg = colors.green, bg = colors.base, gui = 'bold' },
-  padding = { left = 0, right = 0 },
-}
-
 local grapple = {
   'grapple',
   color = { fg = colors.yellow, bg = colors.base, gui = 'bold' },
@@ -237,7 +231,6 @@ require('lze').load {
           lualine_b = {
             branch,
             diff,
-            obsidian,
           },
           lualine_c = {
             center_comp,

@@ -24,10 +24,6 @@ require('lze').load {
           date_format = '%Y-%m-%d',
           template = '_Templates/timeframes/DailyTemplate.md',
         },
-        statusline = {
-          enabled = true,
-          format = '{{backlinks}} ',
-        },
         templates = {
           folder = '_Templates',
           date_format = '%Y-%m-%d',
